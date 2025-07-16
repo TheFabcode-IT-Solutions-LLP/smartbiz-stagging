@@ -21,8 +21,7 @@ export default function Home() {
       <ImageWithText />
       <RealClients />
       <div className="text-white bg-accent-100 text-center font-medium text-2xl leading-[1.208] px-6 pt-[26px] pb-[25px] min-h-[80px] max-mob-lg:text-base max-mob-lg:py-3 max-mob-lg:min-h-auto mb-[50px]">
-        30% reduction in support response time with an AI agent built using
-        LangGraph
+        30% reduction in support response time with an AI agent built using LangGraph
       </div>
       <CustomerExperiences />
       <WorkSteps />
