@@ -8,6 +8,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-100: #222222;
+  --font-inter:var(--font-inter);
+  --color-accent-100: #FF9100;
+  --color-accent-200: #FFCC00;  
+  --color-tc-100: #222222;
+  --breakpoint-des-3xl:1366px;
+  --breakpoint-des-2xl:1280px;
+  --breakpoint-des-xl:1166px;
+  --breakpoint-tab-lg:1024px;
+  --breakpoint-tab-md:990px;
+  --breakpoint-tab-sm:768px;
+  --breakpoint-mob-lg:749px;
+  --breakpoint-mob-md:600px;
+  --breakpoint-mob-sm:375px;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -20,7 +34,6 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter";
 }
+
