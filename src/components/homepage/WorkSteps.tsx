@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Container from "../ui/conatiner/Container";
 
 const steps = [
   {
@@ -26,7 +27,8 @@ const steps = [
 
 const WorkSteps = () => {
   return (
-    <div className="mt-[100px] max-w-[1700px] w-full mx-auto">
+    <div className="mt-[100px]">
+        <Container>
       <h2 className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%]">
         How It Works
       </h2>
@@ -74,6 +76,7 @@ const WorkSteps = () => {
 
         </div>
       </div>
+      </Container>
     </div>
   );
 };
