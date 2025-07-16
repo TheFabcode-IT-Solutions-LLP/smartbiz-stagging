@@ -1,7 +1,8 @@
+
 import { ButtonType } from "@/types";
 import React from "react";
 
-const Button = ({ className, label = "Get Started", onClick, to }: ButtonType) => {
+const Button = ({ className, label = "Get Started", onClick }: ButtonType) => {
   return (
     <button
       onClick={onClick}
