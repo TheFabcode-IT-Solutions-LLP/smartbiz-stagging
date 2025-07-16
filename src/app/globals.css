@@ -9,10 +9,14 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-100: #222222;
-  --font-inter:var(--font-inter);
+  --font-inter:var(--font-inter);  
   --color-accent-100: #FF9100;
   --color-accent-200: #FFCC00;  
   --color-tc-100: #222222;
+  --breakpoint-des-7xl:1780px;
+  --breakpoint-des-6xl:1660px;
+  --breakpoint-des-5xl:1556px;
+  --breakpoint-des-4xl:1440px;
   --breakpoint-des-3xl:1366px;
   --breakpoint-des-2xl:1280px;
   --breakpoint-des-xl:1166px;
@@ -33,7 +37,11 @@
   }
 }
 
-body {
+body {  
   font-family: "Inter";
 }
 
+.overlay-bg{
+  border-radius: 0px 0px 20px 20px;
+background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) -2.85%, rgba(0, 0, 0, 0.00) -2.85%, #000 99.97%);
+}
