@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Banner />
-        <Trusted />
+      <Trusted />
       <MultiColumn />
       <Services />
       <ImageWithText />
