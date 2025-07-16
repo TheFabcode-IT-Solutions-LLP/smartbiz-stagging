@@ -45,13 +45,13 @@ const RealClientsItem = ({
   };
 }) => {
   return (
-    <div className="h-full w-full relative">
+    <div className="h-full w-full relative group">
       <Image
         alt="Site Logo"
         src={item.image}
         width={550}
         height={380}
-        className="object-cover  rounded-[20px]  w-full h-full block"
+        className="object-cover  rounded-[20px] group-hover:scale-[1.2] transition-all duration-300 w-full h-full block"
       />
       <div className="overlay-bg h-[133px] absolute bottom-0 left-0 w-full z-[1]"></div>
       <div className="text-2xl leading-[1.2] text-white font-bold text-center w-full bottom-6 absolute z-[2] max-mob-lg:text-lg">
