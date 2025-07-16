@@ -3,9 +3,9 @@ import Image from "next/image";
 import Container from "../ui/conatiner/Container";
 const AiConversation = () => {
   return (
-    <div className="py-[50px] max-mob-lg:py-6 ">
-        <Container>
-            <div className="rounded-[20px] bg-[#222222] max-w-[1700px] w-full mx-auto flex flex-row justify-between">
+    <div className="py-[50px] max-mob-lg:py-6">
+      <Container>
+    <div className=" rounded-[20px] bg-[#222222]  w-full mx-auto flex flex-row justify-between">
       <div className="flex flex-col justify-center pl-[77px]   gap-[38px]">
         <h2 className="text-[40px] leading-[70px] text-left font-bold  text-white max-w-[595px]">
           Let’s Talk AI – Pick a Time That Works for You
@@ -44,8 +44,8 @@ const AiConversation = () => {
           className=" w-[684px] h-auto"
         />
       </div>
-      </div>
-      </Container>
+    </div>
+    </Container>
     </div>
   );
 };
