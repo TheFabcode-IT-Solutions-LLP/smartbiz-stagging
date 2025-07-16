@@ -3,7 +3,7 @@ import Image from "next/image";
 import Button from "../ui/button/Button";
 const Banner = () => {
   return (
-    <div className="relative">
+    <div className="relative pb-[50px] max-mob-lg:pb-6">
       <Image
         className="w-full h-auto"
         src="/assets/images/Banner.png"

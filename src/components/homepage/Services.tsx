@@ -28,10 +28,10 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <div className='pt-[100px] flex flex-row gap-[70px]'>
-      <div>
+    <div className='py-[50px] max-mob-lg:py-6 flex flex-row gap-[70px] items-center'>
+      <div className='max-w-[52.0833333%] w-full'>
         <Image
-          className='max-w-[1000px] w-full object-cover h-[800px]'
+          className='w-full object-cover rounded-r-[20px]'
           src='/assets/images/humanAI.jpg'
           alt='AI Illustration'
           width={1000}

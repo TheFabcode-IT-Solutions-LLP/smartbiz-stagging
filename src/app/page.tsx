@@ -16,6 +16,7 @@ export default function Home() {
   return (
     <div>
       <Banner />
+        <Trusted />
       <MultiColumn />
       <Services />
       <ImageWithText />
@@ -29,7 +30,7 @@ export default function Home() {
       <WhyChoose />
       <AiConversation />
       <FAQ />
-      <Trusted />
+    
     </div>
   );
 }
