@@ -28,8 +28,8 @@ const serviceData = [
 
 const Services = () => {
   return (
-    <div className='py-[50px] max-mob-lg:py-6 flex flex-row gap-[70px] items-center'>
-      <div className='max-w-[52.0833333%] w-full'>
+    <div className='py-[50px] max-mob-lg:py-6 flex flex-row gap-[70px] items-center max-des-xl:gap-3 max-mob-lg:flex-wrap max-mob-lg:px-4'>
+      <div className='max-w-[52.0833333%] w-full max-mob-lg:max-w-full '>
         <Image
           className='w-full object-cover rounded-r-[20px]'
           src='/assets/images/humanAI.jpg'
@@ -48,7 +48,7 @@ const Services = () => {
           {serviceData.map((service, index) => (
             <div
               key={index}
-              className='rounded-[20px] flex flex-row bg-[#222222] items-center w-[739px]'
+              className='rounded-[20px] flex flex-row bg-[#222222] items-center w-[739px] max-mob-lg:w-full'
             >
               <div className='py-[30px] px-[38px]'>
                 <Image src={service.icon} alt='' width={60} height={60} />
@@ -57,7 +57,7 @@ const Services = () => {
               <span className='w-[1px] bg-white h-[60px]'></span>
 
               <div className='ml-[20px]'>
-                <h3 className='text-[24px] font-medium leading-[100%] text-[#FFFFFF]'>
+                <h3 className='text-[24px] font-medium leading-[100%] text-[#FFFFFF] max-mob-lg:text-[16px] max-mob-lg:leading-[1.2]'>
                   {service.title}
                 </h3>
               </div>

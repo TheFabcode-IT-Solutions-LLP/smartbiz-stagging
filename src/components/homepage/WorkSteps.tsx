@@ -33,18 +33,18 @@ const WorkSteps = () => {
         How It Works
       </h2>
       <div className="mt-[50px] bg-[#222222] rounded-[20px] py-[40px]">
-        <div className="flex flex-row justify-between max-w-[1438px] w-full mx-auto px-[20px]">
+        <div className="flex flex-row justify-between max-w-[1438px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap">
        {steps.map((step, index) => (
   <div key={index} className="flex flex-col items-center w-full relative">
     <h4 className="text-[24px] font-medium text-center text-white mb-[15px]">
       {step.title}
     </h4>
-    <div className="w-[140px] h-[140px] rounded-full bg-accent-100 flex justify-center items-center">
-      <Image src={step.image} alt={step.title} width={60} height={60} />
+    <div className="w-[140px] h-[140px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[90px] max-mob-lg:h-[90px]">
+      <Image src={step.image} alt={step.title} width={60} height={60} className="max-mob-lg:w-[40px] max-mob-lg:h-[40px]" />
     </div>
     <div className="mt-[-8px]">
       <Image
-        className="w-[22px] h-[22px]"
+        className="w-[22px] h-[22px] max-mob-lg:w-[16px] max-mob-lg:h-[16px]"
         src="/assets/images/Polygon .png"
         alt="Arrow Down"
         width={20}
@@ -53,7 +53,7 @@ const WorkSteps = () => {
     </div>
     <div className="mt-[20px] w-full flex items-center justify-center">
       <div
-        className={`flex-1 h-[2px] border-t-2 border-dotted border-[#FFFFFF4D] bg-opacity-30 ${
+        className={`flex-1 h-[2px] max-mob-lg:hidden border-t-2 border-dotted border-[#FFFFFF4D] bg-opacity-30 ${
           index === 0 ? "opacity-0" : ""
         }`}
       ></div>
@@ -63,7 +63,7 @@ const WorkSteps = () => {
       </div>
 
       <div
-        className={`flex-1 h-[2px] border-t-2 border-dotted border-[#FFFFFF4D] bg-opacity-30 ${
+        className={`flex-1 h-[2px] border-t-2  max-mob-lg:hidden border-dotted border-[#FFFFFF4D] bg-opacity-30 ${
           index === steps.length - 1 ? "opacity-0" : ""
         }`}
       ></div>
