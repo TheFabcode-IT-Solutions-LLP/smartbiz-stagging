@@ -49,7 +49,7 @@ const Footer = () => {
                 required
                 value={formData?.email}
                 placeholder="Enter your email address"
-                className="w-full h-[70px] border border-white rounded-[70px] px-8 pr-[250px] text-white placeholder:text-white/50 text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm"
+                className="w-full h-[70px] border border-white rounded-[70px] px-8 max-tab-md:pr-8 pr-[250px] text-white placeholder:text-white/50 text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm"
               />
               <Button
                 type="submit"
@@ -111,18 +111,15 @@ const Footer = () => {
             </div>
             <ul className="mt-[30px] flex gap-[14.8px] max-mob-lg:mt-2">
               {sm.map((item) => (
-                <li
-                  key={item.icons}
-                  className=""
-                >
-                    <Link href={ item.link || '/'} target="_blank">
-                  <Image
-                    src={item.icons}
-                    alt="Site Logo"
-                    width={36}
-                    height={36}
-                    className="object-contain max-tab-lg:mx-auto"
-                  />
+                <li key={item.icons} className="">
+                  <Link href={item.link || "/"} target="_blank">
+                    <Image
+                      src={item.icons}
+                      alt="Site Logo"
+                      width={36}
+                      height={36}
+                      className="object-contain max-tab-lg:mx-auto"
+                    />
                   </Link>
                 </li>
               ))}
@@ -130,7 +127,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-[50px] pb-[45px] border-t border-white max-des-2xl:py-6 max-mob-lg:py-3 max-mob-lg:text-sm text-white font-normal text-2xl leading-[1.2] text-center">
-                Copyright {date.getFullYear()} All Rights Reserved.
+          Copyright {date.getFullYear()} All Rights Reserved.
         </div>
       </Container>
     </footer>
