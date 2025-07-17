@@ -20,6 +20,38 @@ const Footer = () => {
       link: "/",
     },
   ];
+  const services = [
+    {
+      label: "AI Workflow Automation",
+      href: "/ Automation",
+    },
+    {
+      label: "Custom AI Chatbots",
+      href: "/Chatbots",
+    },
+    {
+      label: "Smart Analytics",
+      href: "/Smart Analytics",
+    },
+    {
+      label: "Lead Management",
+      href: "/Lead Management",
+    },
+  ];
+  const quickLinks = [
+    { label: "Services", href: "/services" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "How It Works", href: "/how-it-works" },
+    { label: "Pricing", href: "/pricing" },
+    { label: "Contact", href: "/contact" },
+  ];
+  const legalItems = [
+  { label: 'Privacy Policy', href: '/privacy-policy' },
+  { label: 'Terms of Service', href: '/terms-of-service' },
+  { label: 'Security', href: '/security' },
+  { label: 'Compliance', href: '/compliance' },
+];
+
   const [formData, setFormData] = useState({
     email: "",
   });
@@ -74,37 +106,55 @@ const Footer = () => {
           </div>
           <div>
             <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
-              Get In Touch
+              Services
+              <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2 max-mob-lg:space-y-2">
+                {services.map((service, index) => (
+                  <li key={index}>
+                    <Link
+                      className="text-white text-lg text-left font-normal leading-[1.208] max-des-4xl:text-sm max-w-[637px] max-mob-lg:text-center"
+                      href={service.href}
+                    >
+                      {service.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2 max-mob-lg:space-y-2">
-              <li>
-                <Link
-                  className="text-white text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm max-w-[637px] max-mob-lg:text-center"
-                  href={"tel:+(00) - 76644 86743"}
-                >
-                  +(00) - 76644 86743
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-white text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm max-w-[637px] max-mob-lg:text-center"
-                  href={"mailto:info@smartbizgenie.com"}
-                >
-                  info@smartbizgenie.com
-                </Link>
-              </li>
-            </ul>
           </div>
           <div>
             <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
-              Our Location
+              Quick Links
             </div>
             <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2">
-              <li className="text-white text-lg text-left font-normal max-mob-lg:text-center leading-[1.208]  max-des-4xl:text-sm max-w-[258px]">
-                123 Lorem Street Suite 5B, Ips Park London, UK SW1A 1AA
-              </li>
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-white text-lg text-left font-normal max-mob-lg:text-center leading-[1.208] max-des-4xl:text-sm max-w-[258px]"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+             <div>
+      <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
+        Legal
+      </div>
+      <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2">
+        {legalItems.map((item, index) => (
+          <li key={index}>
+            <Link
+              href={item.href}
+              className="text-white text-lg text-left font-normal max-mob-lg:text-center leading-[1.208] max-des-4xl:text-sm max-w-[258px]"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
           <div>
             <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
               Follow Us

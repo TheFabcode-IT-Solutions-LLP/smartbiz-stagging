@@ -10,24 +10,24 @@ const CustomerExperiences = () => {
   const items = [
     {
       image: "/assets/images/sarah.png",
-      auth: "Sarah Williams",
-      desig: "Marketing Manager",
+      auth: "Rachel Martinez",
+      desig: "TechStart Solutions",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "SmartBiz AI completely transformed our customer support operations. Their WhatsApp AI chatbot handles 75% of our customer queries automatically, and our team can focus on high-value activities. We've seen a 40% increase in customer satisfaction and cut our support costs in half.",
     },
     {
       image: "/assets/images/sarah.png",
-      auth: "Sarah Williams",
-      desig: "Marketing Manager",
+      auth: "David Chen",
+      desig: "EcoMart Online",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "The AI workflow automation they built for us is incredible. Our order processing time dropped from 6 hours to 30 minutes, and our customers love the instant responses. Sales have increased 35% since implementation, and our team is more productive than ever.",
     },
     {
       image: "/assets/images/sarah.png",
-      auth: "Sarah Williams",
-      desig: "Marketing Manager",
+      auth: "Sarah Thompson",
+      desig: "CloudTech Inc",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Their AI-powered lead management system revolutionized our sales process. We now identify high-value prospects 3x faster, and our conversion rates improved by 45%. The ROI was clear within the first month.",
     },
   ];
   return (

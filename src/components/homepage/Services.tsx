@@ -1,27 +1,33 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const serviceData = [
   {
-    title: "LangChain Agent Development",
+    title: "AI Workflow Automation",
     icon: "/assets/images/setting.png",
+    link : "/Automation"
   },
   {
-    title: "RAG System Setup",
+    title: "Custom AI Chatbots",
     icon: "/assets/images/Img1.png",
+    link : "/ AI Chatbots"
   },
   {
-    title: "LangGraph for Workflow Orchestration",
+    title: "E-commerce Specific Features",
     icon: "/assets/images/Img2.png",
+    link : "/Specific Features"
   },
   {
-    title: "N8N Automation",
+    title: "Smart Analytics & AI Reporting",
     icon: "/assets/images/Img3.png",
+    link : "/ai-reporting"
   },
   {
-    title: "Custom AI Agent Deployment",
+    title: "AI-Powered Lead Management",
     icon: "/assets/images/Img4.png",
+    link: "/lead-management"
   },
 ];
 
@@ -29,7 +35,7 @@ const Services = () => {
   return (
     <div className="py-[50px] max-mob-lg:py-6 flex flex-row gap-[70px]  items-center max-des-2xl:gap-3 max-des-2xl:flex-wrap max-tab-md:px-4 max-des-2xl:px-[30px]">
       <h2 className="mt-[10px] text-[40px] font-bold leading-[1.2] text-black max-des-3xl:text-2xl max-des-3xl:text-center w-full mb-[20px] xl:hidden">
-        Our Services
+        Our AI Automation Services - Designed for Real Business Impact
       </h2>
       <div className="max-w-[52.0833333%] w-full max-des-2xl:max-w-full h-full ">
         <Image
@@ -42,13 +48,13 @@ const Services = () => {
       </div>
 
       <div className="max-des-2xl:w-full">
-        <h2 className="mt-[10px] text-[40px] font-bold leading-[1.2] text-black max-des-3xl:text-2xl max-des-2xl:text-center max-des-2xl:hidden">
-          Our Services
+        <h2 className="mt-[10px] text-[40px] font-bold leading-[1.2] text-black max-des-3xl:text-2xl max-des-2xl:text-center max-des-2xl:hidden xl:pr-[30px]">
+          Our AI Automation Services - Designed for Real Business Impact
         </h2>
 
         <div className="mt-[30px] flex flex-col gap-[20px] max-tab-lg:mt-6 w-[769px] xl:pr-[30px]   max-tab-lg:w-full max-des-2xl:w-full">
           {serviceData.map((service, index) => (
-            <div
+            <Link href = {service.link}
               key={index}
               className="rounded-[20px] flex flex-row bg-[#222222] items-center "
             >
@@ -69,7 +75,7 @@ const Services = () => {
                   {service.title}
                 </h3>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

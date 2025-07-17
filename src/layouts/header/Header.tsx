@@ -95,7 +95,7 @@ const Header = ({ className }: { className?: string }) => {
             </ul>
           </nav>
           <div className="flex-1 flex justify-end">
-            <Anchor href="/get-started" className="max-tab-lg:hidden" />
+            <Anchor href="/get-started" className="max-tab-lg:hidden" label = "Schedule a Call" />
             <Anchor href="/get-started" label="Start" className="max-tab-lg:flex hidden" />
           </div>
         </div>

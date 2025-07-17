@@ -6,22 +6,22 @@ const steps = [
   {
     title: "Step 1",
     image: "/assets/images/phone.png",
-    content: "Book a call",
+    content: "Strategic Discovery & Analysis",
   },
   {
     title: "Step 2",
     image: "/assets/images/magnifying-glass.png",
-    content: "AI Opportunity Discovery",
+    content: "Custom AI Development",
   },
   {
     title: "Step 3",
     image: "/assets/images/optimization.png",
-    content: "Custom AI Build",
+    content: "Testing & Optimization",
   },
   {
     title: "Step 4",
     image: "/assets/images/preferences.png",
-    content: "Ongoing Support & Optimization",
+    content: " Deployment & Ongoing Support",
   },
 ];
 

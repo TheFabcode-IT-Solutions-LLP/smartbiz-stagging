@@ -3,10 +3,10 @@ import Image from "next/image";
 import React from "react";
 const ImageWithText = () => {
   const items = [
-    "AI chatbot for eCommerce",
-    "AI-driven email support agent",
-    "Data summarization via RAG",
-    "Automated lead qualification agent",
+    " Drowning in Repetitive Manual Tasks",
+    "Overwhelmed Customer Support Operations",
+    "Inefficient Lead Management Process",
+    "Disconnected Systems Creating Chaos",
   ];
   return (
     <Container className="py-[50px] max-mob-lg:py-6">

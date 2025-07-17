@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Container from "../ui/conatiner/Container";
+import Link from "next/link";
 const AiConversation = () => {
   return (
     <div className="py-[50px] max-mob-lg:py-6">
@@ -11,7 +12,7 @@ const AiConversation = () => {
           Let’s Talk AI – Pick a Time That Works for You
         </h2>
         <div className="flex flex-row gap-[20px] max-des-2xl:flex-wrap">
-          <div className="flex flex-row w-[400px] max-des-4xl:w-auto max-tab-lg:justify-center gap-[15px] border-[1px] rounded-[50px] border-white py-[20px] px-[46px]  max-des-4xl:px-[20px] max-des-4xl:py-[10px] ">
+          <Link href = "/te" className="flex flex-row w-[400px] max-des-4xl:w-auto max-tab-lg:justify-center gap-[15px] border-[1px] rounded-[50px] border-white py-[20px] px-[46px]  max-des-4xl:px-[20px] max-des-4xl:py-[10px] ">
             <Image
               src="/assets/images/telephone.png"
               alt=""
@@ -22,19 +23,19 @@ const AiConversation = () => {
             <p className="text-[24px] flex justify-center items-center font-medium leading-1 text-white max-des-4xl:text-[16px] max-des-4xl:leading-normal">
               Schedule My Call
             </p>
-          </div>
-          <div className="flex flex-row w-[400px] max-des-4xl:w-auto  gap-[15px] border-[1px] rounded-[50px] border-white py-[20px] px-[46px]  max-des-4xl:px-[20px] max-des-4xl:py-[10px]">
+          </Link>
+          <Link href = "/gmail" className="flex flex-row w-[400px] max-des-4xl:w-auto  gap-[15px] border-[1px] rounded-[50px] border-white py-[20px] px-[46px]  max-des-4xl:px-[20px] max-des-4xl:py-[10px]">
             <Image
-              src="/assets/images/whatsapp .png"
+              src="/assets/images/gmail.webp"
               alt=""
               width={60}
               height={60}
-              className="max-des-4xl:w-[45px] max-des-4xl:h-[45px]"
+              className="max-des-4xl:w-[45px] max-des-4xl:h-[45px] rounded-full"
             />
             <p className="text-[24px] flex justify-center items-center font-medium leading-1 text-white max-des-4xl:text-[16px] max-des-4xl:leading-normal">
               Chat on WhatsApp
             </p>
-          </div>
+          </Link>
         </div>
       </div>
       <div className="xl:pr-[44px] py-[50px] max-tab-lg:pb-[0px] flex xl:justify-end items-center xl:w-[728px] w-full justify-center ">
