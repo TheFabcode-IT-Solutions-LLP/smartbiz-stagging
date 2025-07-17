@@ -1,7 +1,6 @@
 import Container from "@/components/ui/conatiner/Container";
 import Image from "next/image";
 import React from "react";
-
 const ImageWithText = () => {
   const items = [
     "AI chatbot for eCommerce",
