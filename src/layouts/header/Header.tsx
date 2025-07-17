@@ -28,6 +28,10 @@ const Header = ({ className }: { className?: string }) => {
     {
       label: "About",
       link: "/about",
+    }, 
+    {
+      label: "AICHATBOT",
+      link: "/AICHATBOT",
     },
     {
       label: "Services",
