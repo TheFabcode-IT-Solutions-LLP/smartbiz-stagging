@@ -1,7 +1,8 @@
 export type ButtonType = {
     className?:string,
     label?:string,
-    onClick?:()=>void    
+    onClick?:()=>void,
+    type?: 'button' | 'submit'    
 }
 export type AnchorType = {
     className?:string,
