@@ -11,40 +11,47 @@ export default function CustomerService247() {
      
 
 
-          <section className="bg-primary-100 ">
-        <div className="text-center max-w-full w-full relative">
-                    <Image  src = "/assets/images/24hours.jpg" alt = "" width = {1900} height = {1000} className="w-full max-h-[100dvh] object-cover h-full"/>
-        <Container className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4">
-          <div className="text-center max-w-[1200px] mx-auto">
-            <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
-            Never Miss Another Customer with{" "}
-              <span className="text-accent-100">24/7 AI Support</span>
-            </h1>
-            <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
-              Your Customers Don&lsquo;t Sleep. Neither Should Your Support.
-            </h2>
-            <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
-             Provide round-the-clock customer service without the
-              round-the-clock costs. Smartbizgenie&lsquo;s 24/7 customer service
-              solution ensures every customer gets instant, accurate support -
-              whether it&lsquo;s 3 PM or 3 AM.
-            </p>
-            <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
-              <Anchor
-                href="/get-started"
-                label="Start Your 24/7 Support"
-                className=""
-              />
-              <Button
-                onClick={() => toggleModal(true)}
-                label="Schedule Demo"
-                className=" bg-transparent border-2 border-white"
-              />
-            </div>
-          </div>
-        </Container>
+  <section className="bg-primary-100 relative">
+  <div className="text-center max-w-full w-full relative">
+    
+  
+    <div className="relative w-full h-full max-h-[100dvh]">
+      <Image
+        src="/assets/images/24hours.jpg"
+        alt=""
+        width={1900}
+        height={1000}
+        className="w-full h-full object-cover max-h-[100dvh]"
+      />
+   
+      <div className="absolute inset-0 bg-primary-100/50 z-10"></div>
+    </div>
+
+    <Container className="absolute z-20 bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2 max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+      <div className="text-center max-w-[1200px] mx-auto">
+        <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
+          Never Miss Another Customer with{" "}
+          <span className="text-accent-100">24/7 AI Support</span>
+        </h1>
+        <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
+          Your Customers Don&lsquo;t Sleep. Neither Should Your Support.
+        </h2>
+        <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
+          Provide round-the-clock customer service without the round-the-clock costs. Smartbizgenie&lsquo;s 24/7 customer service solution ensures every customer gets instant, accurate support - whether it&lsquo;s 3 PM or 3 AM.
+        </p>
+        <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
+          <Anchor href="/get-started" label="Start Your 24/7 Support" className="" />
+          <Button
+            onClick={() => toggleModal(true)}
+            label="Schedule Demo"
+            className="bg-transparent border-2 border-white"
+          />
         </div>
-      </section>
+      </div>
+    </Container>
+  </div>
+</section>
+
 
       {/* True Cost Section */}
       <section className="py-[50px] max-mob-lg:py-6">
