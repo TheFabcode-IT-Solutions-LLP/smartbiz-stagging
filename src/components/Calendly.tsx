@@ -10,7 +10,7 @@ const Calendly = ({
 }) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-black/50 backdrop-blur-md calendly-wrapper ${
+      className={`fixed top-0 left-0 w-full h-dvh z-[991] bg-black/50 backdrop-blur-md calendly-wrapper ${
         open
           ? "scale-100  opacity-100"
           : "scale-95 opacity-0 pointer-events-none"

@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Footer = () => {
+  const [message, setMessage] = useState({ message: "", type: "" });
   const sm = [
     {
       icons: "/assets/images/instagram.png",
@@ -46,16 +47,53 @@ const Footer = () => {
     { label: "Contact", href: "/contact" },
   ];
   const legalItems = [
-  { label: 'Privacy Policy', href: '/privacy-policy' },
-  { label: 'Terms of Service', href: '/terms-of-service' },
-  { label: 'Security', href: '/security' },
-  { label: 'Compliance', href: '/compliance' },
-];
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Security", href: "/security" },
+    { label: "Compliance", href: "/compliance" },
+  ];
 
   const [formData, setFormData] = useState({
     email: "",
   });
   const date = new Date();
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formData.email) {
+      setMessage({
+        message: "Email is required!",
+        type: "error",
+      });
+      return null;
+    }
+    try {
+      const response = await fetch("/api/newsletter", {
+        body: JSON.stringify({
+          email: formData.email,
+        }),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.json();
+      setMessage({
+        message: result.message,
+        type: response.ok ? "success" : "error",
+      });
+      if (response.ok) {
+        setFormData({
+          email: "",
+        });
+      }
+    } catch (e: unknown) {
+      console.error(e);
+      setMessage({
+        message: "Something went wrong!",
+        type: "error",
+      });
+    }
+  };
   return (
     <footer className="bg-primary-100 pt-[70px] max-tab-lg:pt-8">
       <Container>
@@ -65,14 +103,15 @@ const Footer = () => {
               Subcribe to Our Newsletter
             </h3>
             <p className="text-white text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm max-w-[637px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since.
+              Stay ahead with the latest AI automation insights, exclusive tips,
+              and success stories. Get weekly updates on cutting-edge chatbot
+              strategies, workflow optimization techniques, and special offers
+              delivered straight to your inbox.
             </p>
           </div>
 
           <div className="max-w-[870px] w-full">
-            <form className="relative">
+            <form className="relative" onSubmit={(e) => onSubmit(e)}>
               <input
                 type="email"
                 onChange={(e) =>
@@ -89,6 +128,23 @@ const Footer = () => {
                 className="absolute top-[5px] right-[5px] min-w-[240px] max-mob-lg:static max-mob-lg:w-full max-mob-lg:mt-2"
               ></Button>
             </form>
+            {message?.type == "error" && (
+              <div
+                className="p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50 "
+                role="alert"
+              >
+                <span className="font-medium">Error!</span> {message?.message}
+              </div>
+            )}
+            {message?.type == "success" && (
+              <div
+                className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50 "
+                role="alert"
+              >
+                <span className="font-medium">Success alert!</span>{" "}
+                {message?.message}
+              </div>
+            )}
           </div>
         </div>
         <div className="flex justify-between gap-10 pt-[90px] pb-[100px] max-mob-lg:py-10 max-des-4xl:flex-wrap max-mob-lg:gap-4 max-mob-lg:justify-center">
@@ -138,23 +194,23 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-             <div>
-      <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
-        Legal
-      </div>
-      <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2">
-        {legalItems.map((item, index) => (
-          <li key={index}>
-            <Link
-              href={item.href}
-              className="text-white text-lg text-left font-normal max-mob-lg:text-center leading-[1.208] max-des-4xl:text-sm max-w-[258px]"
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+          <div>
+            <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
+              Legal
+            </div>
+            <ul className="mt-[30px] space-y-5 max-mob-lg:mt-2">
+              {legalItems.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    className="text-white text-lg text-left font-normal max-mob-lg:text-center leading-[1.208] max-des-4xl:text-sm max-w-[258px]"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div>
             <div className="text-3xl font-bold leading-[1.2] text-white text-left max-mob-lg:text-xl max-mob-lg:text-center">
               Follow Us

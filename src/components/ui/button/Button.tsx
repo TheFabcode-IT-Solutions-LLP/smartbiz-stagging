@@ -7,7 +7,7 @@ const Button = ({ className, label = "Get Started", onClick, type }: ButtonType)
     <button
       onClick={onClick}
       type={type}
-      className={`text-center text-white text-xl font-medium font-inter leading-[1.2] bg-accent-100 py-[18px] px-11 rounded-4xl ${
+      className={`text-center cursor-pointer block text-white text-xl font-medium font-inter bg-accent-100 leading-[1.2] py-[18px] px-11 rounded-[100px] max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base  ${
         className || ""
       }`}
     >
