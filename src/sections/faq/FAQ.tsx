@@ -27,6 +27,18 @@ const FAQ = () => {
       content:
         "Yes, our AI solutions integrate with 200+ popular business platforms including CRMs (Salesforce, HubSpot), email marketing tools (Mailchimp, Klaviyo), e-commerce platforms (Shopify, WooCommerce), and communication tools (Slack, Microsoft Teams). We also build custom integrations for proprietary systems.",
     },
+     {
+      heading: "What about data security and privacy?",
+      content:
+        "We prioritize security with SOC 2 Type II compliance, end-to-end encryption, and GDPR/CCPA compliance. Your data is processed securely, stored in encrypted databases, and never shared with third parties. Our systems undergo regular security audits and penetration testing.",
+    },
+     
+     {
+      heading: "What ongoing support do you provide?",
+      content:
+        "We include 30 days of post-launch support with every implementation. Ongoing support includes system monitoring, performance optimization, updates, and technical assistance. We also provide training resources and documentation to ensure your team can manage the systems effectively.",
+    },
+       
   ];
   return (
     <div className="py-[50px] max-mob-lg:py-6">

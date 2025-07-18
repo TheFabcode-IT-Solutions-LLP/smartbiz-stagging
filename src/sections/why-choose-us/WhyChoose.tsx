@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 const items = [
   {
-    title: "Manual process vs AI workflow",
+    title: "The SmartBiz AI Advantage",
     children: [
       {
         title: "Manual Process",
@@ -17,7 +17,7 @@ const items = [
         ],
       },
       {
-        title: "AI workflow",
+        title: "PRICING & PACKAGES",
         active:true,
         points: [
           "Fast; AI automates tasks instantly",
@@ -88,8 +88,9 @@ const WhyChoose = () => {
     <div className="py-[50px] max-mob-lg:py-6">
       <Container>
         <h2 className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
-          Why Choose Us
+       WHY CHOOSE SMARTBIZ AI
         </h2>
+        <div className="flex flex-row">
         <div className="flex gap-[25px] justify-between mt-[50px] max-tab-lg:mt-6 max-des-2xl:gap-2.5 max-mob-md:flex-col">
           {items &&
             items.map((item) => (
@@ -147,6 +148,7 @@ const WhyChoose = () => {
                   </div>
                 )
             )}
+        </div>
         </div>
       </Container>
     </div>

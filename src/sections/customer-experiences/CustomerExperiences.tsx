@@ -29,6 +29,21 @@ const CustomerExperiences = () => {
       content:
         "Their AI-powered lead management system revolutionized our sales process. We now identify high-value prospects 3x faster, and our conversion rates improved by 45%. The ROI was clear within the first month.",
     },
+      {
+      image: "/assets/images/sarah.png",
+      auth: "Michael Rodriguez",
+      desig: "ServicePro Agency",
+      content:
+        "The AI voice assistant they developed handles all our appointment scheduling and client communications. It's like having a full-time assistant that never sleeps. Our clients are impressed, and we've reduced administrative overhead by 60%.",
+    },  
+    {
+      image: "/assets/images/sarah.png",
+      auth: "Jennifer Lee",
+      desig: " RetailFlow",
+      content:
+        "Their smart analytics dashboard gives us insights we never had before. We can predict customer behavior, optimize our inventory, and make data-driven decisions in real-time. Our operational efficiency increased by 50%.",
+    },
+      
   ];
   return (
     <div className="py-[50px] max-mob-lg:py-6">
