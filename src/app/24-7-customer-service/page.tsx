@@ -2,7 +2,16 @@ import Head from "next/head";
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: '24/7 Customer Service Solution | AI Support - Smartbizgenie',
+  description: 'Never miss another customer with 24/7 AI customer service. Instant support round-the-clock, 90% resolution rate, 70% cost savings. Get started free today.',
+  keywords:"24/7 customer service, AI customer support, round-the-clock support, always online support, 24/7 chatbot",
+    alternates: {
+      canonical: `https://smartbizgenie.com/24-7-customer-service`,
+    },
+ 
+}
 export default function CustomerService247() {
   return (
     <>
@@ -20,22 +29,24 @@ export default function CustomerService247() {
       </Head>
 
       {/* Hero Section */}
-      <section className="bg-primary-100 py-[80px] max-mob-lg:py-10 mb-[50px]">
-        <Container>
-          <div className="text-center max-w-[1200px] mx-auto">
-            <h1 className="text-[50px] font-bold text-white leading-[60px] max-tab-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
-              Never Miss Another Customer with{" "}
+  
+ <section className=" mb-[50px]">
+          <div className="text-center max-w-full w-full relative">
+            <Image  src = "/assets/images/person-surrounded-by-ai-robots-coworkers.jpg" alt = "" width = {1900} height = {1000} className="w-full max-h-[100dvh] object-cover h-full"/>
+            <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-des-xl:px-4  ">
+            <h1 className="text-[50px] font-bold text-white leading-[60px] max-tab-md:text-black max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
+                Never Miss Another Customer with{" "}
               <span className="text-accent-100">24/7 AI Support</span>
             </h1>
-            <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-tab-lg:text-xl">
+            <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl max-tab-md:text-black">
               Your Customers Don&lsquo;t Sleep. Neither Should Your Support.
             </h2>
-            <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-tab-lg:text-base">
+            <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base max-tab-md:text-black">
               Provide round-the-clock customer service without the round-the-clock costs. 
               Smartbizgenie&lsquo;s 24/7 customer service solution ensures every customer gets 
               instant, accurate support - whether it&lsquo;s 3 PM or 3 AM.
             </p>
-            <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
+           <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
               <Anchor 
                 href="/get-started" 
                 label="Start Your 24/7 Support"
@@ -44,12 +55,15 @@ export default function CustomerService247() {
               <Anchor 
                 href="/demo" 
                 label="Schedule Demo"
-                className=" bg-transparent border-2 border-white"
+                className=" bg-transparent border-2 border-white max-tab-md:bg-accent-100 max-tab-md:border-2"
               />
             </div>
+            </div>
           </div>
-        </Container>
+     
       </section>
+
+
 
       {/* True Cost Section */}
       <section className="py-[50px] max-mob-lg:py-6">
