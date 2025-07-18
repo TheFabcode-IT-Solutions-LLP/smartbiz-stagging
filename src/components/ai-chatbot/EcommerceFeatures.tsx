@@ -33,7 +33,7 @@ const ecommerceFeatures = [
 
 const EcommerceFeatures = () => {
   return (
-    <div className="bg-[#F5F5F5] py-[50px] max-mob-lg:py-6">
+    <div className="bg-[#F5F5F5] py-[40px] max-mob-lg:py-6 my-[50px]">
       <Container>
         <h2 className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl mb-[20px]">
           Built Specifically for Ecommerce Success

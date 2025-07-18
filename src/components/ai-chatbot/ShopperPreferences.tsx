@@ -34,7 +34,7 @@ const ShopperPreferences = () => {
         
         <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1 max-tab-lg:gap-[20px]">
           {shopperPreferences.map((item, index) => (
-            <div key={index} className="flex gap-[20px] items-start">
+            <div key={index} className="flex gap-[20px] items-center justify-center">
               <div className="text-[48px] max-mob-lg:text-[36px]">{item.icon}</div>
               <div>
                 <h3 className="text-[24px] font-medium leading-[100%] text-primary-100 mb-[10px] max-mob-lg:text-[18px]">

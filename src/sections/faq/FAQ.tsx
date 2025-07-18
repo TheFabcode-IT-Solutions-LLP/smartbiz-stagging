@@ -8,25 +8,37 @@ const FAQ = () => {
   const [activeAcc, setActiveTab] = useState("");
   const items = [
     {
-      heading: "Do I need a tech team to use this?",
+      heading: "What is AI workflow automation and how does it work?",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "AI workflow automation uses artificial intelligence to handle repetitive business tasks like email responses, data entry, lead qualification, and customer support. Our AI agents learn your business processes and execute them automatically, freeing your team to focus on high-value activities. The system integrates with your existing tools and can handle complex, multi-step processes.",
     },
     {
-      heading: "How secure is the data?",
+      heading: "How long does it take to implement AI automation?",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Most implementations take 2-6 weeks depending on complexity. Simple chatbots can be deployed in 1-2 weeks, while comprehensive workflow automation typically requires 3-4 weeks. Our proven methodology ensures rapid deployment without disrupting your current operations.",
     },
     {
-      heading: "What industries do you work with?",
+      heading: "What's the difference between your chatbots and generic solutions?",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Our AI chatbots are custom-built for your specific business needs, trained on your data, and integrated with your systems. Unlike generic chatbots, ours understand context, learn from interactions, and provide personalized responses. They can handle complex queries, access your CRM data, and perform actions like scheduling appointments or processing orders.",
     },
     {
-      heading: "What’s the timeline to get started?",
+      heading: "Can AI automation integrate with our existing software?",
       content:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "Yes, our AI solutions integrate with 200+ popular business platforms including CRMs (Salesforce, HubSpot), email marketing tools (Mailchimp, Klaviyo), e-commerce platforms (Shopify, WooCommerce), and communication tools (Slack, Microsoft Teams). We also build custom integrations for proprietary systems.",
     },
+     {
+      heading: "What about data security and privacy?",
+      content:
+        "We prioritize security with SOC 2 Type II compliance, end-to-end encryption, and GDPR/CCPA compliance. Your data is processed securely, stored in encrypted databases, and never shared with third parties. Our systems undergo regular security audits and penetration testing.",
+    },
+     
+     {
+      heading: "What ongoing support do you provide?",
+      content:
+        "We include 30 days of post-launch support with every implementation. Ongoing support includes system monitoring, performance optimization, updates, and technical assistance. We also provide training resources and documentation to ensure your team can manage the systems effectively.",
+    },
+       
   ];
   return (
     <div className="py-[50px] max-mob-lg:py-6">

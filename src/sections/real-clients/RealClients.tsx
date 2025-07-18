@@ -6,15 +6,15 @@ const RealClients = () => {
   const items = [
     {
       image: "/assets/images/problem.png",
-      heading: "Problem",
+      heading: "E-commerce Customer Support Revolution",
     },
     {
       image: "/assets/images/ai-solution.png",
-      heading: "AI solution",
+      heading: "SaaS Lead Generation Transformation",
     },
     {
       image: "/assets/images/outcome.png",
-      heading: "Outcome",
+      heading: "Service Business Operational Efficiency",
     },
   ];
   return (

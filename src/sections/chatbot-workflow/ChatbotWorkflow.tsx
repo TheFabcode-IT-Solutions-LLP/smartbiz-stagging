@@ -35,7 +35,7 @@ const ChatbotWorkflow = () => {
           <div className="flex flex-row justify-between max-w-[1438px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px]">
             {workSteps.map((step, index) => (
               <div key={index} className="flex flex-col items-center w-full relative">
-                <div className="w-[140px] h-[140px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[70px] max-mob-lg:h-[70px] max-tab-md:w-[85px] max-tab-md:h-[85px]">
+                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[70px] max-mob-lg:h-[70px] max-tab-md:w-[85px] max-tab-md:h-[85px]">
                   <span className="text-[48px] font-bold text-white max-mob-lg:text-[24px] max-tab-md:text-[32px]">
                     {step.number}
                   </span>

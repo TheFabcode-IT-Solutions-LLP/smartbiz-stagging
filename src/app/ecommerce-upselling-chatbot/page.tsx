@@ -1,24 +1,23 @@
 import Head from "next/head";
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
-import Image from "next/image";
+import { Metadata } from "next";
 
-export default function EcommerceUpsellingChatbot() {
+
+export const metadata: Metadata = {
+  title: 'Ecommerce Upselling Chatbot | +45% Revenue - Smartbizgenie',
+  description: 'AI-powered upselling chatbot for ecommerce. Increase average order value by 45% with smart product recommendations. Proven ROI in 30 days. Try it free!',
+  keywords:"ecommerce upselling chatbot, AI upselling, increase order value, product recommendations, ecommerce revenue",
+    alternates: {
+      canonical: `https://smartbizgenie.com/ecommerce-upselling-chatbot`,
+    },
+  
+}
+ 
+
+export default function page() {
   return (
     <>
-      <Head>
-        <title>Ecommerce Upselling Chatbot | +45% Revenue - Smartbizgenie</title>
-        <meta
-          name="description"
-          content="AI-powered upselling chatbot for ecommerce. Increase average order value by 45% with smart product recommendations. Proven ROI in 30 days. Try it free!"
-        />
-        <meta
-          name="keywords"
-          content="ecommerce upselling chatbot, AI upselling, increase order value, product recommendations, ecommerce revenue"
-        />
-        <link rel="canonical" href="https://smartbiz-six.vercel.app/ecommerce-upselling-chatbot" />
-      </Head>
-
       {/* Hero Section */}
       <section className="bg-primary-100 py-[80px] max-mob-lg:py-10">
         <Container>
@@ -44,7 +43,7 @@ export default function EcommerceUpsellingChatbot() {
               <Anchor 
                 href="/get-started" 
                 label="Start Free Trial"
-                className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100"
+                className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100"
               />
             </div>
           </div>
@@ -381,7 +380,7 @@ export default function EcommerceUpsellingChatbot() {
               <Anchor 
                 href="/get-started" 
                 label="Start Free Trial"
-                className="w-full text-center"
+                className="w-full text-center "
               />
             </div>
             <div className="bg-accent-100 rounded-[20px] p-[40px] text-center transform scale-105 max-mob-lg:p-[20px] max-tab-lg:scale-100">
@@ -402,7 +401,7 @@ export default function EcommerceUpsellingChatbot() {
               <Anchor 
                 href="/get-started" 
                 label="Start Free Trial"
-                className="w-full text-center bg-white text-primary-100 hover:bg-gray-100"
+                className="w-full text-center bg-white !text-accent-100 hover:bg-gray-100"
               />
             </div>
             <div className="bg-white rounded-[20px] p-[40px] text-center max-mob-lg:p-[20px]">
@@ -451,7 +450,7 @@ export default function EcommerceUpsellingChatbot() {
               <Anchor 
                 href="/consultation" 
                 label="Book Consultation"
-                className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100 text-primary-100"
+                className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100 !text-primary-100"
               />
             </div>
           </div>
