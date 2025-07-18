@@ -11,22 +11,21 @@ import MultiColumn from "@/sections/multicolumns/MultiColumn";
 import RealClients from "@/sections/real-clients/RealClients";
 import Trusted from "@/sections/trusted/Trusted";
 import WhyChoose from "@/sections/why-choose-us/WhyChoose";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: 'AI Workflow Automation & Custom Chatbots for Business Growth | SmartBiz AI',
+  description: 'Transform your business with AI workflow automation, custom chatbots, smart analytics, and voice assistants. Automate emails, tasks, leads, and customer support with proven results.',
+  keywords:"AI workflow automation, custom AI chatbots, business automation, ecommerce chatbot, WhatsApp AI chatbot, AI voice assistant, smart analytics, lead management",
+    alternates: {
+      canonical: `https://smartbizgenie.com`,
+    },
+    icons: "/assets/icon/favicon.jfif"
+ 
+}
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>AI Workflow Automation & Custom Chatbots for Business Growth | SmartBiz AI</title>
-        <meta
-          name="description"
-          content="Transform your business with AI workflow automation, custom chatbots, smart analytics, and voice assistants. Automate emails, tasks, leads, and customer support with proven results."
-        />
-        <meta
-          name="keywords"
-          content="AI workflow automation, custom AI chatbots, business automation, ecommerce chatbot, WhatsApp AI chatbot, AI voice assistant, smart analytics, lead management"
-        />
-        <link rel="canonical" href="https://smartbiz-six.vercel.app/" />
-      </Head>
+     
 
       <div>
         <Banner />

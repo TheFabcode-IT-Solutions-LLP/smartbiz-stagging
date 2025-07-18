@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
+
     
       {/* Hero Section */}
       <section className=" mb-[50px]">

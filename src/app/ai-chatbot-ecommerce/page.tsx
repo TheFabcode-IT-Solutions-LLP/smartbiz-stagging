@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import AiChatbotHero from "@/components/ai-chatbot/AiChatbotHero";
 import ShopperPreferences from "@/components/ai-chatbot/ShopperPreferences";
 import EcommerceFeatures from "@/components/ai-chatbot/EcommerceFeatures";
@@ -20,6 +20,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
+    
       <div>
         <AiChatbotHero />
         <ShopperPreferences />

@@ -119,7 +119,7 @@ const WhyChoose = () => {
           WHY CHOOSE SMARTBIZ AI
         </h2>
 
-        <div className="flex flex-row gap-20 mt-[50px] max-mob-lg:flex-col justify-center">
+        <div className="flex flex-row gap-20 mt-[50px] max-mob-lg:flex-col max-mob-lg:gap-10 justify-center">
           <div className="flex flex-col gap-[25px] max-des-2xl:gap-2.5 justify-center">
             {items.map((item) => (
               <button
