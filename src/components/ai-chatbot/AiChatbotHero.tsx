@@ -42,7 +42,7 @@ const AiChatbotHero = () => {
         <Anchor 
           href="/demo" 
           label="See Demo"
-          className="bg-transparent border-2"
+          className="bg-transparent border-2 max-tab-lg:border-accent-100 max-tab-lg:bg-accent-100"
         />
       </div>
     </div>

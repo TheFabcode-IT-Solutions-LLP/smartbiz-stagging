@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
@@ -17,18 +17,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-     <Head>
-        <title>Automated Customer Support | Cut Costs by 70% - Smartbizgenie</title>
-        <meta
-          name="description"
-          content="Automate customer support with AI. Handle 1000s of queries instantly, reduce response time to seconds, save 70% on support costs. Start free trial today."
-        />
-        <meta
-          name="keywords"
-          content="automated customer support, AI customer service, customer support automation, reduce support costs, 24/7 customer service"
-        />
-        <link rel="canonical" href="https://smartbiz-six.vercel.app/automated-customer-support" />
-      </Head>
+
     
       {/* Hero Section */}
       <section className=" mb-[50px]">

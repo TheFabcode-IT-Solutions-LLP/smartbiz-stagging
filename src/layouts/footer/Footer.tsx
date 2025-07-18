@@ -337,7 +337,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="bg-[#F5F5F5] py-3 px-3 rounded-2xl">
+          <div className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
             <button
               onClick={() => toggleSection("quickLinks")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-xl sm:hidden "

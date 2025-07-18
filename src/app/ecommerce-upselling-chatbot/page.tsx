@@ -1,7 +1,8 @@
-import Head from "next/head";
+
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import { Metadata } from "next";
+import Image from "next/image";
 
 
 export const metadata: Metadata = {
@@ -19,8 +20,10 @@ export default function page() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-primary-100 py-[80px] max-mob-lg:py-10">
-        <Container>
+      <section className="bg-primary-100 ">
+        <div className="text-center max-w-full w-full relative">
+                    <Image  src = "/assets/images/ecommerce.jpg" alt = "" width = {1900} height = {1000} className="w-full max-h-[100dvh] object-cover h-full"/>
+        <Container className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4">
           <div className="text-center max-w-[1200px] mx-auto">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               The Ecommerce Upselling Chatbot That{" "}
@@ -43,11 +46,12 @@ export default function page() {
               <Anchor 
                 href="/get-started" 
                 label="Start Free Trial"
-                className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100"
+                className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-white"
               />
             </div>
           </div>
         </Container>
+        </div>
       </section>
 
       {/* Science of Smart Upselling Section */}
