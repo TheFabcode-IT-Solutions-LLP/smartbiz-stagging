@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Footer = () => {
+  const [message, setMessage] = useState({ message: "", type: "" });
   const sm = [
     {
       icons: "/assets/images/instagram.png",
@@ -65,7 +66,43 @@ const Footer = () => {
   };
 
   const date = new Date();
-
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formData.email) {
+      setMessage({
+        message: "Email is required!",
+        type: "error",
+      });
+      return null;
+    }
+    try {
+      const response = await fetch("/api/newsletter", {
+        body: JSON.stringify({
+          email: formData.email,
+        }),
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const result = await response.json();
+      setMessage({
+        message: result.message,
+        type: response.ok ? "success" : "error",
+      });
+      if (response.ok) {
+        setFormData({
+          email: "",
+        });
+      }
+    } catch (e: unknown) {
+      console.error(e);
+      setMessage({
+        message: "Something went wrong!",
+        type: "error",
+      });
+    }
+  };
   return (
     <footer className="bg-primary-100 pt-[70px] max-tab-lg:pt-8">
       <Container>
@@ -75,14 +112,16 @@ const Footer = () => {
             <h3 className="text-white text-[40px] text-left font-bold leading-[70px] max-des-4xl:text-2xl max-mob-lg:leading-[2]">
               Subcribe to Our Newsletter
             </h3>
-            <p className="text-white text-lg text-left font-normal leading-[1.208] max-des-4xl:text-sm max-w-[637px]">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            <p className="text-white text-lg text-left font-normal leading-[1.208]  max-des-4xl:text-sm max-w-[637px]">
+              Stay ahead with the latest AI automation insights, exclusive tips,
+              and success stories. Get weekly updates on cutting-edge chatbot
+              strategies, workflow optimization techniques, and special offers
+              delivered straight to your inbox.
             </p>
           </div>
 
           <div className="max-w-[870px] w-full">
-            <form className="relative">
+            <form className="relative" onSubmit={(e) => onSubmit(e)}>
               <input
                 type="email"
                 onChange={(e) =>
@@ -99,6 +138,23 @@ const Footer = () => {
                 className="absolute top-[5px] right-[5px] min-w-[240px] max-mob-lg:static max-mob-lg:w-full max-mob-lg:mt-2"
               />
             </form>
+            {message?.type == "error" && (
+              <div
+                className="p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50 "
+                role="alert"
+              >
+                <span className="font-medium">Error!</span> {message?.message}
+              </div>
+            )}
+            {message?.type == "success" && (
+              <div
+                className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50 "
+                role="alert"
+              >
+                <span className="font-medium">Success alert!</span>{" "}
+                {message?.message}
+              </div>
+            )}
           </div>
         </div>
 

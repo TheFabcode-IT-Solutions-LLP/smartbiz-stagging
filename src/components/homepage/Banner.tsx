@@ -1,8 +1,11 @@
+'use client';
 import React from "react";
 
 import Button from "../ui/button/Button";
 import Anchor from "../ui/Anchor/Anchor";
+import { useTheme } from "@/contexts/ThemeContext";
 const Banner = () => {
+    const { toggleModal } = useTheme();
   return (
     <div className="relative pb-[50px] max-mob-lg:pb-6">
       <video
@@ -20,22 +23,21 @@ const Banner = () => {
           Scale Your Business with AI Workflow Automation {''}
             <span className="text-accent-100 ">That Actually Works</span>
           </h1>
-   
+
           <div className="max-mob-lg:text-center">
-            <h2 className="text-[34px]  font-normal leading-[100%] tracking-[0%] text-white max-des-4xl:text-lg max-mob-lg:text-xl  max-tab-md:text-black">
-             Custom AI Chatbots, Smart Analytics & Voice Assistants Built for Scale - Trusted by 50+ Growing Businesses
+            <h2 className="text-[34px]  font-normal leading-[100%] tracking-[0%] text-white max-des-4xl:text-lg max-mob-lg:text-xl max-mob-lg:text-black">
+              Custom AI Chatbots, Smart Analytics & Voice Assistants Built for
+              Scale - Trusted by 50+ Growing Businesses
             </h2>
           </div>
         </div>
-        <div className=" max-tab-md:flex max-mob-lg:gap-[20px] max-tab-lg:mt-[20px] mt-[40px] max-mob-lg:justify-center max-tab-lg:flex-wrap flex-row gap-[35px] max-tab-lg:gap-[20px] flex">
-          <Anchor href = "/"
+        <div className=" max-mob-lg:flex max-mob-lg:gap-[20px] max-tab-lg:mt-[20px] mt-[40px] max-mob-lg:justify-center max-tab-lg:flex-wrap flex-row gap-[35px] max-tab-lg:gap-[0px] flex">
+          <Button
+            onClick={() => toggleModal(true)}
             label="Schedule a Free AI Consultation"
             className=""
-          ></Anchor>
-           <Anchor href = "/"
-            label="Watch a Demo"
-            className="  "
-          ></Anchor>
+          />
+          <Anchor href="/" label="Watch a Demo" className="  "></Anchor>
         </div>
       </div>
     </div>
