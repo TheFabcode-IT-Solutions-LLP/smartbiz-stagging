@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <div className="relative pb-[50px] max-mob-lg:pb-6">
       <video
-        className="w-full h-auto"
+        className="w-full h-auto max-h-[100dvh] object-cover"
         src="/assets/images/Banner.mp4"
         autoPlay
         muted
@@ -27,14 +27,14 @@ const Banner = () => {
             </h2>
           </div>
         </div>
-        <div className=" max-mob-lg:flex max-mob-lg:justify-center max-tab-lg:flex-wrap flex-row gap-[40px] max-tab-lg:gap-[0px] flex">
+        <div className=" max-mob-lg:flex max-mob-lg:gap-[20px] max-tab-lg:mt-[20px] mt-[40px] max-mob-lg:justify-center max-tab-lg:flex-wrap flex-row gap-[35px] max-tab-lg:gap-[0px] flex">
           <Anchor href = "/"
             label="Schedule a Free AI Consultation"
-            className="mt-[40px] px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:mt-[20px] max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
+            className=""
           ></Anchor>
            <Anchor href = "/"
             label="Watch a Demo"
-            className="mt-[40px] px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:mt-[20px] max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
+            className="  "
           ></Anchor>
         </div>
       </div>

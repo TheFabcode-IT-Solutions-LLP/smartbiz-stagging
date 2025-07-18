@@ -13,7 +13,7 @@ const ImageWithText = () => {
       <div className="bg-primary-100 rounded-[20px] w-full p-[45px] pl-[74px] flex  items-center justify-between gap-6 max-tab-md:p-10 max-tab-md:flex-col-reverse max-mob-lg:p-4 max-mob-lg:p-6">
         <div>
           <h2 className=" text-white text-[40px] font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
-            Built for Businesses Like Yours
+          Are These Business Challenges Holding You Back?
           </h2>
           <ul className="grid gap-10 mt-[50px] max-des-4xl:gap-5 max-des-4xl:mt-6">
 

@@ -10,7 +10,7 @@ const metrics = [
 
 const ChatbotMetrics = () => {
   return (
-    <div className="bg-accent-100 py-[50px] max-mob-lg:py-6">
+    <div className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
       <Container>
         <h2 className="text-[40px] font-bold leading-[1.2] text-center text-white max-des-3xl:text-2xl mb-[50px] max-mob-lg:mb-6">
           Key Performance Metrics:
