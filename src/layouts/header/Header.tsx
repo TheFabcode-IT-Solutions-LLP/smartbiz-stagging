@@ -20,32 +20,32 @@ const Header = ({ className }: { className?: string }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  const navigation = [
-    {
-      label: "Home",
-      link: "/",
-    },
-    {
-      label: "About",
-      link: "/about",
-    },
-    {
-      label: "Services",
-      link: "/services",
-    },
-    {
-      label: "Work",
-      link: "/work",
-    },
-    {
-      label: "Our Clients",
-      link: "/clients",
-    },
-    {
-      label: "Contact",
-      link: "/contact",
-    },
-  ];
+    const navigation = [
+      {
+        label: "Home",
+        link: "/",
+      },
+      {
+        label: "About",
+        link: "/about",
+      }, 
+          {
+        label: "Services",
+        link: "/services",
+      },
+      {
+        label: "Work",
+        link: "/work",
+      },
+      {
+        label: "Our Clients",
+        link: "/clients",
+      },
+      {
+        label: "Contact",
+        link: "/contact",
+      },
+    ];
   return (
     <header
       className={`${path == '/' ? 'fixed' : 'sticky bg-primary-100'} py-5 top-0 border-b border-white w-full z-[99] max-tab-lg:py-2 transition-colors duration-200 ${scrolled ? 'bg-primary-100' : ''} ${
