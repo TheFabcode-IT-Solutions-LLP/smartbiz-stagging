@@ -1,20 +1,18 @@
-
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import { Metadata } from "next";
 import Image from "next/image";
 
-
 export const metadata: Metadata = {
-  title: 'Ecommerce Upselling Chatbot | +45% Revenue - Smartbizgenie',
-  description: 'AI-powered upselling chatbot for ecommerce. Increase average order value by 45% with smart product recommendations. Proven ROI in 30 days. Try it free!',
-  keywords:"ecommerce upselling chatbot, AI upselling, increase order value, product recommendations, ecommerce revenue",
-    alternates: {
-      canonical: `https://smartbizgenie.com/ecommerce-upselling-chatbot`,
-    },
-  
-}
- 
+  title: "Ecommerce Upselling Chatbot | +45% Revenue - Smartbizgenie",
+  description:
+    "AI-powered upselling chatbot for ecommerce. Increase average order value by 45% with smart product recommendations. Proven ROI in 30 days. Try it free!",
+  keywords:
+    "ecommerce upselling chatbot, AI upselling, increase order value, product recommendations, ecommerce revenue",
+  alternates: {
+    canonical: `https://smartbizgenie.com/ecommerce-upselling-chatbot`,
+  },
+};
 
 export default function page() {
   return (
@@ -22,35 +20,44 @@ export default function page() {
       {/* Hero Section */}
       <section className="bg-primary-100 ">
         <div className="text-center max-w-full w-full relative">
-                    <Image  src = "/assets/images/ecommerce.jpg" alt = "" width = {1900} height = {1000} className="w-full max-h-[100dvh] object-cover h-full"/>
-        <Container className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4">
-          <div className="text-center max-w-[1200px] mx-auto">
-            <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
-              The Ecommerce Upselling Chatbot That{" "}
-              <span className="text-accent-100">Pays for Itself</span>
-            </h1>
-            <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
-              Increase Average Order Value by 45% with AI-Powered Recommendations
-            </h2>
-            <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
-              Turn every conversation into a sales opportunity. Smartbizgenie&apos;s ecommerce upselling chatbot 
-              uses advanced AI to suggest the perfect products at the perfect moment, driving revenue while 
-              enhancing customer experience.
-            </p>
-            <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
-              <Anchor 
-                href="/demo" 
-                label="Watch Demo Video"
-                className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
-              />
-              <Anchor 
-                href="/get-started" 
-                label="Start Free Trial"
-                className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-white"
-              />
+          <Image
+            src="/assets/images/ecommerce.jpg"
+            alt=""
+            width={1900}
+            height={1000}
+            className="w-full max-h-[100dvh] object-cover h-full"
+          />
+           <div className="absolute inset-0 bg-primary-100/30 z-10"></div>
+          <Container className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4">
+            <div className="text-center max-w-[1200px] mx-auto">
+              <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
+                The Ecommerce Upselling Chatbot That{" "}
+                <span className="text-accent-100">Pays for Itself</span>
+              </h1>
+              <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
+                Increase Average Order Value by 45% with AI-Powered
+                Recommendations
+              </h2>
+              <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
+                Turn every conversation into a sales opportunity.
+                Smartbizgenie&apos;s ecommerce upselling chatbot uses advanced
+                AI to suggest the perfect products at the perfect moment,
+                driving revenue while enhancing customer experience.
+              </p>
+              <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
+                <Anchor
+                  href="/demo"
+                  label="Watch Demo Video"
+                  className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
+                />
+                <Anchor
+                  href="/get-started"
+                  label="Start Free Trial"
+                  className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-white"
+                />
+              </div>
             </div>
-          </div>
-        </Container>
+          </Container>
         </div>
       </section>
 
@@ -130,19 +137,27 @@ export default function page() {
               <ul className="space-y-[15px]">
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Analyze browsing patterns</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Analyze browsing patterns
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Understand purchase intent</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Understand purchase intent
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Identify upsell opportunities</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Identify upsell opportunities
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Time suggestions perfectly</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Time suggestions perfectly
+                  </span>
                 </li>
               </ul>
             </div>
@@ -154,19 +169,27 @@ export default function page() {
               <ul className="space-y-[15px]">
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Complementary item suggestions</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Complementary item suggestions
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Bundle recommendations</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Bundle recommendations
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Size/color variants</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Size/color variants
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Premium alternatives</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Premium alternatives
+                  </span>
                 </li>
               </ul>
             </div>
@@ -178,19 +201,27 @@ export default function page() {
               <ul className="space-y-[15px]">
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Based on cart contents</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Based on cart contents
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Previous purchases</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Previous purchases
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Seasonal trends</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Seasonal trends
+                  </span>
                 </li>
                 <li className="flex items-center gap-[10px]">
                   <span className="w-[8px] h-[8px] bg-accent-100 rounded-full flex-shrink-0"></span>
-                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">Stock levels</span>
+                  <span className="text-white text-[18px] max-mob-lg:text-[14px]">
+                    Stock levels
+                  </span>
                 </li>
               </ul>
             </div>
@@ -213,22 +244,34 @@ export default function page() {
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">📈</span>
                   <div>
-                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">52% increase</span>
-                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">in average order value</span>
+                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">
+                      52% increase
+                    </span>
+                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">
+                      in average order value
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">🛒</span>
                   <div>
-                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">3.2 items</span>
-                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">per order (up from 1.8)</span>
+                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">
+                      3.2 items
+                    </span>
+                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">
+                      per order (up from 1.8)
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">💰</span>
                   <div>
-                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">$240,000</span>
-                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">additional revenue in 6 months</span>
+                    <span className="text-[24px] font-bold text-white max-mob-lg:text-[18px]">
+                      $240,000
+                    </span>
+                    <span className="text-[18px] text-white/90 ml-2 max-mob-lg:text-[14px]">
+                      additional revenue in 6 months
+                    </span>
                   </div>
                 </div>
               </div>
@@ -241,22 +284,34 @@ export default function page() {
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">📱</span>
                   <div>
-                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">68% of customers</span>
-                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">accepted accessory suggestions</span>
+                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">
+                      68% of customers
+                    </span>
+                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">
+                      accepted accessory suggestions
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">🔋</span>
                   <div>
-                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">$85</span>
-                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">average upsell value</span>
+                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">
+                      $85
+                    </span>
+                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">
+                      average upsell value
+                    </span>
                   </div>
                 </div>
                 <div className="flex items-center gap-[15px]">
                   <span className="text-[32px]">⭐</span>
                   <div>
-                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">4.8/5</span>
-                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">customer satisfaction rating</span>
+                    <span className="text-[24px] font-bold text-primary-100 max-mob-lg:text-[18px]">
+                      4.8/5
+                    </span>
+                    <span className="text-[18px] text-primary-100/80 ml-2 max-mob-lg:text-[14px]">
+                      customer satisfaction rating
+                    </span>
                   </div>
                 </div>
               </div>
@@ -274,41 +329,65 @@ export default function page() {
           <div className="flex justify-between max-w-[1200px] mx-auto max-mob-lg:flex-col max-mob-lg:gap-[40px]">
             <div className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">1</span>
+                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
+                  1
+                </span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[15px] max-mob-lg:text-[18px]">
                 Welcome & Engage
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Greet visitors personally</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Understand their needs</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Build trust naturally</li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Greet visitors personally
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Understand their needs
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Build trust naturally
+                </li>
               </ul>
             </div>
             <div className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">2</span>
+                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
+                  2
+                </span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[15px] max-mob-lg:text-[18px]">
                 Analyze & Recommend
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Study shopping behavior</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Identify opportunities</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Suggest relevant products</li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Study shopping behavior
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Identify opportunities
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Suggest relevant products
+                </li>
               </ul>
             </div>
             <div className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">3</span>
+                <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
+                  3
+                </span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[15px] max-mob-lg:text-[18px]">
                 Convert & Delight
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Present irresistible offers</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Handle objections smoothly</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Close sales effortlessly</li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Present irresistible offers
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Handle objections smoothly
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Close sales effortlessly
+                </li>
               </ul>
             </div>
           </div>
@@ -328,10 +407,18 @@ export default function page() {
                 Visual Product Showcase
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Rich media presentations</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• 360° product views</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Comparison tools</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Size guides</li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Rich media presentations
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • 360° product views
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Comparison tools
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Size guides
+                </li>
               </ul>
             </div>
             <div className="text-center">
@@ -340,10 +427,18 @@ export default function page() {
                 Dynamic Bundling
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Create custom packages</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Offer bundle discounts</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Show savings clearly</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Limited-time offers</li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Create custom packages
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Offer bundle discounts
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Show savings clearly
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Limited-time offers
+                </li>
               </ul>
             </div>
             <div className="text-center">
@@ -352,10 +447,18 @@ export default function page() {
                 Performance Analytics
               </h3>
               <ul className="text-left inline-block space-y-[10px]">
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Track upsell success rates</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• Identify best-performing products</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• A/B test strategies</li>
-                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">• ROI measurement</li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Track upsell success rates
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Identify best-performing products
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • A/B test strategies
+                </li>
+                <li className="text-[18px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • ROI measurement
+                </li>
               </ul>
             </div>
           </div>
@@ -374,15 +477,24 @@ export default function page() {
                 Starter Plan
               </h3>
               <div className="text-[48px] font-bold text-accent-100 mb-[20px] max-mob-lg:text-[36px]">
-                $299<span className="text-[24px] font-normal max-mob-lg:text-[18px]">/month</span>
+                $299
+                <span className="text-[24px] font-normal max-mob-lg:text-[18px]">
+                  /month
+                </span>
               </div>
               <ul className="space-y-[15px] text-left mb-[30px]">
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Up to 5,000 conversations</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Basic upselling features</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Standard analytics</li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Up to 5,000 conversations
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Basic upselling features
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Standard analytics
+                </li>
               </ul>
-              <Anchor 
-                href="/get-started" 
+              <Anchor
+                href="/get-started"
                 label="Start Free Trial"
                 className="w-full text-center "
               />
@@ -395,15 +507,24 @@ export default function page() {
                 Growth Plan
               </h3>
               <div className="text-[48px] font-bold text-white mb-[20px] max-mob-lg:text-[36px]">
-                $599<span className="text-[24px] font-normal max-mob-lg:text-[18px]">/month</span>
+                $599
+                <span className="text-[24px] font-normal max-mob-lg:text-[18px]">
+                  /month
+                </span>
               </div>
               <ul className="space-y-[15px] text-left mb-[30px]">
-                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">• Up to 20,000 conversations</li>
-                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">• Advanced AI recommendations</li>
-                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">• Premium analytics</li>
+                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">
+                  • Up to 20,000 conversations
+                </li>
+                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">
+                  • Advanced AI recommendations
+                </li>
+                <li className="text-[16px] text-white/90 max-mob-lg:text-[14px]">
+                  • Premium analytics
+                </li>
               </ul>
-              <Anchor 
-                href="/get-started" 
+              <Anchor
+                href="/get-started"
                 label="Start Free Trial"
                 className="w-full text-center bg-white !text-accent-100 hover:bg-gray-100"
               />
@@ -416,12 +537,18 @@ export default function page() {
                 Custom
               </div>
               <ul className="space-y-[15px] text-left mb-[30px]">
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Unlimited conversations</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Custom integrations</li>
-                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">• Dedicated support</li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Unlimited conversations
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Custom integrations
+                </li>
+                <li className="text-[16px] text-primary-100/80 max-mob-lg:text-[14px]">
+                  • Dedicated support
+                </li>
               </ul>
-              <Anchor 
-                href="/contact" 
+              <Anchor
+                href="/contact"
                 label="Contact Sales"
                 className="w-full text-center"
               />
@@ -438,21 +565,22 @@ export default function page() {
               See It In Action
             </h2>
             <p className="text-[24px] text-primary-100/80 mb-[40px] max-w-[800px] mx-auto max-mob-lg:text-[18px]">
-              Watch how our upselling chatbot increased this store&apos;s revenue by 45% in just 30 days.
+              Watch how our upselling chatbot increased this store&apos;s
+              revenue by 45% in just 30 days.
             </p>
             <div className="flex justify-center gap-[20px] flex-wrap">
-              <Anchor 
-                href="/demo" 
+              <Anchor
+                href="/demo"
                 label="Watch Demo Video"
                 className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
               />
-              <Anchor 
-                href="/get-started" 
+              <Anchor
+                href="/get-started"
                 label="Start Free Trial"
                 className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-primary-100 text-white border-2 border-primary-100"
               />
-              <Anchor 
-                href="/consultation" 
+              <Anchor
+                href="/consultation"
                 label="Book Consultation"
                 className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100 !text-primary-100"
               />

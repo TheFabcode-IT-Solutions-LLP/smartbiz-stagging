@@ -174,43 +174,41 @@ const Footer = () => {
           <div className="sm:hidden bg-[#F5F5F5] py-3 px-3 rounded-2xl">
             <button
               onClick={() => toggleSection("services")}
-              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-xl "
+              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base "
             >
               Services
-           <span>
-  {open.services ? (
-    // Up arrow SVG
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  ) : (
- 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  )}
-</span>
-
+              <span>
+                {open.services ? (
+                 
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                )}
+              </span>
             </button>
             {open.services && (
               <ul className="mt-[20px] space-y-3">
@@ -267,43 +265,42 @@ const Footer = () => {
           <div className="sm:hidden bg-[#F5F5F5]  py-3 px-3 rounded-2xl ">
             <button
               onClick={() => toggleSection("legal")}
-              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-xl  "
+              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base  "
             >
               Legal
-             <span>
-  {open.legal ? (
-    // Up arrow SVG
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="12"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  ) : (
-    // Down arrow SVG
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  )}
-</span>
-
+              <span>
+                {open.legal ? (
+                  // Up arrow SVG
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                ) : (
+                  // Down arrow SVG
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                )}
+              </span>
             </button>
             {open.legal && (
               <ul className="mt-[20px] space-y-3">
@@ -340,43 +337,40 @@ const Footer = () => {
           <div className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
             <button
               onClick={() => toggleSection("quickLinks")}
-              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-xl sm:hidden "
+              className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base sm:hidden "
             >
               Quick Links
               <span>
-  {open.quickLinks ? (
- 
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  ) : (
-  
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  )}
-</span>
-
+                {open.quickLinks ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="18 15 12 9 6 15" />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                )}
+              </span>
             </button>
             {open.quickLinks && (
               <ul className="mt-[20px] space-y-3">
