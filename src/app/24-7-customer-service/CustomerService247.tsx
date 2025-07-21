@@ -24,7 +24,7 @@ export default function CustomerService247() {
         className="w-full h-full object-cover max-h-[100dvh]"
       />
    
-      <div className="absolute inset-0 bg-primary-100/50 z-10"></div>
+      <div className="absolute inset-0 bg-primary-100/50 z-10 max-tab-md:hidden"></div>
     </div>
 
     <Container className="absolute z-20 bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2 max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">

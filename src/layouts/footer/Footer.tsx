@@ -51,19 +51,12 @@ const Footer = () => {
     quickLinks: false,
     legal: false,
   });
-
-  // ✅ Accordion logic: only one open at a time
-  const toggleSection = (section: keyof typeof open) => {
-    setOpen((prev) => {
-      const isAlreadyOpen = prev[section];
-      return {
-        services: false,
-        quickLinks: false,
-        legal: false,
-        [section]: !isAlreadyOpen,
-      };
-    });
-  };
+const toggleSection = (section: keyof typeof open) => {
+  setOpen((prev) => ({
+    ...prev,
+    [section]: !prev[section],
+  }));
+};
 
   const date = new Date();
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -270,7 +263,7 @@ const Footer = () => {
               Legal
               <span>
                 {open.legal ? (
-                  // Up arrow SVG
+      
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -285,7 +278,7 @@ const Footer = () => {
                     <polyline points="18 15 12 9 6 15" />
                   </svg>
                 ) : (
-                  // Down arrow SVG
+ 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
