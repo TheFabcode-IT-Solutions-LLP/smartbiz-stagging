@@ -9,6 +9,7 @@ export default function HowItWorksContent() {
       {/* Hero Section */}
       <section className="mb-[50px] bg-primary-100">
         <div className="text-center max-w-full w-full relative pb-[50px]">
+          <div className="relative w-full  max-h-[100dvh]">
           <Image
             src="/assets/images/How it work.jpg"
             alt="Business owner learning how AI workflow automation works step by step"
@@ -17,7 +18,8 @@ export default function HowItWorksContent() {
             className="w-full max-h-[100dvh] object-cover h-full"
             loading="eager"
           />
-           
+          <div className="absolute inset-0 bg-primary-100/50 " />
+           </div>
           <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               How AI Workflow Automation Works:{" "}
@@ -30,7 +32,7 @@ export default function HowItWorksContent() {
               Discover our proven process that transforms manual tasks into automated workflows. 
               No technical skills needed - we handle everything while you focus on growing your business.
             </p>
-            <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
+            <div className="flex gap-[35px] justify-center max-tab-lg:mt-[32] mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
               <Anchor
                 href="/get-started"
                 label="Start Your Automation"
@@ -110,7 +112,7 @@ export default function HowItWorksContent() {
       </section>
 
       {/* Detailed Process Section */}
-      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6">
+      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             The Complete Workflow Automation Process
@@ -121,7 +123,7 @@ export default function HowItWorksContent() {
             <div className="flex items-center gap-[40px] max-tab-lg:flex-col">
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
-                  <div className="w-[80px] h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
+                  <div className="w-[80px] aspect-square h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
                     <span className="text-[36px] font-bold text-white">1</span>
                   </div>
                   <h3 className="text-[32px] font-bold text-white max-mob-lg:text-[24px]">
@@ -187,7 +189,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
-                  <div className="w-[80px] h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
+                  <div className="w-[80px] h-[80px] aspect-square bg-accent-100 rounded-full flex items-center justify-center">
                     <span className="text-[36px] font-bold text-white">2</span>
                   </div>
                   <h3 className="text-[32px] font-bold text-white max-mob-lg:text-[24px]">
@@ -233,7 +235,7 @@ export default function HowItWorksContent() {
             <div className="flex items-center gap-[40px] max-tab-lg:flex-col">
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
-                  <div className="w-[80px] h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
+                  <div className="w-[80px] h-[80px] aspect-square bg-accent-100 rounded-full flex items-center justify-center">
                     <span className="text-[36px] font-bold text-white">3</span>
                   </div>
                   <h3 className="text-[32px] font-bold text-white max-mob-lg:text-[24px]">
@@ -299,7 +301,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
-                  <div className="w-[80px] h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
+                  <div className="w-[80px] h-[80px] aspect-square bg-accent-100 rounded-full flex items-center justify-center">
                     <span className="text-[36px] font-bold text-white">4</span>
                   </div>
                   <h3 className="text-[32px] font-bold text-white max-mob-lg:text-[24px]">
@@ -352,7 +354,7 @@ export default function HowItWorksContent() {
             <div className="flex flex-row justify-between max-w-[1200px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px] gap-3">
               <div className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
-                  <span className="text-[20px] font-bold text-white max-mob-lg:text-[20px]">
+                  <span className="text-[20px] font-bold text-white max-mob-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 1
                   </span>
                 </div>
@@ -365,7 +367,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
-                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 2-3
                   </span>
                 </div>
@@ -378,7 +380,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
-                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 4
                   </span>
                 </div>
@@ -391,7 +393,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
-                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 5
                   </span>
                 </div>
@@ -408,7 +410,7 @@ export default function HowItWorksContent() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="bg-accent-100 py-[50px] max-mob-lg:py-6">
+      <section className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Real Results from Our Process
@@ -454,7 +456,7 @@ export default function HowItWorksContent() {
             What Makes Our Process Different
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1">
-            <div className="flex gap-[20px] items-start">
+            <div className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🎯</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -467,7 +469,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-start">
+            <div className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🤝</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -480,7 +482,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-start">
+            <div className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">⚡</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -493,7 +495,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-start">
+            <div className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🔒</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -520,7 +522,7 @@ export default function HowItWorksContent() {
               Join 50+ businesses who&apos;ve transformed their operations with our proven workflow automation process. 
               Get started with a free consultation today.
             </p>
-            <div className="bg-accent-200 text-primary-100 text-[20px] font-bold px-[30px] py-[15px] rounded-full inline-block mb-[40px] max-mob-lg:text-[16px]">
+            <div className="bg-accent-200 text-primary-100 text-[20px] font-bold px-[30px] py-[15px] rounded-full inline-block mb-[40px] max-mob-md:mb-[30px] max-mob-lg:text-[16px]">
               Free Consultation + Custom Automation Plan Included
             </div>
             <div className="flex justify-center gap-[20px] flex-wrap">

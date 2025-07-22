@@ -20,12 +20,10 @@ export const metadata: Metadata = {
   description:
     "Transform your business with AI workflow automation, custom chatbots, smart analytics, and voice assistants. Automate emails, tasks, leads, and customer support with proven results.",
   icons: "/assets/icon/favicon.jfif",
-  verification :{
-    google: "kohfPFhP66g6ycnzYmw3wcSIMXjv29sxwgwlZu4-8co"
-  }
+  verification: {
+    google: "kohfPFhP66g6ycnzYmw3wcSIMXjv29sxwgwlZu4-8co",
+  },
 };
- 
-
 
 export default function RootLayout({
   children,
