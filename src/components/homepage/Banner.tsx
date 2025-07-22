@@ -38,7 +38,7 @@ const Banner = () => {
             label="Get Free AI Automation Audit"
             className=""
           />
-          <Anchor href="/demo" label="See How It Works" className=""></Anchor>
+          <Anchor href="/how-it-works" label="How It Works" className=""></Anchor>
         </div>
       </div>
     </div>

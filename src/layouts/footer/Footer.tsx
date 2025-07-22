@@ -10,7 +10,7 @@ const Footer = () => {
   const sm = [
     {
       icons: "/assets/images/instagram.png",
-      link: "/",
+      link: "https://www.instagram.com/smartbizgenie/",
     },
     {
       icons: "/assets/images/facebook.png",
@@ -18,7 +18,7 @@ const Footer = () => {
     },
     {
       icons: "/assets/images/twiiter.png",
-      link: "/",
+      link: "https://x.com/SmartBizGenie",
     },
   ];
 
