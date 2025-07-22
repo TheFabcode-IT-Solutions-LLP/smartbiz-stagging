@@ -6,50 +6,56 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+
 const MultiColumn = ({
-  heading = "Struggling With Repetitive Tasks, Manual Workflows, or Customer Support?",
+  heading = "Common Business Automation Challenges We Solve Every Day",
 }: {
   heading?: string;
 }) => {
   const items = [
     {
       icon: "/assets/images/to-do.png",
-      heading: "Wasting Time on Repetitive Tasks",
+      heading: "Manual Tasks Eating Your Time",
       content:
-        "Teams spend hours every week on manual tasks like email replies, lead qualification, or report generation-slowing growth and burning resources.",
+        "Your team spends 15+ hours weekly on repetitive work like email responses, data entry, and lead follow-ups. This slows growth and wastes money on tasks AI workflow automation can handle instantly.",
     },
     {
       icon: "/assets/images/chatSupport.png",
-      heading: "Overloaded Customer Support Teams",
+      heading: "Customer Support Bottlenecks",
       content:
-        "Support teams are overwhelmed with routine queries, leading to long response times, missed SLAs, and frustrated customers.",
+        "Support teams get overwhelmed with the same questions daily. Long wait times frustrate customers and hurt your reputation. Our AI chatbots answer 80% of queries instantly, 24/7.",
     },
     {
       icon: "/assets/images/systems.png",
-      heading: "Disconnected Systems & Workflows",
+      heading: "Disconnected Business Systems",
       content:
-        "Businesses struggle with siloed tools and platforms, making data flow and process automation nearly impossible.",
+        "Your tools don't talk to each other. Data gets lost between platforms. Workflow automation tools can connect everything, making your business run like a well-oiled machine.",
     },
     {
       icon: "/assets/images/chatbots.png",
-      heading: "Low ROI from Generic Chatbots",
+      heading: "Basic Chatbots That Don't Work",
       content:
-        "Most off-the-shelf chatbots can't understand context, don’t learn over time, and fail to deliver a personalized experience.",
+        "Generic chatbots give robotic answers and frustrate customers. Our custom AI chatbots understand context, learn from conversations, and provide helpful, human-like responses.",
     },
     {
       icon: "/assets/images/in-house.png",
-      heading: "Lack of In-House AI Expertise",
+      heading: "No AI Expertise In-House",
       content:
-        "Companies want to adopt AI but don’t have the technical resources or strategy to implement high-impact solutions like RAG or LangGraph.",
+        "You want business process automation but lack technical skills. Our team handles everything - from setup to training - so you get results without the headaches.",
     },
   ];
+
   return (
     <div className="py-[50px] max-mob-lg:py-6">
       <Container>
-        <h2 className=" text-primary-100 text-center text-[40px] font-bold leading-[1.2] max-w-[1037px] mx-auto max-mob-lg:text-2xl">
+        <h2 className="text-primary-100 text-center text-[40px] font-bold leading-[1.2] max-w-[1037px] mx-auto max-mob-lg:text-2xl">
           {heading}
         </h2>
-        <div className="mt-[50px] max-mob-lg:mt-6 max-mob-lg:-mx-[16px] ">
+        <p className="text-center text-[20px] text-primary-100/80 mt-4 max-w-[800px] mx-auto max-mob-lg:text-base">
+          If any of these sound familiar, AI workflow automation can transform your business operations and boost productivity by 40% or more.
+        </p>
+        
+        <div className="mt-[50px] max-mob-lg:mt-6 max-mob-lg:-mx-[16px]">
           <div className="product-slider-component relative px-0">
             <Swiper
               slidesPerView={1}
@@ -76,7 +82,7 @@ const MultiColumn = ({
                   slidesPerView: 3.3,
                   spaceBetween: 25,
                 },
-                1280: {                  
+                1280: {
                   slidesPerView: 4,
                   spaceBetween: 25,
                 },
@@ -102,8 +108,6 @@ const MultiColumn = ({
   );
 };
 
-export default MultiColumn;
-
 const MultiColumnItem = ({
   item,
 }: {
@@ -111,34 +115,26 @@ const MultiColumnItem = ({
     icon: string;
     heading: string;
     content: string;
-    headingStyle?: string;
-    contentStyle?: string;
   };
 }) => {
   return (
     <div className="bg-primary-100 w-full rounded-[20px] pt-11 px-[19px] pb-12 h-full">
       <div className="bg-accent-100 rounded-full w-[90px] h-[90px] flex justify-center items-center mx-auto">
         <Image
-          alt={item?.heading || ""}
+          alt={`${item?.heading} automation solution icon`}
           src={item?.icon}
           width={40}
           height={40}
         />
       </div>
-      <div
-        className={`mt-10 mb-2.5 text-white text-2xl leading-[1.2] font-bold text-center ${
-          item?.headingStyle || ""
-        }`}
-      >
+      <div className="mt-10 mb-2.5 text-white text-2xl leading-[1.2] font-bold text-center">
         {item?.heading}
       </div>
-      <div
-        className={`text-white text-sm leading-5 !font-normal text-center ${
-          item?.contentStyle || ""
-        }`}
-      >
+      <div className="text-white text-sm leading-5 !font-normal text-center">
         {item?.content}
       </div>
     </div>
   );
 };
+
+export default MultiColumn;
