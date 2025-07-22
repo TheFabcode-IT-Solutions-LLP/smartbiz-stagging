@@ -46,7 +46,7 @@ const Services = () => {
       <div className="max-w-[52.0833333%] w-full max-des-2xl:max-w-full h-full">
         <Image
           className="w-full object-cover rounded-r-[20px] max-w-[1000px] h-auto max-des-2xl:rounded-[20px] max-des-2xl:max-w-full"
-          src="/assets/images/humanAI.jpg"
+          src="/assets/images/Services.jpg"
           alt="AI workflow automation and business process automation solutions"
           width={1000}
           height={800}
@@ -67,7 +67,7 @@ const Services = () => {
             <Link 
               href={service.link}
               key={index}
-              className="rounded-[20px] flex flex-row bg-[#222222] items-center hover:bg-accent-100 transition-colors duration-300"
+              className=" group rounded-[20px] flex flex-row bg-[#222222] items-center hover:bg-accent-100 transition-colors duration-300"
             >
               <div className="py-[30px] px-[38px] max-mob-lg:py-[20px] max-mob-lg:px-[25px]">
                 <Image
@@ -75,9 +75,10 @@ const Services = () => {
                   alt={`${service.title} icon`}
                   width={60}
                   height={60}
-                  className="max-mob-lg:w-[50px] max-mob-lg:h-[50px] max-mob-lg:object-contain"
+                  className="max-mob-lg:w-[50px] max-mob-lg:h-[50px] max-mob-lg:object-contain group-hover:brightness-0 group-hover:invert transition duration-300"
                 />
               </div>
+              
 
               <span className="w-[1px] bg-white h-[60px]"></span>
 

@@ -53,7 +53,7 @@ const Header = ({ className }: { className?: string }) => {
     <header
       className={`${
         path == "/" ? "fixed" : "sticky bg-primary-100"
-      } py-5 top-0 border-b border-white w-full z-[99] max-tab-lg:py-2 transition-colors duration-200 ${
+      } py-5 top-0 border-b border-white w-full z-[99999] max-tab-lg:py-2 transition-colors duration-200 ${
         scrolled ? "bg-primary-100" : ""
       } ${className || ""}`}
     >

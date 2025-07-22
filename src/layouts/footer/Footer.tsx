@@ -59,43 +59,45 @@ const toggleSection = (section: keyof typeof open) => {
 };
 
   const date = new Date();
-  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (!formData.email) {
       setMessage({
         message: "Email is required!",
         type: "error",
       });
-      return null;
+      return;
     }
+
+    setMessage({ message: "", type: "" });
+
     try {
       const response = await fetch("/api/newsletter", {
-        body: JSON.stringify({
-          email: formData.email,
-        }),
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: formData.email }),
       });
+
       const result = await response.json();
+
       setMessage({
-        message: result.message,
+        message: result.message || (response.ok ? "Subscribed successfully!" : "Subscription failed."),
         type: response.ok ? "success" : "error",
       });
+
       if (response.ok) {
-        setFormData({
-          email: "",
-        });
+        setFormData({ email: "" });
       }
-    } catch (e: unknown) {
-      console.error(e);
+    } catch (error) {
+      console.error(error);
       setMessage({
-        message: "Something went wrong!",
+        message: "Something went wrong! Please try again.",
         type: "error",
       });
     }
   };
+
   return (
     <footer className="bg-primary-100 pt-[70px] max-tab-lg:pt-8">
       <Container>
