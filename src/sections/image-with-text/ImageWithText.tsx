@@ -39,10 +39,10 @@ const ImageWithText = () => {
           </ul>
           
           <div className="mt-8 p-6 bg-accent-100 rounded-[15px]">
-            <p className="text-primary-100 font-bold text-[18px] mb-2">
+            <p className="text-white font-bold text-[18px] mb-2">
               Ready to Fix These Problems?
             </p>
-            <p className="text-primary-100 text-[16px]">
+            <p className="text-white text-[16px]">
               Our business process automation solutions have helped 50+ companies eliminate these exact challenges. Most see results in 2-4 weeks.
             </p>
           </div>

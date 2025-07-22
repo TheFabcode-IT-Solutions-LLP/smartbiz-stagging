@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/layouts/header/Header";
 import Footer from "@/layouts/footer/Footer";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Head from "next/head";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,7 +28,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="G-YTJH5VJC48" />
+       <Head>
+        <meta
+          name="google-site-verification"
+          content="kohfPFhP66g6ycnzYmw3wcSIMXjv29sxwgwlZu4-8co"
+        />
+      </Head>
+    
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YTJH5VJC48"></Script>
+<Script id="g-tag">
+ {` window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-YTJH5VJC48');
+  `}
+</Script>
+    
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider>
           <Header />

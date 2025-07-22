@@ -42,7 +42,7 @@ const items = [
         active: true,
         points: [
           "Deep industry expertise in eCommerce, SaaS, and service businesses",
-          "Clear, measurable results with KPI tracking and performance reports", 
+          "Clear, measurable results with KPI tracking and performance reports",
           "Fast implementation: Most workflow automation projects done in 2-6 weeks",
           "Continuous improvement: We optimize and update your systems regularly",
         ],
@@ -83,16 +83,18 @@ const items = [
 
 const WhyChoose = () => {
   const [activeTab, setActiveTab] = useState(items[0].title);
-  
+
   return (
     <div className="py-[50px] max-mob-lg:py-6">
       <Container>
         <h2 className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
           Why Choose SmartBiz AI for Workflow Automation?
         </h2>
-        
+
         <p className="text-center text-[18px] text-primary-100/80 mt-4 max-w-[800px] mx-auto max-mob-lg:text-base mb-8">
-          We&apos;re not just another AI company. We&apos;re business automation experts who understand what works in the real world. Here&apos;s what makes us different:
+          We&apos;re not just another AI company. We&apos;re business automation
+          experts who understand what works in the real world. Here&apos;s what
+          makes us different:
         </p>
 
         <div className="flex flex-row gap-20 mt-[50px] max-mob-lg:flex-col max-mob-lg:gap-10 justify-center">
@@ -109,11 +111,18 @@ const WhyChoose = () => {
               </button>
             ))}
           </div>
-          
+
           <div className="">
             {items.map((item) =>
               activeTab === item.title ? (
-                <div key={item.title} className="w-full max-w-[600px] mx-auto">
+                <div
+                  key={item.title}
+                  className={`w-full max-w-[600px] mx-auto transform transition duration-500 ease-in-out ${
+                    activeTab === item.title
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 -translate-y-2 pointer-events-none absolute"
+                  }`}
+                >
                   {item.children
                     .filter((child) => child.active)
                     .map((child) => (
@@ -121,7 +130,7 @@ const WhyChoose = () => {
                         key={child.title}
                         className="bg-primary-100 rounded-[20px] w-full"
                       >
-                        <div className="rounded-t-[20px] pt-[26px] pb-6 border-b border-[#D9D9D9] text-center text-white text-2xl leading-[1.208] font-bold bg-accent-100 border-accent-100">
+                        <div className="rounded-t-[20px] px-2 pt-[26px] pb-6 border-b border-[#D9D9D9] text-center text-white text-2xl leading-[1.208] font-bold bg-accent-100 border-accent-100">
                           {child.title}
                         </div>
                         <div className="pt-10 pl-[29px] pb-[42px] pr-16 max-mob-lg:p-6">
@@ -150,15 +159,16 @@ const WhyChoose = () => {
             )}
           </div>
         </div>
-        
+
         {/* Additional Trust Signals */}
         <div className="mt-12 bg-[#F5F5F5] rounded-[20px] p-8 text-center">
           <h3 className="text-[24px] font-bold text-primary-100 mb-4">
             Ready to Join 50+ Successful Businesses?
           </h3>
           <p className="text-[18px] text-primary-100/80 max-w-[600px] mx-auto">
-            Our AI workflow automation platform has helped businesses save over 1,000 hours of manual work every month. 
-            See how we can transform your operations in just 30 days.
+            Our AI workflow automation platform has helped businesses save over
+            1,000 hours of manual work every month. See how we can transform
+            your operations in just 30 days.
           </p>
         </div>
       </Container>
