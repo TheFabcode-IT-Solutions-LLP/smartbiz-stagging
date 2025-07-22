@@ -15,11 +15,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Workflow Automation & Custom Chatbots for Business Growth | SmartBiz AI",
-  description: "Transform your business with AI workflow automation, custom chatbots, smart analytics, and voice assistants. Automate emails, tasks, leads, and customer support with proven results.",
-  icons : "/assets/icon/favicon.jfif"
+  title:
+    "AI Workflow Automation & Custom Chatbots for Business Growth | SmartBiz AI",
+  description:
+    "Transform your business with AI workflow automation, custom chatbots, smart analytics, and voice assistants. Automate emails, tasks, leads, and customer support with proven results.",
+  icons: "/assets/icon/favicon.jfif",
 };
-
 
 export default function RootLayout({
   children,
@@ -28,23 +29,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-       <Head>
+      <Head>
         <meta
           name="google-site-verification"
           content="kohfPFhP66g6ycnzYmw3wcSIMXjv29sxwgwlZu4-8co"
         />
       </Head>
-    
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-YTJH5VJC48"></Script>
-<Script id="g-tag">
- {` window.dataLayer = window.dataLayer || [];
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-YTJH5VJC48"
+      ></Script>
+      <Script id="g-tag">
+        {` window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
  
   gtag('config', 'G-YTJH5VJC48');
   `}
-</Script>
-    
+      </Script>
+
       <body className={`${inter.variable} antialiased`}>
         <ThemeProvider>
           <Header />

@@ -10,7 +10,7 @@ export default function HowItWorksContent() {
       <section className="mb-[50px] bg-primary-100">
         <div className="text-center max-w-full w-full relative pb-[50px]">
           <Image
-            src="/assets/images/young-adult-business-person-working-late-listening-generated-by-ai.jpg"
+            src="/assets/images/How it work.jpg"
             alt="Business owner learning how AI workflow automation works step by step"
             width={1900}
             height={1000}
@@ -161,7 +161,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex-1 max-w-[500px]">
                 <Image
-                  src="/assets/images/humanAI.jpg"
+                  src="/assets/images/Discovery & Analysis Phase.jpg"
                   alt="Business analysis for AI workflow automation implementation"
                   width={500}
                   height={400}
@@ -177,7 +177,7 @@ export default function HowItWorksContent() {
             <div className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
               <div className="flex-1 max-w-[500px]">
                 <Image
-                  src="/assets/images/digital-wardrobe-transparent-screen.jpg"
+                  src="/assets/images/Custom Development Phase.jpg"
                   alt="Custom AI chatbot development and workflow automation building process"
                   width={500}
                   height={400}
@@ -273,7 +273,7 @@ export default function HowItWorksContent() {
               </div>
               <div className="flex-1 max-w-[500px]">
                 <Image
-                  src="/assets/images/ecommerce.jpg"
+                  src="/assets/images/Testing & Training Phase.jpg"
                   alt="Testing and training phase of AI workflow automation implementation"
                   width={500}
                   height={400}
@@ -289,7 +289,7 @@ export default function HowItWorksContent() {
             <div className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
               <div className="flex-1 max-w-[500px]">
                 <Image
-                  src="/assets/images/24hours.jpg"
+                  src="/assets/images/Launch & Support Phase.jpg"
                   alt="Launch and ongoing support for AI workflow automation systems"
                   width={500}
                   height={400}
