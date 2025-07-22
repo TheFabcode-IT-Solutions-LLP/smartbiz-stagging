@@ -46,7 +46,7 @@ const Services = () => {
       <div className="max-w-[52.0833333%] w-full max-des-2xl:max-w-full h-full">
         <Image
           className="w-full object-cover rounded-r-[20px] max-w-[1000px] h-auto max-des-2xl:rounded-[20px] max-des-2xl:max-w-full"
-          src="/assets/images/Services.jpg"
+          src="/assets/images/humanAI.jpg"
           alt="AI workflow automation and business process automation solutions"
           width={1000}
           height={800}
