@@ -17,16 +17,16 @@ export default function page() {
     <>
       {/* Hero Section */}
       <section className=" mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative pb-[50px]">
+        <div className="text-center max-w-full w-full relative ">
           <Image
-            src="/assets/images/young-adult-business-person-working-late-listening-generated-by-ai.jpg"
+            src="/assets/images/Services.jpg"
             alt="AI workflow automation services team building custom chatbots and business process automation solutions"
             width={1900}
             height={1000}
             className="w-full max-h-[100dvh] object-cover h-full"
           />
-           
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
+            <div className="absolute inset-0 bg-primary-100/30 z-[1] max-tab-md:hidden" />
+          <div className="absolute bottom-[60px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               AI Workflow Automation Services That{" "}
               <span className="text-accent-100">Actually Work for Your Business</span>
