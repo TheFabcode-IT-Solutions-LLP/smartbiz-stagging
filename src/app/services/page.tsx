@@ -17,7 +17,8 @@ export default function page() {
     <>
       {/* Hero Section */}
       <section className=" mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative ">
+        <div className="text-center max-w-full w-full relative max-tab-lg:pb-[50px]">
+          <div className="relative w-full h-full max-h-[100dvh]">
           <Image
             src="/assets/images/Services.jpg"
             alt="AI workflow automation services team building custom chatbots and business process automation solutions"
@@ -25,8 +26,10 @@ export default function page() {
             height={1000}
             className="w-full max-h-[100dvh] object-cover h-full"
           />
-            <div className="absolute inset-0 bg-primary-100/30 z-[1] max-tab-md:hidden" />
-          <div className="absolute bottom-[60px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
+      
+            <div className="absolute inset-0 bg-primary-100/50  max-tab-md:hidden" />
+               </div>
+          <div className="absolute z-20 bottom-[60px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               AI Workflow Automation Services That{" "}
               <span className="text-accent-100">Actually Work for Your Business</span>
@@ -50,6 +53,7 @@ export default function page() {
               />
             </div>
           </div>
+        
         </div>
       </section>
 
@@ -138,7 +142,7 @@ export default function page() {
                   <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                     {title}
                   </h3>
-                  <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+                  <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] whitespace-normal">
                     {desc}
                   </p>
                 </div>
@@ -350,7 +354,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         Before: Manual customer support
                       </span>
-                      <span className="text-[20px] font-bold text-white max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         6-hour response time
                       </span>
                     </div>
@@ -358,7 +362,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         After: Custom AI chatbot
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         Instant responses
                       </span>
                     </div>
@@ -366,7 +370,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         Time saved weekly:
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         30 hours
                       </span>
                     </div>
@@ -374,7 +378,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         Customer satisfaction:
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         +40% increase
                       </span>
                     </div>
@@ -391,7 +395,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         Before: Manual lead follow-up
                       </span>
-                      <span className="text-[20px] font-bold text-white max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         25 hours/week
                       </span>
                     </div>
@@ -399,7 +403,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         After: Automated workflows
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         2 hours/week
                       </span>
                     </div>
@@ -407,7 +411,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         Lead conversion rate:
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         +45% increase
                       </span>
                     </div>
@@ -415,7 +419,7 @@ export default function page() {
                       <span className="text-[18px] text-white max-mob-lg:text-[14px]">
                         ROI achieved in:
                       </span>
-                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[16px]">
+                      <span className="text-[20px] font-bold text-accent-200 max-mob-lg:text-[14px]">
                         60 days
                       </span>
                     </div>
@@ -576,48 +580,48 @@ export default function page() {
           <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             How Our AI Workflow Automation Services Work
           </h2>
-          <div className="flex justify-between max-w-[1100px] mx-auto  max-mob-lg:gap-[30px] max-mob-lg:flex-wrap">
-            <div className="text-center flex-1">
+          <div className="flex justify-between max-w-[1150px] mx-auto  max-mob-lg:gap-[30px] max-mob-lg:flex-wrap max-mob-md:flex-col">
+            <div className=" flex-1 flex flex-col text-center items-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">1</span>
               </div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+              <h3 className="text-[20px] max-tab-md:min-h-[52px]   max-mob-md:min-h-auto font-bold text-primary-100 mb-[10px] max-tab-lg:text-[18px]">
                 Understand Your Needs
               </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+              <p className="text-[18px] text-primary-100/70 max-tab-lg:text-[14px]">
                 We learn about your business, challenges, and goals
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div className="flex-1 flex flex-col text-center items-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]  max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">2</span>
               </div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+              <h3 className="text-[20px] max-tab-md:min-h-[52px]  max-mob-md:min-h-auto font-bold text-primary-100 mb-[10px] max-tab-lg:text-[18px]">
                 Design Custom Solution
               </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+              <p className="text-[18px] text-primary-100/70 max-tab-lg:text-[14px]">
                 Create AI automation that fits your specific needs
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div className="flex-1 flex flex-col text-center items-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">3</span>
               </div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+              <h3 className="text-[20px] max-tab-md:min-h-[52px]  max-mob-md:min-h-auto font-bold text-primary-100 mb-[10px] max-tab-lg:text-[18px]">
                 Build & Test
               </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+              <p className="text-[18px] text-primary-100/70 max-tab-lg:text-[14px]">
                 Develop and test your automation before going live
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div className="flex-1 flex flex-col text-center items-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">4</span>
               </div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+              <h3 className="text-[20px]  max-tab-md:min-h-[52px] max-mob-md:min-h-auto font-bold text-primary-100 mb-[10px] max-tab-lg:text-[18px]">
                 Launch & Support
               </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+              <p className="text-[18px] text-primary-100/70 max-tab-lg:text-[14px]">
                 Deploy your solution with ongoing training and support
               </p>
             </div>

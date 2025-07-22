@@ -4,9 +4,12 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About SmartBiz AI | Leading AI Workflow Automation Experts & Custom Chatbot Specialists",
-  description: "Meet the AI workflow automation experts behind 50+ successful business transformations. Our team builds custom AI chatbots and automation solutions that save 20+ hours weekly with proven 4-6x ROI.",
-  keywords: "AI workflow automation experts, custom AI chatbots team, business process automation specialists, workflow automation tools creators, AI automation company, SmartBiz AI team",
+  title:
+    "About SmartBiz AI | Leading AI Workflow Automation Experts & Custom Chatbot Specialists",
+  description:
+    "Meet the AI workflow automation experts behind 50+ successful business transformations. Our team builds custom AI chatbots and automation solutions that save 20+ hours weekly with proven 4-6x ROI.",
+  keywords:
+    "AI workflow automation experts, custom AI chatbots team, business process automation specialists, workflow automation tools creators, AI automation company, SmartBiz AI team",
   alternates: {
     canonical: `https://smartbizgenie.com/about`,
   },
@@ -17,7 +20,8 @@ export default function page() {
     <>
       {/* Hero Section */}
       <section className=" mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative ">
+        <div className="text-center max-w-full w-full relative max-tab-lg:pb-[50px]">
+          <div className="relative w-full h-full max-h-[100dvh]">
           <Image
             src="/assets/images/About Us.jpg"
             alt="SmartBiz AI team of workflow automation experts working on custom AI chatbot solutions"
@@ -25,17 +29,23 @@ export default function page() {
             height={1000}
             className="w-full max-h-[100dvh] object-cover h-full"
           />
-            <div className="absolute inset-0 bg-primary-100/30 z-[1] max-tab-md:hidden" />
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
+          <div className="absolute inset-0 bg-primary-100/50 z-[10] pointer-events-none max-tab-md:hidden"></div>
+</div>
+          <div className="absolute bottom-[80px] z-20 flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Meet the AI Workflow Automation Experts Behind{" "}
-              <span className="text-accent-100">50+ Business Transformations</span>
+              <span className="text-accent-100">
+                50+ Business Transformations
+              </span>
             </h1>
             <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl ">
               We&apos;re the team that turns manual work into automated profits
             </h2>
             <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base ">
-              SmartBiz AI started with a simple goal: help businesses save time and money through smart AI workflow automation. Today, we&apos;re the trusted partner for companies wanting custom AI chatbots and business process automation that actually works.
+              SmartBiz AI started with a simple goal: help businesses save time
+              and money through smart AI workflow automation. Today, we&apos;re
+              the trusted partner for companies wanting custom AI chatbots and
+              business process automation that actually works.
             </p>
             <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
               <Anchor
@@ -46,7 +56,7 @@ export default function page() {
               <Anchor
                 href="/demo"
                 label="Book a Demo"
-                className=" bg-transparent border-2 border-white "
+                className=" bg-transparent border-2 border-white cursor-pointer"
               />
             </div>
           </div>
@@ -138,7 +148,7 @@ export default function page() {
                   <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                     {title}
                   </h3>
-                  <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]">
+                  <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px]  whitespace-normal">
                     {desc}
                   </p>
                 </div>
@@ -317,10 +327,10 @@ export default function page() {
             <p className="text-[24px] text-white mb-[40px] max-mob-lg:text-[18px]">
               Numbers don&apos;t lie - here&apos;s what our clients achieve:
             </p>
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-w-[800px] mx-auto max-mob-lg:p-[20px]">
+            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-w-[1100px] mx-auto max-mob-lg:p-[20px]">
               <div className="grid grid-cols-2 gap-[30px] max-mob-lg:grid-cols-1">
                 <div className="text-left space-y-[20px]">
-                  <div className="flex justify-between items-center max-tab-sm:gap-[10px]">
+                  <div className="flex justify-between items-center max-tab-lg:items-start max-tab-sm:gap-[10px]">
                     <span className="text-[20px] text-white max-mob-lg:text-[16px]">
                       50+ Successful Projects:
                     </span>
@@ -328,7 +338,7 @@ export default function page() {
                       95% Success Rate
                     </span>
                   </div>
-                  <div className="flex justify-between items-center max-tab-sm:gap-[10px]">
+                  <div className="flex justify-between items-center max-tab-lg:items-start max-tab-sm:gap-[10px]">
                     <span className="text-[20px] text-white max-mob-lg:text-[16px]">
                       Time Saved Monthly:
                     </span>
@@ -337,8 +347,8 @@ export default function page() {
                     </span>
                   </div>
                 </div>
-                <div className="text-left space-y-[20px]">
-                  <div className="flex justify-between items-center max-tab-sm:gap-[10px]">
+                <div className="text-left ">
+                  <div className="flex justify-between items-center  max-tab-sm:gap-[10px]">
                     <span className="text-[20px] text-white max-mob-lg:text-[16px]">
                       Average ROI:
                     </span>
@@ -346,7 +356,7 @@ export default function page() {
                       4-6x Return
                     </span>
                   </div>
-                  <div className="flex justify-between items-center max-tab-sm:gap-[10px]">
+                  <div className="flex justify-between items-center max-tab-md:gap-[10px]">
                     <span className="text-[20px] text-white max-mob-lg:text-[16px]">
                       Client Satisfaction:
                     </span>
@@ -442,7 +452,10 @@ export default function page() {
             <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1">
               <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
                 <p className="text-[24px] text-white italic mb-[20px] max-mob-lg:text-[18px]">
-                  &quot;The SmartBiz AI team completely transformed our customer support with their custom AI chatbot. We went from 6-hour response times to instant replies. Our customers love it, and we saved 30 hours per week.&quot;
+                  &quot;The SmartBiz AI team completely transformed our customer
+                  support with their custom AI chatbot. We went from 6-hour
+                  response times to instant replies. Our customers love it, and
+                  we saved 30 hours per week.&quot;
                 </p>
                 <p className="text-[20px] text-accent-100 font-medium max-mob-lg:text-[16px]">
                   - Sarah Chen, E-commerce Store Owner
@@ -450,7 +463,10 @@ export default function page() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
                 <p className="text-[24px] text-white italic mb-[20px] max-mob-lg:text-[18px]">
-                  &quot;Their AI workflow automation saved our agency 25 hours weekly on lead qualification and follow-ups. We can now focus on high-value client work instead of manual tasks. ROI was clear within 60 days.&quot;
+                  &quot;Their AI workflow automation saved our agency 25 hours
+                  weekly on lead qualification and follow-ups. We can now focus
+                  on high-value client work instead of manual tasks. ROI was
+                  clear within 60 days.&quot;
                 </p>
                 <p className="text-[20px] text-accent-100 font-medium max-mob-lg:text-[16px]">
                   - Mike Rodriguez, Marketing Agency CEO
@@ -524,7 +540,9 @@ export default function page() {
               Ready to Work with AI Workflow Automation Experts?
             </h2>
             <p className="text-[24px] text-white/90 mb-[30px] max-mob-lg:text-[18px]">
-              Join 50+ businesses that trust us for their AI automation needs. Let&apos;s discuss how custom AI chatbots and workflow automation can transform your operations.
+              Join 50+ businesses that trust us for their AI automation needs.
+              Let&apos;s discuss how custom AI chatbots and workflow automation
+              can transform your operations.
             </p>
             <div className="bg-accent-200 text-primary-100 text-[20px] font-bold px-[30px] py-[15px] rounded-full inline-block mb-[40px] max-mob-lg:text-[16px]">
               Free consultation - No sales pitch, just honest advice
@@ -535,7 +553,6 @@ export default function page() {
                 label="Schedule Free Consultation"
                 className=""
               />
-             
             </div>
             <p className="text-[20px] font-normal text-accent-200 mt-[40px] max-mob-lg:text-[16px]">
               Questions about our team? Our AI chatbot has all the answers! 💬
