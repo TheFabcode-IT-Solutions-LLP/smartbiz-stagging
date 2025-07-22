@@ -349,10 +349,10 @@ export default function HowItWorksContent() {
             Your AI Automation Timeline
           </h2>
           <div className="bg-[#222222] rounded-[20px] py-[40px] max-tab-lg:py-[30px]">
-            <div className="flex flex-row justify-between max-w-[1200px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px]">
+            <div className="flex flex-row justify-between max-w-[1200px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px] gap-3">
               <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                  <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
+                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
+                  <span className="text-[20px] font-bold text-white max-mob-lg:text-[20px]">
                     Week 1
                   </span>
                 </div>
@@ -364,12 +364,12 @@ export default function HowItWorksContent() {
                 </p>
               </div>
               <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                  <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
+                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
                     Week 2-3
                   </span>
                 </div>
-                <h3 className="text-[24px] font-medium text-white mt-[20px] max-tab-lg:text-[18px]">
+                <h3 className="text-[20px] font-medium text-white mt-[20px] max-tab-lg:text-[18px]">
                   Development
                 </h3>
                 <p className="text-[18px] text-white/80 mt-[10px] max-tab-lg:text-[14px] text-center">
@@ -377,12 +377,12 @@ export default function HowItWorksContent() {
                 </p>
               </div>
               <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                  <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
+                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
                     Week 4
                   </span>
                 </div>
-                <h3 className="text-[24px] font-medium text-white mt-[20px] max-tab-lg:text-[18px]">
+                <h3 className="text-[20px] font-medium text-white mt-[20px] max-tab-lg:text-[18px]">
                   Testing
                 </h3>
                 <p className="text-[18px] text-white/80 mt-[10px] max-tab-lg:text-[14px] text-center">
@@ -390,8 +390,8 @@ export default function HowItWorksContent() {
                 </p>
               </div>
               <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
-                  <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
+                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
+                  <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px]">
                     Week 5
                   </span>
                 </div>
