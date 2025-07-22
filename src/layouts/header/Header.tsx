@@ -37,12 +37,8 @@ const Header = ({ className }: { className?: string }) => {
       link: "/services",
     },
     {
-      label: "Work",
-      link: "/work",
-    },
-    {
-      label: "Our Clients",
-      link: "/clients",
+      label: "How It Works",
+      link: "/how-it-works",
     },
     {
       label: "Contact",

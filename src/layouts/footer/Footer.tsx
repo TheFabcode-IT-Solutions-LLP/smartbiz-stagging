@@ -10,7 +10,7 @@ const Footer = () => {
   const sm = [
     {
       icons: "/assets/images/instagram.png",
-      link: "/",
+      link: "https://www.instagram.com/smartbizgenie/",
     },
     {
       icons: "/assets/images/facebook.png",
@@ -18,7 +18,7 @@ const Footer = () => {
     },
     {
       icons: "/assets/images/twiiter.png",
-      link: "/",
+      link: "https://x.com/SmartBizGenie",
     },
   ];
 
@@ -33,7 +33,6 @@ const Footer = () => {
     { label: "Services", href: "/services" },
     { label: "Case Studies", href: "/case-studies" },
     { label: "How It Works", href: "/how-it-works" },
-    { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
   ];
 
