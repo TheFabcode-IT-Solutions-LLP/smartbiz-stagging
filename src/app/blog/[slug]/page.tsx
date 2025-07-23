@@ -1,5 +1,7 @@
+// src/app/blog/[slug]/page.tsx
 import BlogPost from '@/components/blog/BlogPost';
 import EcommerceChatbotArticle from '@/components/blog/EcommerceChatbotArticle';
+import WorkflowChatbotIntegrationArticle from '@/components/blog/AIWorkflowChatbotArticle';
 import { Metadata } from 'next';
 
 // Define the blog post metadata
@@ -15,6 +17,12 @@ const blogPostMeta = {
     description: 'Turn your ecommerce chatbot into a conversion machine. Learn proven strategies that increase AOV by 45% and conversion rates by 25%.',
     keywords: 'ecommerce chatbot optimization, AI chatbot conversion, ecommerce conversion optimization, chatbot ROI',
     image: '/images/blog/ecommerce-chatbot-og.png'
+  },
+  'implementing-ai-workflows-chatbot-integration': {
+    title: 'From Chaos to Control: Implementing AI Workflows with Chatbot Integration | SmartBiz Genie',
+    description: 'Learn how to build AI workflows that integrate chatbots directly into your business operations. Transform manual customer service into automated excellence.',
+    keywords: 'AI workflow automation, chatbot integration, customer service automation, workflow implementation, business process automation',
+    image: '/images/blog/workflow-chatbot-integration-og.png'
   }
 };
 
@@ -60,6 +68,8 @@ export default async function Page({
       return <BlogPost />;
     case 'ai-ecommerce-chatbots-conversion-optimization-playbook':
       return <EcommerceChatbotArticle />;
+    case 'implementing-ai-workflows-chatbot-integration':
+      return <WorkflowChatbotIntegrationArticle />;
     default:
       return (
         <div className="min-h-screen flex items-center justify-center">
