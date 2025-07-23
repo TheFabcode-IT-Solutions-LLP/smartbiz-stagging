@@ -36,12 +36,12 @@ const Footer = () => {
     { label: "Contact", href: "/contact" },
   ];
 
-  const legalItems = [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
-    { label: "Security", href: "/security" },
-    { label: "Compliance", href: "/compliance" },
-  ];
+  // const legalItems = [
+  //   { label: "Privacy Policy", href: "/privacy-policy" },
+  //   { label: "Terms of Service", href: "/terms-of-service" },
+  //   { label: "Security", href: "/security" },
+  //   { label: "Compliance", href: "/compliance" },
+  // ];
 
   const [formData, setFormData] = useState({ email: "" });
 
@@ -296,7 +296,7 @@ const toggleSection = (section: keyof typeof open) => {
                 )}
               </span>
             </button>
-            {open.legal && (
+            {/* {open.legal && (
               <ul className="mt-[20px] space-y-3">
                 {legalItems.map((item, index) => (
                   <li key={index}>
@@ -309,10 +309,10 @@ const toggleSection = (section: keyof typeof open) => {
                   </li>
                 ))}
               </ul>
-            )}
+            )} */}
           </div>
 
-          <div className="max-sm:hidden">
+          {/* <div className="max-sm:hidden">
             <div className="text-3xl font-bold text-white text-left">Legal</div>
             <ul className="mt-[30px] space-y-5">
               {legalItems.map((item, index) => (
@@ -326,7 +326,7 @@ const toggleSection = (section: keyof typeof open) => {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
             <button
