@@ -4,7 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import Header from "@/layouts/header/Header";
 import Footer from "@/layouts/footer/Footer";
-import { GoogleTagManager } from "@next/third-parties/google";
 import Head from "next/head";
 import Script from "next/script";
 
