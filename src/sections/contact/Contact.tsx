@@ -76,7 +76,7 @@ const ContactPage = () => {
     <>
       {/* Hero Section */}
       <section className="mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative pb-[50px]">
+        <div className="text-center max-w-full w-full relative max-tab-lg:pb-[50px]">
           <Image
             src="/assets/images/young-adult-business-person-working-late-listening-generated-by-ai.jpg"
             alt="Contact SmartBiz AI team for AI workflow automation and custom chatbot consultation"
@@ -85,7 +85,7 @@ const ContactPage = () => {
             className="w-full max-h-[100dvh] object-cover h-full"
           />
 
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Ready to Transform Your Business with{" "}
               <span className="text-accent-100">AI Workflow Automation?</span>
@@ -210,7 +210,7 @@ const ContactPage = () => {
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
             {/* Call */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
+            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-tab-lg:p-[20px] text-center">
               <div className="text-[48px] mb-[15px]">📞</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Schedule a Call
@@ -236,7 +236,7 @@ const ContactPage = () => {
               </p>
               <a
                 href="mailto:hello@smartbizgenie.com"
-                className="text-[16px] text-accent-100 font-medium hover:underline"
+                className="text-[16px] text-accent-100 font-medium hover:underline whitespace-normal"
               >
                 hello@smartbizgenie.com
               </a>
