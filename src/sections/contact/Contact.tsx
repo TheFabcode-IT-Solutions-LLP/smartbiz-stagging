@@ -76,7 +76,7 @@ const ContactPage = () => {
     <>
       {/* Hero Section */}
       <section className="mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative pb-[50px]">
+        <div className="text-center max-w-full w-full relative max-tab-lg:pb-[50px]">
           <Image
             src="/assets/images/young-adult-business-person-working-late-listening-generated-by-ai.jpg"
             alt="Contact SmartBiz AI team for AI workflow automation and custom chatbot consultation"
@@ -85,7 +85,7 @@ const ContactPage = () => {
             className="w-full max-h-[100dvh] object-cover h-full"
           />
 
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Ready to Transform Your Business with{" "}
               <span className="text-accent-100">AI Workflow Automation?</span>
@@ -110,65 +110,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact Information Section */}
-      <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">
-        <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
-            Multiple Ways to Reach Our AI Automation Team
-          </h2>
-          <div className="grid grid-cols-3 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
-            {/* Call */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
-              <div className="text-[48px] mb-[15px]">📞</div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
-                Schedule a Call
-              </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
-                Book a free 30-minute consultation to discuss your automation needs
-              </p>
-              <Button
-                onClick={() => toggleModal(true)}
-                label="Book Now"
-                className="text-[16px] py-[12px] px-[24px]"
-              />
-            </div>
-
-            {/* Email */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
-              <div className="text-[48px] mb-[15px]">✉️</div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
-                Email Us
-              </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
-                Send us a detailed message about your project
-              </p>
-              <a
-                href="mailto:hello@smartbizgenie.com"
-                className="text-[16px] text-accent-100 font-medium hover:underline"
-              >
-                hello@smartbizgenie.com
-              </a>
-            </div>
-
-            {/* Chat */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
-              <div className="text-[48px] mb-[15px]">💬</div>
-              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
-                Chat with AI
-              </h3>
-              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
-                Get instant answers from our AI chatbot
-              </p>
-              <span className="text-[16px] text-primary-100 font-medium">
-                Available 24/7
-              </span>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Contact Form Section */}
+        {/* Contact Form Section */}
       <section id="contact-form" className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
@@ -254,18 +196,70 @@ const ContactPage = () => {
                 />
               </form>
 
-              <div className="mt-[40px] text-center">
-                <p className="text-[16px] text-white/80 max-mob-lg:text-[14px]">
-                  Expected response time: Within 24 hours
-                </p>
-                <p className="text-[16px] text-white/80 mt-2 max-mob-lg:text-[14px]">
-                  For urgent matters, please schedule a call above
-                </p>
-              </div>
+           
             </div>
           </div>
         </Container>
       </section>
+
+      {/* Contact Information Section */}
+      <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">
+        <Container>
+          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+            Multiple Ways to Reach Our AI Automation Team
+          </h2>
+          <div className="grid grid-cols-3 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
+            {/* Call */}
+            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-tab-lg:p-[20px] text-center">
+              <div className="text-[48px] mb-[15px]">📞</div>
+              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+                Schedule a Call
+              </h3>
+              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
+                Book a free 30-minute consultation to discuss your automation needs
+              </p>
+              <Button
+                onClick={() => toggleModal(true)}
+                label="Book Now"
+                className="text-[16px] py-[12px] px-[24px]"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
+              <div className="text-[48px] mb-[15px]">✉️</div>
+              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+                Email Us
+              </h3>
+              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
+                Send us a detailed message about your project
+              </p>
+              <a
+                href="mailto:hello@smartbizgenie.com"
+                className="text-[16px] text-accent-100 font-medium hover:underline whitespace-normal"
+              >
+                hello@smartbizgenie.com
+              </a>
+            </div>
+
+            {/* Chat */}
+            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
+              <div className="text-[48px] mb-[15px]">💬</div>
+              <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
+                Chat with AI
+              </h3>
+              <p className="text-[18px] text-primary-100/70 max-mob-lg:text-[14px] mb-4">
+                Get instant answers from our AI chatbot
+              </p>
+              <span className="text-[16px] text-primary-100 font-medium">
+                Available 24/7
+              </span>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+    
     </>
   );
 };

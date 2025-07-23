@@ -26,6 +26,7 @@ export async function POST(request: Request) {
       from: `"${name}" <${email}>`,
       to: "hello@smartbizgenie.com",
       subject: `New Contact Message from ${name}`,
+      replyTo: email,
       text: message,
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>

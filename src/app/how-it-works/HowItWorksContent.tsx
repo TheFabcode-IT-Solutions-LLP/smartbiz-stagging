@@ -8,7 +8,7 @@ export default function HowItWorksContent() {
     <>
       {/* Hero Section */}
       <section className="mb-[50px] bg-primary-100">
-        <div className="text-center max-w-full w-full relative pb-[50px]">
+        <div className="text-center max-w-full w-full relative max-tab-lg:pb-[50px]">
           <div className="relative w-full  max-h-[100dvh]">
           <Image
             src="/assets/images/How it work.jpg"
@@ -20,7 +20,7 @@ export default function HowItWorksContent() {
           />
           <div className="absolute inset-0 bg-primary-100/50 " />
            </div>
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               How AI Workflow Automation Works:{" "}
               <span className="text-accent-100">Simple 4-Step Process</span>
