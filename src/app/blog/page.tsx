@@ -25,6 +25,24 @@ const blogPosts = [
     date: 'February 18, 2025',
     readTime: '15 min read',
     category: 'AI Automation'
+  },
+  {
+  slug: 'industry-specific-ai-solutions-vertical-workflows',
+  title: 'Industry-Specific AI Solutions: Why Generic Chatbots Fail and Vertical AI Workflows Win',
+  excerpt: 'Most businesses make the same costly mistake when implementing AI workflow automation: they grab a one-size-fits-all solution and wonder why it doesn\'t move the needle.',
+  date: 'July 15, 2025',
+  readTime: '12 min read',
+  category: 'AI Solutions'
+},
+{
+    slug:'ai-implementation-cost-calculator-build-vs-buy-vs-partner',
+    title: 'AI Implementation Cost Calculator: Build vs Buy vs Partner | SmartBiz Genie',
+    description: 'Compare real costs of AI implementation across three paths. Based on 200+ projects, this calculator shows development, deployment, and 3-year operational costs.',
+    keywords: 'AI implementation cost, build vs buy AI, AI cost calculator, AI project budget, AI implementation strategy',
+    image: '/images/blog/ai-cost-calculator-og.png',
+    date: 'May 18, 2025',
+    readTime: '15 min read',
+    category: 'AI Automation'
   }
 ];
 
