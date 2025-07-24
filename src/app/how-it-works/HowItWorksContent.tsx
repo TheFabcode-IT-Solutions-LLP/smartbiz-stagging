@@ -2,8 +2,11 @@
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
+import Button from "@/components/ui/button/Button";
+import { useTheme } from "@/contexts/ThemeContext";
 
 export default function HowItWorksContent() {
+  const {toggleModal} = useTheme();
   return (
     <>
       {/* Hero Section */}
@@ -33,8 +36,8 @@ export default function HowItWorksContent() {
               No technical skills needed - we handle everything while you focus on growing your business.
             </p>
             <div className="flex gap-[35px] justify-center max-tab-lg:mt-[32] mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
-              <Anchor
-                href="/get-started"
+              <Button
+                onClick={()=> toggleModal(true)}
                 label="Start Your Automation"
                 className=""
               />
@@ -526,8 +529,8 @@ export default function HowItWorksContent() {
               Free Consultation + Custom Automation Plan Included
             </div>
             <div className="flex justify-center gap-[20px] flex-wrap">
-              <Anchor
-                href="/get-started"
+              <Button
+                onClick={() => toggleModal(true)}
                 label="Start Your Free Consultation"
                 className=""
               />

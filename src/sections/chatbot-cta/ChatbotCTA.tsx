@@ -1,8 +1,13 @@
+'use client';
+
 import React from "react";
 import Container from "@/components/ui/conatiner/Container";
 import Anchor from "@/components/ui/Anchor/Anchor";
+import Button from "@/components/ui/button/Button";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const ChatbotCTA = () => {
+  const { toggleModal } = useTheme();
   return (
     <div className="bg-primary-100 py-[80px] max-mob-lg:py-10 border-b-[1px] border-white">
       <Container>
@@ -14,8 +19,8 @@ const ChatbotCTA = () => {
             No credit card required. See results in days, not months.
           </p>
           <div className="flex justify-center gap-[20px] flex-wrap">
-            <Anchor 
-              href="/get-started" 
+            <Button 
+               onClick={() => toggleModal(true)}
               label="Start Free Trial"
               className=""
             />

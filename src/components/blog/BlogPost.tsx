@@ -3,8 +3,10 @@
 import React, { useState } from 'react';
 import { ChevronRight, Clock, CheckCircle, Download, Calculator, Users, TrendingUp, AlertCircle } from 'lucide-react';
 import ROICalculator from './ROICalculator';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const BlogPost = () => {
+  const { toggleModal } = useTheme();
   const [activeSection, setActiveSection] = useState('');
   const [showCalculator, setShowCalculator] = useState(false);
 
@@ -698,7 +700,9 @@ const BlogPost = () => {
             Join 500+ small businesses already using AI workflow automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button 
+            onClick={() => toggleModal(true)}
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Schedule Free Consultation
             </button>
             <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 transition-colors flex items-center justify-center gap-2">

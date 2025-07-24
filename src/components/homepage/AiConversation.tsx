@@ -1,9 +1,13 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
 import Container from "../ui/conatiner/Container";
 import Link from "next/link";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const AiConversation = () => {
+  const {toggleModal} = useTheme();
   return (
     <div className="py-[50px] max-mob-lg:py-6">
       <Container>
@@ -19,8 +23,8 @@ const AiConversation = () => {
             </div>
             
             <div className="flex flex-row gap-[20px] max-des-2xl:flex-wrap">
-              <Link 
-                href="/schedule-consultation" 
+              <button 
+                // href="/schedule-consultation" 
                 className="flex group flex-row w-[350px] max-des-4xl:w-auto max-tab-lg:justify-center gap-[15px] border-[1px] rounded-[50px] border-white py-[18px] px-[35px] max-des-4xl:px-[20px] max-des-4xl:py-[10px] hover:bg-accent-100 hover:border-accent-100 transition-colors"
               >
                 <Image
@@ -30,10 +34,12 @@ const AiConversation = () => {
                   height={50}
                   className="max-des-4xl:w-[45px] max-des-4xl:h-[45px] object-contain"
                 />
-                <p className="text-[24px] flex  justify-center leading-[30px] items-center font-medium  text-white max-des-4xl:text-[16px] max-des-4xl:leading-normal">
+                <button
+                onClick={() => toggleModal(true)}
+                 className="text-[24px] flex  justify-center leading-[30px] items-center font-medium  text-white max-des-4xl:text-[16px] max-des-4xl:leading-normal">
                   Schedule Free Consultation
-                </p>
-              </Link>
+                </button>
+              </button>
               
               <Link 
                 href="/contact" 

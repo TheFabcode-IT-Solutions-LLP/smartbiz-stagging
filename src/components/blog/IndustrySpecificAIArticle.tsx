@@ -3,8 +3,11 @@
 import React, { useState } from 'react';
 import { ChevronRight, Clock, Building2, HeartPulse, Home, ShoppingBag, Utensils, Monitor, Shield, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import Button from '../ui/button/Button';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const IndustrySpecificAIArticle = () => {
+  const { toggleModal } = useTheme(); 
   const [activeSection, setActiveSection] = useState('');
 
   const tableOfContents = [
@@ -458,12 +461,12 @@ const IndustrySpecificAIArticle = () => {
             Contact our team for a custom automation audit and see how vertical AI solutions can transform your business operations while maintaining full regulatory compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/get-started"
+            <button 
+              onClick={() => toggleModal(true)}
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Custom AI Solutions
-            </Link>
+            </button>
             <Link 
               href="/contact"
               className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 transition-colors"

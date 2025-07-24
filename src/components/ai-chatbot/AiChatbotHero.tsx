@@ -1,7 +1,12 @@
+'use client';
+
 import React from "react";
 import Anchor from "../ui/Anchor/Anchor";
 import Image from "next/image";
+import Button from "../ui/button/Button";
+import { useTheme } from "@/contexts/ThemeContext";
 const AiChatbotHero = () => {
+  const { toggleModal } = useTheme();
   return (
    
 
@@ -29,8 +34,8 @@ const AiChatbotHero = () => {
         Deliver instant support, personalized recommendations, and seamless shopping experiences 24/7.
       </p>
       <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
-        <Anchor 
-          href="/get-started" 
+        <Button 
+          onClick={() => toggleModal(true)}
           label="Start Free Trial"
           className=""
         />
