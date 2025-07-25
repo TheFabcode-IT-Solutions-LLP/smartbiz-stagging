@@ -19,7 +19,7 @@ const ChatbotCTA = () => {
               label="Start Free Trial"
               className=""
             />
-            <Anchor 
+            {/* <Anchor 
               href="/demo" 
               label="See Demo"
               className=" border-white border-2  text-primary-100 bg-transparent  "
@@ -28,7 +28,7 @@ const ChatbotCTA = () => {
               href="/pricing" 
               label="Pricing Plans"
               className=" "
-            />
+            /> */}
           </div>
           <p className="text-[20px] font-normal text-accent-200 mt-[40px] max-mob-lg:text-[16px] max-mob-lg:mt-[30px]">
             Questions? Our AI chatbot is ready to help! 💬
