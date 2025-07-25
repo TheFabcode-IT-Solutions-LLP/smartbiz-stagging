@@ -4,7 +4,10 @@ import React, { useState } from 'react';
 import { ChevronRight, Clock, Calculator, DollarSign, Users, TrendingUp, AlertTriangle, BarChart3, Building2, ShoppingBag, Handshake } from 'lucide-react';
 import Link from 'next/link';
 
+import { useTheme } from "@/contexts/ThemeContext";
+
 const AICostCalculatorArticle = () => {
+  const { toggleModal } = useTheme();
   const [activeSection, setActiveSection] = useState('');
   const [showCalculator, setShowCalculator] = useState(false);
   const [calculatorInputs, setCalculatorInputs] = useState({
@@ -650,12 +653,12 @@ const AICostCalculatorArticle = () => {
             Use our interactive decision matrix to get a recommendation tailored to your specific situation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/get-started"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Assessment
-            </Link>
+            <button 
+      onClick={() => toggleModal(true)}
+      className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+    >
+      Start Assessment
+    </button>
             <Link 
               href="/contact"
               className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors"

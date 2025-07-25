@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 const Footer = () => {
+
   const [message, setMessage] = useState({ message: "", type: "" });
   const sm = [
     {
@@ -50,15 +51,15 @@ const Footer = () => {
     quickLinks: false,
     legal: false,
   });
-const toggleSection = (section: keyof typeof open) => {
-  setOpen((prev) => ({
-    ...prev,
-    [section]: !prev[section],
-  }));
-};
+  const toggleSection = (section: keyof typeof open) => {
+    setOpen((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
 
   const date = new Date();
-   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!formData.email) {
@@ -140,15 +141,15 @@ const toggleSection = (section: keyof typeof open) => {
                 <span className="font-medium">Error!</span> {message?.message}
               </div>
             )}
-            {message?.type == "success" && (
-              <div
-                className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50 "
-                role="alert"
-              >
-                <span className="font-medium">Success alert!</span>{" "}
-                {message?.message}
-              </div>
+            {message?.type === "success" && (
+              <>
+                <div className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
+                  <span className="font-medium">Success!</span> {message.message}
+                </div>
+                
+              </>
             )}
+
           </div>
         </div>
 
@@ -173,7 +174,7 @@ const toggleSection = (section: keyof typeof open) => {
               Services
               <span>
                 {open.services ? (
-                 
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -264,7 +265,7 @@ const toggleSection = (section: keyof typeof open) => {
               Legal
               <span>
                 {open.legal ? (
-      
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -279,7 +280,7 @@ const toggleSection = (section: keyof typeof open) => {
                     <polyline points="18 15 12 9 6 15" />
                   </svg>
                 ) : (
- 
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
