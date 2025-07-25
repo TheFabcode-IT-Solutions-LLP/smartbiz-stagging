@@ -35,7 +35,7 @@ export default function ClientAbout() {
               We&apos;re the team that turns manual work into automated profits
             </h2>
             <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
-              SmartBiz AI started with a simple goal: help businesses save time and money through smart AI workflow automation. Today, we're the trusted partner for companies wanting custom AI chatbots and business process automation that actually works.
+              SmartBiz AI started with a simple goal: help businesses save time and money through smart AI workflow automation. Today, we&apos;re the trusted partner for companies wanting custom AI chatbots and business process automation that actually works.
             </p>
             <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
               <Button
@@ -44,15 +44,15 @@ export default function ClientAbout() {
                 className=""
               
               />
-              <Button
-                onClick={() => toggleModal(true)}
+              <Anchor
+                href="/bookdemo"
                 label="Book a Demo"
                 className="bg-transparent border-2 border-white cursor-pointer"
               />
             </div>
           </div>
         </div>
-      </section>
+      </section>    
 
       {/* Company Story Section */}
       <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">

@@ -2,13 +2,13 @@
 import Link from 'next/link';
 
 const blogPosts = [
-  {
-    slug: 'implementing-ai-workflows-chatbot-integration',
-    title: 'From Chaos to Control: Implementing AI Workflows with Chatbot Integration',
-    excerpt: 'Your customer service team is drowning. Here\'s how to build AI workflows that integrate chatbots directly into your business operations.',
-    date: 'April 23, 2025',
+    {
+    slug: 'ai-workflow-automation-small-business-guide-2025',
+    title: 'The Complete Guide to AI Workflow Automation for Small Businesses in 2025',
+    excerpt: 'Learn how to implement AI workflow automation in your small business with our step-by-step guide.',
+    date: 'February 18, 2025',
     readTime: '15 min read',
-    category: 'Workflow Automation'
+    category: 'AI Automation'
   },
   {
     slug: 'ai-ecommerce-chatbots-conversion-optimization-playbook',
@@ -19,13 +19,25 @@ const blogPosts = [
     category: 'Ecommerce'
   },
   {
-    slug: 'ai-workflow-automation-small-business-guide-2025',
-    title: 'The Complete Guide to AI Workflow Automation for Small Businesses in 2025',
-    excerpt: 'Learn how to implement AI workflow automation in your small business with our step-by-step guide.',
-    date: 'February 18, 2025',
+    slug: 'implementing-ai-workflows-chatbot-integration',
+    title: 'From Chaos to Control: Implementing AI Workflows with Chatbot Integration',
+    excerpt: 'Your customer service team is drowning. Here\'s how to build AI workflows that integrate chatbots directly into your business operations.',
+    date: 'April 23, 2025',
     readTime: '15 min read',
-    category: 'AI Automation'
+    category: 'Workflow Automation'
   },
+  {
+      slug:'ai-implementation-cost-calculator-build-vs-buy-vs-partner',
+      title: 'AI Implementation Cost Calculator: Build vs Buy vs Partner | SmartBiz Genie',
+      excerpt: 'Most AI cost calculators lie to you. They give you rosy development estimates while ignoring the brutal reality of deployment, maintenance, and the inevitable scope creep that kills budgets.',
+      description: 'Compare real costs of AI implementation across three paths. Based on 200+ projects, this calculator shows development, deployment, and 3-year operational costs.',
+      keywords: 'AI implementation cost, build vs buy AI, AI cost calculator, AI project budget, AI implementation strategy',
+      image: '/images/blog/ai-cost-calculator-og.png',
+      date: 'May 18, 2025',
+      readTime: '15 min read',
+      category: 'AI Automation'
+    },
+    
   {
   slug: 'industry-specific-ai-solutions-vertical-workflows',
   title: 'Industry-Specific AI Solutions: Why Generic Chatbots Fail and Vertical AI Workflows Win',
@@ -34,16 +46,7 @@ const blogPosts = [
   readTime: '12 min read',
   category: 'AI Solutions'
 },
-{
-    slug:'ai-implementation-cost-calculator-build-vs-buy-vs-partner',
-    title: 'AI Implementation Cost Calculator: Build vs Buy vs Partner | SmartBiz Genie',
-    description: 'Compare real costs of AI implementation across three paths. Based on 200+ projects, this calculator shows development, deployment, and 3-year operational costs.',
-    keywords: 'AI implementation cost, build vs buy AI, AI cost calculator, AI project budget, AI implementation strategy',
-    image: '/images/blog/ai-cost-calculator-og.png',
-    date: 'May 18, 2025',
-    readTime: '15 min read',
-    category: 'AI Automation'
-  }
+
 ];
 
 export default function BlogPage() {
