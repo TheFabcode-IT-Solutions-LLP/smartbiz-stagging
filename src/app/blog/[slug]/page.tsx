@@ -4,6 +4,8 @@ import EcommerceChatbotArticle from '@/components/blog/EcommerceChatbotArticle';
 import WorkflowChatbotIntegrationArticle from '@/components/blog/AIWorkflowChatbotArticle';
 import IndustrySpecificAIArticle from '@/components/blog/IndustrySpecificAIArticle';
 import AICostCalculatorArticle from '@/components/blog/AICostCalculatorArticle';
+import ShopifyCustomerSupportArticle from '@/components/blog/ShopifyCustomerSupportArticle';
+import AIMarketingToolsArticle from '@/components/blog/AIMarketingToolsArticle';
 
 import { Metadata } from 'next';
 
@@ -38,7 +40,22 @@ const blogPostMeta = {
     description: 'Compare real costs of AI implementation across three paths. Based on 200+ projects, this calculator shows development, deployment, and 3-year operational costs.',
     keywords: 'AI implementation cost, build vs buy AI, AI cost calculator, AI project budget, AI implementation strategy',
     image: '/images/blog/ai-cost-calculator-og.png'
+  },
+  'customer-support-automation-shopify-complete-guide': {
+  title: 'Customer Support Automation in Shopify: The Complete Guide | SmartBiz Genie',
+  description: 'Learn how to implement customer support automation in Shopify. Reduce support costs by 30%, improve response times by 67%, and scale your ecommerce support efficiently.',
+  keywords: 'Shopify customer support automation, ecommerce support automation, Shopify chatbot, automated customer service, Shopify automation tools',
+  image: '/images/blog/shopify-support-automation-og.png'
+},
+  'ai-marketing-tools-2025': {
+    title: 'AI Marketing Tools 2025: Complete Guide | SmartBiz Genie',
+    description: 'Discover the AI marketing tools driving 312% ROI in 2025. From content creation to predictive analytics, get the complete implementation guide.',
+    keywords: 'AI marketing tools, marketing automation 2025, AI content creation, predictive analytics marketing, conversational marketing',
+    image: '/images/blog/ai-marketing-tools-og.png'
   }
+
+
+    
 };
 
 // Generate metadata for the page
@@ -89,6 +106,10 @@ export default async function Page({
   return <IndustrySpecificAIArticle />;
   case 'ai-implementation-cost-calculator-build-vs-buy-vs-partner':
       return <AICostCalculatorArticle />;
+      case 'customer-support-automation-shopify-complete-guide':
+  return <ShopifyCustomerSupportArticle />;
+  case 'ai-marketing-tools-2025':
+      return <AIMarketingToolsArticle />;
     default:
       return (
         <div className="min-h-screen flex items-center justify-center">

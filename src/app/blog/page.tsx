@@ -45,7 +45,22 @@ const blogPosts = [
   date: 'July 15, 2025',
   readTime: '12 min read',
   category: 'AI Solutions'
+},{
+  slug: 'customer-support-automation-shopify-complete-guide',
+  title: 'Customer Support Automation in Shopify: The Complete Guide to Scaling Your Ecommerce Support',
+  excerpt: 'Customer support automation isn\'t just a nice-to-have anymore—it\'s the difference between scaling profitably and drowning in support tickets.',
+  date: 'July 28, 2025',
+  readTime: '18 min read',
+  category: 'Ecommerce Automation'
 },
+  {
+    slug: 'ai-marketing-tools-2025',
+    title: 'AI Marketing Tools 2025: The Complete Guide to Automated Growth',
+    excerpt: 'Marketing in 2025 isn\'t about working harder—it\'s about working smarter with AI. Discover the tools driving 312% ROI increases.',
+    date: 'January 15, 2025',
+    readTime: '18 min read',
+    category: 'Marketing AI'
+  },
 
 ];
 
