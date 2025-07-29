@@ -463,7 +463,7 @@ const ShopifyCustomerSupportArticle = () => {
               onClick={() => toggleModal(true)}
               className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Get Free Consultation
+              get started freeConsultation
             </button>
             <Link 
               href="/automated-customer-support"

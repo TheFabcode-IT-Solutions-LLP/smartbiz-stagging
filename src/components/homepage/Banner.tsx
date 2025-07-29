@@ -5,9 +5,20 @@ import React from "react";
 import Button from "../ui/button/Button";
 import Anchor from "../ui/Anchor/Anchor";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
   const { toggleModal } = useTheme();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <div className="relative pb-[50px] max-mob-lg:pb-6">
       <video
@@ -19,7 +30,9 @@ const Banner = () => {
         playsInline
       ></video>
 
-      <div className="absolute bottom-[161px] left-[110px] max-tab-md:relative max-tab-md:bottom-0 max-tab-md:left-0 max-tab-lg:px-4 max-des-xl:left-[30px]">
+      <div
+        data-aos="fade-up"
+        className="absolute bottom-[161px] left-[110px] max-tab-md:relative max-tab-md:bottom-0 max-tab-md:left-0 max-tab-lg:px-4 max-des-xl:left-[30px]">
         <div className="flex flex-col gap-[40px] max-tab-lg:gap-[20px] w-[951px] max-des-xl:w-[700px] max-mob-lg:w-full">
           <h1 className="text-[50px] font-bold text-white leading-[60px] tracking-[0%] max-tab-md:text-2xl max-des-3xl:text-[40px] max-mob-lg:pt-[20px] max-tab-md:pt-[40px] max-mob-lg:w-full max-tab-md:text-black max-mob-lg:leading-[1.2] max-mob-lg:text-center max-des-3xl:leading-[40px]">
             AI Workflow Automation That Saves You 20+ Hours Every Week
@@ -35,7 +48,7 @@ const Banner = () => {
         <div className="max-mob-lg:flex max-mob-lg:gap-[20px] max-tab-lg:mt-[20px] mt-[40px] max-mob-lg:justify-center max-tab-lg:flex-wrap flex-row gap-[35px] max-tab-lg:gap-[0px] flex">
           <Button
             onClick={() => toggleModal(true)}
-            label="Get Free AI Automation Audit"
+            label="get started freeAI Automation Audit"
             className=""
           />
           <Anchor href="/how-it-works" label="How It Works" className=""></Anchor>

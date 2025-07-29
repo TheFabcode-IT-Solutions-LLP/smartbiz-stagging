@@ -1,8 +1,19 @@
 import Container from "@/components/ui/conatiner/Container";
 import Image from "next/image";
 import React from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const RealClients = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const items = [
     {
       image: "/assets/images/problem.png",
@@ -23,10 +34,10 @@ const RealClients = () => {
         <h2 className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
           Real Results from Real Clients
         </h2>
-        <div className="mt-[50px] max-tab-lg:mt-6 flex gap-[25px] justify-between max-des-xl:gap-3 max-mob-lg:flex-wrap">
+        <div data-aos="fade-in" className="mt-[50px] max-tab-lg:mt-6 flex gap-[25px] justify-between max-des-xl:gap-3 max-mob-lg:flex-wrap">
           {items &&
-            items.map((item) => (
-              <RealClientsItem key={item.heading} item={item} />
+            items.map((item, index) => (
+              <RealClientsItem key={item.heading} item={item} delay={index * 200} />
             ))}
         </div>
       </Container>
@@ -38,14 +49,16 @@ export default RealClients;
 
 const RealClientsItem = ({
   item,
+  delay,
 }: {
   item: {
     image: string;
     heading: string;
   };
+  delay: number;
 }) => {
   return (
-    <div className="h-full w-full relative group overflow-hidden  rounded-[20px]">
+    <div data-aos="fade-in" data-aos-delay={delay} className="h-full w-full relative group overflow-hidden  rounded-[20px]">
       <Image
         alt="Site Logo"
         src={item.image}

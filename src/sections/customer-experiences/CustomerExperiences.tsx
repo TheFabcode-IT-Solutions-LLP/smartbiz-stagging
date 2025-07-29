@@ -6,7 +6,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
 const CustomerExperiences = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const items = [
     {
       image: "/assets/images/sarah.png",
@@ -29,13 +41,13 @@ const CustomerExperiences = () => {
       content:
         "Their AI-powered lead management system revolutionized our sales process. We now identify high-value prospects 3x faster, and our conversion rates improved by 45%. The ROI was clear within the first month.",
     },
-      {
+    {
       image: "/assets/images/sarah.png",
       auth: "Michael Rodriguez",
       desig: "ServicePro Agency",
       content:
         "The AI voice assistant they developed handles all our appointment scheduling and client communications. It's like having a full-time assistant that never sleeps. Our clients are impressed, and we've reduced administrative overhead by 60%.",
-    },  
+    },
     {
       image: "/assets/images/sarah.png",
       auth: "Jennifer Lee",
@@ -43,7 +55,7 @@ const CustomerExperiences = () => {
       content:
         "Their smart analytics dashboard gives us insights we never had before. We can predict customer behavior, optimize our inventory, and make data-driven decisions in real-time. Our operational efficiency increased by 50%.",
     },
-      
+
   ];
   return (
     <div className="py-[50px] max-mob-lg:py-6">
@@ -51,7 +63,7 @@ const CustomerExperiences = () => {
         <h2 className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
           Customer Experiences
         </h2>
-        <div className="mt-[50px] max-tab-lg:mt-6 max-mob-lg:mx-[-16px]">
+        <div data-aos="fade-up" className="mt-[50px] max-tab-lg:mt-6 max-mob-lg:mx-[-16px]">
           <Swiper
             slidesPerView={1}
             spaceBetween={25}
@@ -66,11 +78,11 @@ const CustomerExperiences = () => {
                 centeredSlides: true,
                 slidesPerView: 1.3,
                 spaceBetween: 16,
-              },         
-              768: {                
+              },
+              768: {
                 slidesPerView: 2,
                 spaceBetween: 25,
-              },                  
+              },
               1440: {
                 autoplay: false,
                 slidesPerView: 3,
@@ -80,9 +92,9 @@ const CustomerExperiences = () => {
             className="mySwiper"
           >
             {items &&
-              items.map((item) => (
-                <SwiperSlide className="!h-auto" key={item.auth}>                  
-                  <CustomerExperiencesItem item={item} />
+              items.map((item, index) => (
+                <SwiperSlide className="!h-auto" key={item.auth}>
+                  <CustomerExperiencesItem item={item} delay={index * 200} />
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -96,6 +108,7 @@ export default CustomerExperiences;
 
 const CustomerExperiencesItem = ({
   item,
+  delay,
 }: {
   item: {
     image: string;
@@ -103,9 +116,10 @@ const CustomerExperiencesItem = ({
     desig: string;
     content: string;
   };
+  delay: number;
 }) => {
   return (
-    <div className="h-full w-full relative pt-[19px] pl-[26px] pr-[58px] pb-[55px] bg-primary-100 rounded-[20px] max-mob-lg:p-4">
+    <div data-aos="fade-in" data-aos-delay={delay} className="h-full w-full relative pt-[19px] pl-[26px] pr-[58px] pb-[55px] bg-primary-100 rounded-[20px] max-mob-lg:p-4">
       <svg
         width="107"
         height="20"

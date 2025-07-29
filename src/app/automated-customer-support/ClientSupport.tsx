@@ -5,8 +5,19 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
 import Button from "@/components/ui/button/Button";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 export default function ClientSupport() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const { toggleModal } = useTheme();
   return (
     <>
@@ -20,8 +31,8 @@ export default function ClientSupport() {
             height={1000}
             className="w-full max-h-[100dvh] object-cover h-full"
           />
-           
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
+
+          <div data-aos="fade-up" className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px]  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4  ">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Automated Customer Support That{" "}
               <span className="text-accent-100">Never Sleeps</span>
@@ -37,7 +48,7 @@ export default function ClientSupport() {
             </p>
             <div className="flex gap-[35px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
               <Button
-                onClick={() => toggleModal(true)} 
+                onClick={() => toggleModal(true)}
                 label="Get Started Free"
                 className=""
               />
@@ -53,12 +64,12 @@ export default function ClientSupport() {
 
       <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             The Hidden Cost of Manual Customer Support
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">📞</div>
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">📞</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 $1.50 per minute
               </h3>
@@ -66,8 +77,8 @@ export default function ClientSupport() {
                 Average cost of phone support
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">📧</div>
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" data-aos-delay="100" className="text-[48px] mb-[15px]">📧</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 24-48 hours
               </h3>
@@ -75,8 +86,8 @@ export default function ClientSupport() {
                 Typical email response time
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">😔</div>
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">😔</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 67% of customers
               </h3>
@@ -84,8 +95,8 @@ export default function ClientSupport() {
                 Leave due to poor service
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">💸</div>
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" data-aos-delay="100" className="text-[48px] mb-[15px]">💸</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 $75 billion
               </h3>
@@ -147,11 +158,11 @@ export default function ClientSupport() {
       {/* Intelligent Automation Section */}
       <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Intelligent Automation That Understands Your Customers
           </h2>
           <div className="grid grid-cols-3 gap-[25px] max-tab-lg:flex max-tab-lg:flex-wrap max-tab-lg:justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Instant Query Resolution
               </h3>
@@ -182,7 +193,7 @@ export default function ClientSupport() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" data-aos-delay="100" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Smart Ticket Management
               </h3>
@@ -213,7 +224,7 @@ export default function ClientSupport() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" data-aos-delay="200" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Proactive Support
               </h3>
@@ -251,11 +262,11 @@ export default function ClientSupport() {
       {/* Why Choose Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-up" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Why Leading Brands Choose Our Automated Customer Support
           </h2>
           <div className="grid grid-cols-2 gap-[30px] max-w-[1100px] mx-auto max-mob-lg:grid-cols-1">
-            <div className="flex gap-[20px] items-center">
+            <div data-aos="fade-up" className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">✅</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[5px] max-des-xl:text-[18px]">
@@ -266,7 +277,7 @@ export default function ClientSupport() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-[20px]  items-center">
+            <div data-aos="fade-up" className="flex gap-[20px]  items-center">
               <span className="text-[32px] flex-shrink-0">✅</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[5px] max-des-xl:text-[18px]">
@@ -277,7 +288,7 @@ export default function ClientSupport() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-[20px]  items-center">
+            <div data-aos="fade-up" className="flex gap-[20px]  items-center">
               <span className="text-[32px] flex-shrink-0">✅</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[5px]  max-des-xl:text-[18px]">
@@ -288,7 +299,7 @@ export default function ClientSupport() {
                 </p>
               </div>
             </div>
-            <div className="flex gap-[20px]  items-center">
+            <div data-aos="fade-up" className="flex gap-[20px]  items-center">
               <span className="text-[32px] flex-shrink-0">✅</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[5px]  max-des-xl:text-[18px]">
@@ -304,7 +315,7 @@ export default function ClientSupport() {
       </section>
 
       {/* ROI Calculator Section */}
-      <section className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
+      <section style={{overflow:'hidden'}} className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <div className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[30px] max-des-3xl:text-2xl">
@@ -313,9 +324,9 @@ export default function ClientSupport() {
             <p className="text-[24px] text-white mb-[40px] max-mob-lg:text-[18px]">
               For a business handling 1,000 support queries/month:
             </p>
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-w-[600px] mx-auto max-mob-lg:p-[20px]">
-              <div className="text-left space-y-[20px]">
-                <div className="flex justify-between items-center max-tab-sm:gap-[10px]">
+            <div data-aos="fade-up" className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-w-[600px] mx-auto max-mob-lg:p-[20px]">
+              <div  className="text-left space-y-[20px]">
+                <div  className="flex justify-between items-center max-tab-sm:gap-[10px]">
                   <span className="text-[20px] text-white max-mob-lg:text-[16px]">
                     Traditional Support Cost:
                   </span>
@@ -342,7 +353,7 @@ export default function ClientSupport() {
                   </div>
                 </div>
               </div>
-              <Anchor
+              <Anchor 
                 href="/calculate-roi"
                 label="Calculate Your ROI"
                 className="mt-[40px] bg-white !text-primary-100 hover:bg-gray-100 "
@@ -355,12 +366,12 @@ export default function ClientSupport() {
       {/* Features Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Features That Set Us Apart
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-tab-lg:flex max-tab-lg:flex-wrap max-tab-lg:justify-center">
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
-              <div className="text-[48px] mb-[15px]">🤖</div>
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">🤖</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Advanced AI Understanding
               </h3>
@@ -379,8 +390,8 @@ export default function ClientSupport() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
-              <div className="text-[48px] mb-[15px]">📊</div>
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+              <div data-aos="fade-in" data-aos-delay="100" className="text-[48px] mb-[15px]">📊</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Comprehensive Analytics
               </h3>
@@ -399,8 +410,8 @@ export default function ClientSupport() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
-              <div className="text-[48px] mb-[15px]">🔗</div>
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+              <div data-aos="fade-in" data-aos-delay="200" className="text-[48px] mb-[15px]">🔗</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Seamless Integration
               </h3>
@@ -424,13 +435,13 @@ export default function ClientSupport() {
       </section>
 
       {/* Success Story Section */}
-      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
+      <section style={{overflow:'hidden'}} className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <div className="text-center">
-            <h2 className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
+            <h2 data-aos="fade-in" className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
               Success Stories
             </h2>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-w-[800px] mx-auto max-mob-lg:p-[30px]">
+            <div data-aos="fade-up" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-w-[800px] mx-auto max-mob-lg:p-[30px]">
               <p className="text-[24px] text-white italic mb-[20px] max-mob-lg:text-[18px]">
                 &quot;We reduced our support team from 15 to 5 agents while
                 improving customer satisfaction by 40%.&quot;
@@ -446,12 +457,12 @@ export default function ClientSupport() {
       {/* Get Started Steps */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Get Started in 3 Simple Steps
           </h2>
           <div className="flex justify-between max-w-[1100px] mx-auto  max-mob-lg:gap-[30px] max-mob-lg:flex-wrap">
-            <div className="text-center flex-1">
-              <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
+            <div data-aos="fade-up" className="text-center flex-1">
+              <div data-aos="fade-in" className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">1</span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -461,8 +472,8 @@ export default function ClientSupport() {
                 Integrate with your existing systems
               </p>
             </div>
-            <div className="text-center flex-1">
-              <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]  max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-center flex-1">
+              <div data-aos="fade-in" data-aos-delay="100" className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]  max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">2</span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -472,8 +483,8 @@ export default function ClientSupport() {
                 Set up responses and workflows
               </p>
             </div>
-            <div className="text-center flex-1">
-              <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="text-center flex-1">
+              <div data-aos="fade-in" data-aos-delay="200" className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">3</span>
               </div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -490,13 +501,13 @@ export default function ClientSupport() {
       {/* Final CTA Section */}
       <section className="bg-primary-100 py-[80px] max-mob-lg:py-10 mt-[50px] border-b-white border-[1px]">
         <Container>
-          <div className="text-center">
+          <div data-aos="fade-in" className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
               Ready to Transform Your Customer Support?
             </h2>
             <div className="flex justify-center gap-[20px] flex-wrap">
               <Button
-                onClick={() => toggleModal(true)} 
+                onClick={() => toggleModal(true)}
                 label="Get Started Free"
                 className=""
               />

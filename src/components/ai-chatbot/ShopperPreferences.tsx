@@ -1,5 +1,10 @@
+'use client';
+
 import React from "react";
 import Container from "../ui/conatiner/Container";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const shopperPreferences = [
   {
@@ -25,16 +30,24 @@ const shopperPreferences = [
 ];
 
 const ShopperPreferences = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <Container>
       <div className="py-[50px] max-mob-lg:py-6">
-        <h2 className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl mb-[50px] max-mob-lg:mb-6">
+        <h2 data-aos="fade-in" data-aos-delay="100" className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl mb-[50px] max-mob-lg:mb-6">
           Why 73% of Online Shoppers Prefer AI Chatbots
         </h2>
-        
+
         <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1 max-tab-lg:gap-[20px]">
           {shopperPreferences.map((item, index) => (
-            <div key={index} className="flex gap-[20px] items-center justify-center">
+            <div data-aos="fade-up" data-aos-delay={index * 100} key={index} className="flex gap-[20px] items-center justify-center">
               <div className="text-[48px] max-mob-lg:text-[36px]">{item.icon}</div>
               <div>
                 <h3 className="text-[24px] font-medium leading-[100%] text-primary-100 mb-[10px] max-mob-lg:text-[18px]">

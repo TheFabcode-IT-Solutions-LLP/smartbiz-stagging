@@ -7,6 +7,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Container from "@/components/ui/conatiner/Container";
 
+import PhoneInput from "react-phone-input-2";
+import 'react-phone-input-2/lib/style.css';
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 type FormData = {
   name: string;
   email: string;
@@ -26,8 +33,14 @@ type FormData = {
 };
 
 const ContactPage = () => {
+  // const [submittedData, setSubmittedData] = useState<FormData | null>(null);
 
-
+  useEffect(() => {
+        AOS.init({
+          duration: 1000, 
+          once: false,     
+        });
+      }, []);
 
   const { toggleModal } = useTheme();
   const [message, setMessage] = useState({ message: "", type: "" });
@@ -55,7 +68,11 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     if (!formData.consent) {
-      alert("Please agree to the terms and privacy policy.");
+      // alert("Please agree to the terms and privacy policy.");
+      setMessage({
+        message: "Please agree to the terms and privacy policy",
+        type: "error",
+      });
       setIsSubmitting(false);
       return;
     }
@@ -70,12 +87,34 @@ const ContactPage = () => {
     }
 
     try {
+      const data = new FormData();
+      data.append("name", formData.name);
+      data.append("email", formData.email);
+      data.append("phone", formData.phone);
+      data.append("company", formData.company);
+      data.append("industry", formData.industry);
+      data.append("website", formData.website);
+      data.append("projectDescription", formData.projectDescription);
+      data.append("preferredCallTime", formData.preferredCallTime || "");
+      data.append("estimatedBudget", formData.estimatedBudget || "");
+      data.append("hearAboutUs", formData.hearAboutUs);
+      data.append("hearAboutUsOther", formData.hearAboutUsOther);
+      data.append("consent", formData.consent ? "true" : "false");
+      data.append("message", formData.message);
+
+
+      formData.services.forEach((service) => {
+        data.append("services", service);
+      });
+
+
+      if (formData.file) {
+        data.append("file", formData.file);
+      }
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+        body: data,
       });
 
       const result = await response.json();
@@ -84,7 +123,8 @@ const ContactPage = () => {
         type: response.ok ? "success" : "error",
       });
 
-      if (response.ok && result?.data) {
+      if (response.ok) {
+        // setSubmittedData(formData);
         setFormData({
           name: "",
           email: "",
@@ -165,7 +205,7 @@ const ContactPage = () => {
             className="w-full max-h-[100dvh] object-cover h-full"
           />
 
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div data-aos="fade-up" className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Ready to Transform Your Business with{" "}
               <span className="text-accent-100">AI Workflow Automation?</span>
@@ -196,7 +236,7 @@ const ContactPage = () => {
           <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Send Us a Message
           </h2>
-          <div className="max-w-[800px] mx-auto">
+          <div data-aos="fade-up" className="max-w-[800px] mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
               <form onSubmit={handleSubmit} className="space-y-[30px]">
                 <div>
@@ -247,7 +287,8 @@ const ContactPage = () => {
                     >
                       Phone Number
                     </label>
-                    <input
+
+                    {/* <input
                       type="tel"
                       id="phone"
                       name="phone"
@@ -256,7 +297,38 @@ const ContactPage = () => {
                       required
                       className="w-full h-[60px] px-[20px] rounded-[15px] border border-white/20 bg-white/10 text-white placeholder:text-white/60 text-[18px] max-mob-lg:text-[16px] max-mob-lg:h-[50px] focus:outline-none focus:border-accent-100 transition-colors"
                       placeholder="Enter Phone Number"
+                    /> */}
+
+                    <PhoneInput
+                      country={'in'}
+                      value={formData.phone}
+                      onChange={(phone) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          phone,
+                        }))
+                      }
+                      inputStyle={{
+                        width: '100%',
+                        height: '60px',
+                        paddingLeft: '60px',
+                        borderRadius: '15px',
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        backgroundColor: 'rgba(255,255,255,0.1)',
+                        color: '#fff',
+                        fontSize: '18px',
+                      }}
+                      buttonStyle={{
+                        backgroundColor: 'transparent',
+                        border: 'none',
+                      }}
+                      inputClass="placeholder:text-white/60 focus:outline-none"
+                      specialLabel=""
+                      preferredCountries={['in', 'us', 'gb']}
+                      enableSearch
                     />
+
+
                   </div>
                 </div>
 
@@ -327,7 +399,7 @@ const ContactPage = () => {
                 {/* Services Interested In */}
                 <div className="mt-[30px]">
                   <label className="block text-[18px] font-medium text-white mb-[10px] max-mob-lg:text-[16px]">
-                    What service are you looking for? <span className="text-white/60">(Select all that apply)</span>
+                    What service are you looking for? 
                   </label>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2 text-white text-[16px] max-mob-lg:text-[14px]">
@@ -547,10 +619,41 @@ const ContactPage = () => {
             </div>
 
 
+            {/* {submittedData && (
+  <div className="mt-6 bg-green-100 border border-green-300 rounded-xl p-4 text-sm text-black">
+    <h3 className="font-semibold text-base mb-2">Submitted Data:</h3>
+    <ul className="space-y-1">
+      <li><strong>Name:</strong> {submittedData.name}</li>
+      <li><strong>Email:</strong> {submittedData.email}</li>
+      <li><strong>Phone:</strong> {submittedData.phone || "N/A"}</li>
+      <li><strong>Company:</strong> {submittedData.company || "N/A"}</li>
+      <li><strong>Industry:</strong> {submittedData.industry || "N/A"}</li>
+      <li><strong>Website:</strong> {submittedData.website || "N/A"}</li>
+      <li><strong>Services:</strong> {submittedData.services.join(", ") || "N/A"}</li>
+      <li><strong>Project Description:</strong> {submittedData.projectDescription || "N/A"}</li>
+      <li><strong>Preferred Call Time:</strong> {submittedData.preferredCallTime || "N/A"}</li>
+      <li><strong>Estimated Budget:</strong> {submittedData.estimatedBudget || "N/A"}</li>
+      <li><strong>Heard About Us:</strong> {submittedData.hearAboutUs}</li>
+      {submittedData.hearAboutUs === "Other" && (
+        <li><strong>Other (Specify):</strong> {submittedData.hearAboutUsOther || "N/A"}</li>
+      )}
+      <li><strong>Message:</strong> {submittedData.message || "N/A"}</li>
+      <li>
+        <strong>File:</strong>{" "}
+        {submittedData.file ? submittedData.file.name : "No file uploaded"}
+      </li>
+    </ul>
+  </div>
+)} */}
+
+
+
+
+
 
           </div>
 
-          
+
 
 
         </Container>
@@ -561,12 +664,12 @@ const ContactPage = () => {
       {/* Contact Information Section */}
       <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Multiple Ways to Reach Our AI Automation Team
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
             {/* Call */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-tab-lg:p-[20px] text-center">
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-tab-lg:p-[20px] text-center">
               <div className="text-[48px] mb-[15px]">📞</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Schedule a Call
@@ -582,7 +685,7 @@ const ContactPage = () => {
             </div>
 
             {/* Email */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
               <div className="text-[48px] mb-[15px]">✉️</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Email Us
@@ -599,7 +702,7 @@ const ContactPage = () => {
             </div>
 
             {/* Chat */}
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] text-center">
               <div className="text-[48px] mb-[15px]">💬</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Chat with AI

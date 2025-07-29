@@ -5,10 +5,19 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
 import { useTheme } from "@/contexts/ThemeContext";
 import Button from "@/components/ui/button/Button";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function ClientAbout() {
   const { toggleModal } = useTheme();
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
 
   return (
     <>
@@ -26,7 +35,7 @@ export default function ClientAbout() {
             />
             <div className="absolute inset-0 bg-primary-100/50 z-[10] pointer-events-none max-tab-md:hidden"></div>
           </div>
-          <div className="absolute bottom-[80px] z-20 flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div data-aos="fade-up" className="absolute bottom-[80px] z-20 flex flex-col w-full max-tab-lg:mt-[50px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               Meet the AI Workflow Automation Experts Behind{" "}
               <span className="text-accent-100">50+ Business Transformations</span>
@@ -42,7 +51,7 @@ export default function ClientAbout() {
                 onClick={() => toggleModal(true)}
                 label="Get Started Free"
                 className=""
-              
+
               />
               <Anchor
                 href="/bookdemo"
@@ -52,16 +61,16 @@ export default function ClientAbout() {
             </div>
           </div>
         </div>
-      </section>    
+      </section>
 
       {/* Company Story Section */}
       <section className="py-[50px] max-mob-lg:py-6 max-sm:hidden">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Our Story: From Manual Tasks to AI Automation Success
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:flex-1 max-tab-lg:flex-wrap max-tab-lg:justify-center max-tab-lg:gap-[20px]">
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">📖</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Started Like You
@@ -70,7 +79,7 @@ export default function ClientAbout() {
                 We spent 15+ hours weekly on manual tasks that ate up our days
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">🤖</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Built Our First AI Bot
@@ -79,7 +88,7 @@ export default function ClientAbout() {
                 Saved 15 hours per week with our first AI workflow automation
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">🚀</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 Word Spread Fast
@@ -88,7 +97,7 @@ export default function ClientAbout() {
                 Other businesses wanted the same time-saving results
               </p>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">🎯</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
                 50+ Success Stories
@@ -131,7 +140,7 @@ export default function ClientAbout() {
                   desc: "Now we help businesses save 20+ hours weekly on average",
                 },
               ].map(({ icon, title, desc }, i) => (
-                <div
+                <div data-aos="fade-in" data-aos-delay={i * 100}
                   key={i}
                   className="bg-[#F5F5F5] rounded-[20px] p-[40px] min-w-[280px] max-w-[300px] max-mob-lg:p-[20px] flex-shrink-0"
                 >
@@ -152,11 +161,11 @@ export default function ClientAbout() {
       {/* Team Expertise Section */}
       <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" data-aos-delay="300" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Expert Team Behind Your AI Workflow Automation Success
           </h2>
           <div className="grid grid-cols-3 gap-[25px] max-tab-lg:flex max-tab-lg:flex-wrap max-tab-lg:justify-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 AI Workflow Automation Specialists
               </h3>
@@ -187,7 +196,7 @@ export default function ClientAbout() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" data-aos-delay="100" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Technical Implementation Experts
               </h3>
@@ -218,7 +227,7 @@ export default function ClientAbout() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
+            <div data-aos="fade-in" data-aos-delay="200" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[30px]">
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Business Growth Strategists
               </h3>
@@ -254,7 +263,7 @@ export default function ClientAbout() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-[50px] max-mob-lg:py-6">
+      <section data-aos="fade-up" className="py-[50px] max-mob-lg:py-6">
         <Container>
           <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Why Leading Businesses Choose Our AI Workflow Automation Team
@@ -309,7 +318,7 @@ export default function ClientAbout() {
       </section>
 
       {/* Results Section */}
-      <section className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
+      <section data-aos="fade-up" className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <div className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[30px] max-des-3xl:text-2xl">
@@ -365,11 +374,11 @@ export default function ClientAbout() {
       {/* Features Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             What Sets Our AI Workflow Automation Apart
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-tab-lg:flex max-tab-lg:flex-wrap max-tab-lg:justify-center">
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+            <div data-aos="fade-up" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
               <div className="text-[48px] mb-[15px]">🎯</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Business-First AI Solutions
@@ -389,7 +398,7 @@ export default function ClientAbout() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
               <div className="text-[48px] mb-[15px]">⚡</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Fast Implementation
@@ -409,7 +418,7 @@ export default function ClientAbout() {
                 </li>
               </ul>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px] max-des-xl:p-[15px]">
               <div className="text-[48px] mb-[15px]">🛡️</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Enterprise-Grade Security
@@ -437,11 +446,11 @@ export default function ClientAbout() {
       <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
           <div className="text-center">
-            <h2 className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
+            <h2 data-aos="fade-in" className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
               What Our Clients Say About Working with Our Team
             </h2>
             <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1">
-              <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
+              <div data-aos="fade-in" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
                 <p className="text-[24px] text-white italic mb-[20px] max-mob-lg:text-[18px]">
                   &quot;The SmartBiz AI team completely transformed our customer
                   support with their custom AI chatbot. We went from 6-hour
@@ -452,7 +461,7 @@ export default function ClientAbout() {
                   - Sarah Chen, E-commerce Store Owner
                 </p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
+              <div data-aos="fade-in" data-aos-delay="150" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[50px] max-mob-lg:p-[30px]">
                 <p className="text-[24px] text-white italic mb-[20px] max-mob-lg:text-[18px]">
                   &quot;Their AI workflow automation saved our agency 25 hours
                   weekly on lead qualification and follow-ups. We can now focus
@@ -471,11 +480,11 @@ export default function ClientAbout() {
       {/* Get Started Steps */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             How We Work With You in 4 Simple Steps
           </h2>
           <div className="flex justify-between max-w-[1100px] mx-auto  max-mob-lg:gap-[30px] max-mob-lg:flex-wrap">
-            <div className="text-center flex-1">
+            <div data-aos="fade-up" className="text-center flex-1">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">1</span>
               </div>
@@ -486,7 +495,7 @@ export default function ClientAbout() {
                 We learn about your business and automation needs
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-center flex-1">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]  max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">2</span>
               </div>
@@ -497,7 +506,7 @@ export default function ClientAbout() {
                 We design AI workflow automation for your specific goals
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div data-aos="fade-up" data-aos-delay="200" className="text-center flex-1">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">3</span>
               </div>
@@ -508,7 +517,7 @@ export default function ClientAbout() {
                 We develop and test your custom AI solutions
               </p>
             </div>
-            <div className="text-center flex-1">
+            <div data-aos="fade-up" data-aos-delay="300" className="text-center flex-1">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-tab-sm:w-[80px] max-tab-sm:h-[80px]">
                 <span className="text-[40px] font-bold text-white">4</span>
               </div>
@@ -524,7 +533,7 @@ export default function ClientAbout() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="bg-primary-100 py-[80px] max-mob-lg:py-10 mt-[50px] border-b-white border-[1px]">
+      <section data-aos="fade-in" className="bg-primary-100 py-[80px] max-mob-lg:py-10 mt-[50px] border-b-white border-[1px]">
         <Container>
           <div className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[40px] max-des-3xl:text-2xl">
@@ -540,7 +549,7 @@ export default function ClientAbout() {
             </div>
             <div className="flex justify-center gap-[20px] flex-wrap">
               <Button
-                onClick={() => toggleModal(true)} 
+                onClick={() => toggleModal(true)}
                 label="Schedule Free Consultation"
                 className=""
               />

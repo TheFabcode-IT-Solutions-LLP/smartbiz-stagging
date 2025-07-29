@@ -2,6 +2,9 @@
 import Container from "@/components/ui/conatiner/Container";
 import Image from "next/image";
 import React, { useState } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const items = [
   {
@@ -82,46 +85,52 @@ const items = [
 ];
 
 const WhyChoose = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const [activeTab, setActiveTab] = useState(items[0].title);
 
   return (
     <div className="py-[50px] max-mob-lg:py-6">
       <Container>
-        <h2 className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
+        <h2 data-aos="fade-up" className="text-primary-100 text-[40px] text-center font-bold leading-[1.2] max-w-[1037px] mx-auto max-des-4xl:text-2xl">
           Why Choose SmartBiz AI for Workflow Automation?
         </h2>
 
-        <p className="text-center text-[18px] text-primary-100/80 mt-4 max-w-[800px] mx-auto max-mob-lg:text-base mb-8">
+        <p data-aos="fade-up" className="text-center text-[18px] text-primary-100/80 mt-4 max-w-[800px] mx-auto max-mob-lg:text-base mb-8">
           We&apos;re not just another AI company. We&apos;re business automation
           experts who understand what works in the real world. Here&apos;s what
           makes us different:
         </p>
 
         <div className="flex flex-row gap-20 mt-[50px] max-mob-lg:flex-col max-mob-lg:gap-10 justify-center">
-          <div className="flex flex-col gap-[25px] max-des-2xl:gap-2.5 justify-center">
+          <div data-aos="fade-up" className="flex flex-col gap-[25px] max-des-2xl:gap-2.5 justify-center">
             {items.map((item) => (
               <button
                 key={item.title}
                 onClick={() => setActiveTab(item.title)}
-                className={`${
-                  activeTab === item.title ? "bg-accent-100" : "bg-primary-100"
-                } text-white text-center rounded-[20px] cursor-pointer text-2xl font-bold py-6 px-4 max-des-3xl:text-lg max-des-xl:text-sm max-mob-md:py-4 max-mob-md:px-2 max-mob-md:rounded-md hover:bg-accent-100 transition-colors`}
+                className={`${activeTab === item.title ? "bg-accent-100" : "bg-primary-100"
+                  } text-white text-center rounded-[20px] cursor-pointer text-2xl font-bold py-6 px-4 max-des-3xl:text-lg max-des-xl:text-sm max-mob-md:py-4 max-mob-md:px-2 max-mob-md:rounded-md hover:bg-accent-100 transition-colors`}
               >
                 {item.title}
               </button>
             ))}
           </div>
 
-          <div className="">
+          <div data-aos="fade-up" className="">
             {items.map((item) =>
               activeTab === item.title ? (
                 <div
                   key={item.title}
-                  className={`w-full max-w-[600px] mx-auto transform transition duration-500 ease-in-out ${
-                    activeTab === item.title
+                  className={`w-full max-w-[600px] mx-auto transform transition duration-500 ease-in-out ${activeTab === item.title
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 -translate-y-2 pointer-events-none absolute"
-                  }`}
+                    }`}
                 >
                   {item.children
                     .filter((child) => child.active)
@@ -161,7 +170,7 @@ const WhyChoose = () => {
         </div>
 
         {/* Additional Trust Signals */}
-        <div className="mt-12 bg-[#F5F5F5] rounded-[20px] p-8 text-center">
+        <div data-aos="fade-up" className="mt-12 bg-[#F5F5F5] rounded-[20px] p-8 text-center">
           <h3 className="text-[24px] font-bold text-primary-100 mb-4">
             Ready to Join 50+ Successful Businesses?
           </h3>
