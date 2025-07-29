@@ -4,67 +4,80 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Button from "@/components/ui/button/Button";
 import { useTheme } from "@/contexts/ThemeContext";
 import Image from "next/image";
+
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+
 export default function CustomerService247() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const { toggleModal } = useTheme();
   return (
     <>
-     
 
 
-  <section className="bg-primary-100 relative">
-  <div className="text-center max-w-full w-full relative">
-    
-  
-    <div className="relative w-full h-full max-h-[100dvh]">
-      <Image
-        src="/assets/images/24hours.jpg"
-        alt=""
-        width={1900}
-        height={1000}
-        className="w-full h-full object-cover max-h-[100dvh]"
-      />
-   
-      <div className="absolute inset-0 bg-primary-100/50 z-10 max-tab-md:hidden"></div>
-    </div>
 
-    <Container className="absolute z-20 bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2 max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
-      <div className="text-center max-w-[1200px] mx-auto">
-        <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
-          Never Miss Another Customer with{" "}
-          <span className="text-accent-100">24/7 AI Support</span>
-        </h1>
-        <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
-          Your Customers Don&lsquo;t Sleep. Neither Should Your Support.
-        </h2>
-        <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
-          Provide round-the-clock customer service without the round-the-clock costs. Smartbizgenie&lsquo;s 24/7 customer service solution ensures every customer gets instant, accurate support - whether it&lsquo;s 3 PM or 3 AM.
-        </p>
-        <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
-          <Anchor href="/get-started" label="Start Your 24/7 Support" className="" />
-          <Button
-            onClick={() => toggleModal(true)}
-            label="Schedule Demo"
-            className="bg-transparent border-2 border-white"
-          />
+      <section className="bg-primary-100 relative">
+        <div className="text-center max-w-full w-full relative">
+
+
+          <div className="relative w-full h-full max-h-[100dvh]">
+            <Image
+              src="/assets/images/24hours.jpg"
+              alt=""
+              width={1900}
+              height={1000}
+              className="w-full h-full object-cover max-h-[100dvh]"
+            />
+
+            <div className="absolute inset-0 bg-primary-100/50 z-10 max-tab-md:hidden"></div>
+          </div>
+
+          <Container className="absolute z-20 bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2 max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+            <div data-aos="fade-up" className="text-center max-w-[1200px] mx-auto">
+              <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
+                Never Miss Another Customer with{" "}
+                <span className="text-accent-100">24/7 AI Support</span>
+              </h1>
+              <h2 className="text-[34px] font-normal leading-[100%] text-white mt-6 max-des-4xl:text-lg max-mob-lg:text-xl">
+                Your Customers Don&lsquo;t Sleep. Neither Should Your Support.
+              </h2>
+              <p className="text-[24px] leading-[1.2] text-white/80 mt-8 max-w-[900px] mx-auto max-mob-lg:text-base">
+                Provide round-the-clock customer service without the round-the-clock costs. Smartbizgenie&lsquo;s 24/7 customer service solution ensures every customer gets instant, accurate support - whether it&lsquo;s 3 PM or 3 AM.
+              </p>
+              <div className="flex gap-[40px] justify-center mt-[50px] max-tab-lg:gap-[20px] max-mob-lg:flex-wrap">
+                <Anchor href="/get-started" label="Start Your 24/7 Support" className="" />
+                <Button
+                  onClick={() => toggleModal(true)}
+                  label="Schedule Demo"
+                  className="bg-transparent border-2 border-white"
+                />
+              </div>
+            </div>
+          </Container>
         </div>
-      </div>
-    </Container>
-  </div>
-</section>
+      </section>
 
 
       {/* True Cost Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             The True Cost of Limited Support Hours
           </h2>
           <div className="bg-[#F5F5F5] rounded-[20px] p-[50px] max-w-[1000px] mx-auto max-mob-lg:p-[30px]">
-            <h3 className="text-[28px] font-bold text-primary-100 mb-[30px] text-center max-tab-lg:text-[20px] max-mob-md:text-left">
+            <h3 data-aos="fade-in" className="text-[28px] font-bold text-primary-100 mb-[30px] text-center max-tab-lg:text-[20px] max-mob-md:text-left">
               What Happens After 5 PM:
             </h3>
             <div className="grid grid-cols-2 gap-[30px] max-mob-md:grid-cols-1">
-              <div className="flex items-start gap-[20px]">
+              <div data-aos="fade-up" className="flex items-start gap-[20px]">
                 <span className="text-[48px] flex-shrink-0">🚪</span>
                 <div>
                   <span className="text-[24px] font-bold text-primary-100 max-tab-lg:text-[18px]">
@@ -75,7 +88,7 @@ export default function CustomerService247() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-[20px]">
+              <div data-aos="fade-up" data-aos-delay="100" className="flex items-start gap-[20px]">
                 <span className="text-[48px] flex-shrink-0">😤</span>
                 <div>
                   <span className="text-[24px] font-bold text-primary-100 max-tab-lg:text-[18px]">
@@ -86,7 +99,7 @@ export default function CustomerService247() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-[20px]">
+              <div data-aos="fade-up" className="flex items-start gap-[20px]">
                 <span className="text-[48px] flex-shrink-0">💔</span>
                 <div>
                   <span className="text-[24px] font-bold text-primary-100 max-tab-lg:text-[18px]">
@@ -97,7 +110,7 @@ export default function CustomerService247() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-start gap-[20px]">
+              <div data-aos="fade-up" data-aos-delay="100" className="flex items-start gap-[20px]">
                 <span className="text-[48px] flex-shrink-0">💸</span>
                 <div>
                   <span className="text-[24px] font-bold text-primary-100 max-tab-lg:text-[18px]">
@@ -114,14 +127,14 @@ export default function CustomerService247() {
       </section>
 
       {/* Always-On Support Section */}
-      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
+      <section style={{overflow:'hidden'}} className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Always-On Support That Never Compromises
           </h2>
           <div className="grid grid-cols-3  gap-[25px] max-tab-lg:grid-cols-2 max-mob-md:grid-cols-1">
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">🌙</div>
+            <div data-aos="fade-up" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">🌙</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[15px] max-mob-lg:text-[18px]">
                 Night Shift Excellence
               </h3>
@@ -140,8 +153,8 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">🌍</div>
+            <div data-aos="fade-up" data-aos-delay="150" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">🌍</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[15px] max-mob-lg:text-[18px]">
                 Global Reach
               </h3>
@@ -160,8 +173,8 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">⚡</div>
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[30px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">⚡</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[15px] max-mob-lg:text-[18px]">
                 Instant Everything
               </h3>
@@ -187,11 +200,11 @@ export default function CustomerService247() {
       {/* What 24/7 Means Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             What 24/7 Really Means for Your Business
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-tab-lg:flex max-tab-lg:flex-wrap max-tab-lg:justify-center">
-            <div className="text-center">
+            <div data-aos="fade-up" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[48px]">👥</span>
               </div>
@@ -215,7 +228,7 @@ export default function CustomerService247() {
                 </ul>
               </div>
             </div>
-            <div className="text-center">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[48px]">👨‍💼</span>
               </div>
@@ -239,7 +252,7 @@ export default function CustomerService247() {
                 </ul>
               </div>
             </div>
-            <div className="text-center">
+            <div data-aos="fade-up" data-aos-delay="200" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[48px]">💰</span>
               </div>
@@ -270,13 +283,13 @@ export default function CustomerService247() {
       </section>
 
       {/* Comprehensive Features Section */}
-      <section className="bg-[#F5F5F5] py-[40px] max-mob-lg:py-6 my-[50px]">
+      <section style={{overflow:'hidden'}} className="bg-[#F5F5F5] py-[40px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Comprehensive 24/7 Support Features
           </h2>
           <div className="grid grid-cols-4 gap-[40px] max-mob-md:grid-cols-1 max-des-xl:grid-cols-2">
-            <div className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">🔧</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-des-3xl:text-[18px]">
                 Technical Support
@@ -296,7 +309,7 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">📦</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-des-3xl:text-[18px]">
                 Order Management
@@ -316,7 +329,7 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">💬</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-des-3xl:text-[18px]">
                 Sales Support
@@ -336,7 +349,7 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="300" className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[15px]">🆘</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-des-3xl:text-[18px]">
                 Emergency Handling
@@ -363,11 +376,11 @@ export default function CustomerService247() {
       {/* Success Metrics Section */}
       <section className="bg-accent-100 py-[50px] max-mob-lg:py-6 ">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Success Metrics from Our Clients
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-w-[1000px] mx-auto max-mob-md:grid-cols-1">
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-in" className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-white mb-[30px] max-tab-lg:text-[20px]">
                 Before Smartbizgenie:
               </h3>
@@ -386,7 +399,7 @@ export default function CustomerService247() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-in" data-aos-delay="150" className="bg-white rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-primary-100 mb-[30px] max-tab-lg:text-[20px]">
                 After Smartbizgenie:
               </h3>
@@ -412,13 +425,13 @@ export default function CustomerService247() {
       {/* Implementation Timeline Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Implementation Timeline
           </h2>
           <div className="bg-[#222222] rounded-[20px] py-[40px] max-tab-lg:py-[30px]">
             <div className="flex flex-row justify-between max-w-[1200px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px]">
-              <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
+              <div data-aos="fade-in" className="flex flex-col items-center flex-1">
+                <div data-aos="fade-in" className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                   <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
                     1
                   </span>
@@ -430,8 +443,8 @@ export default function CustomerService247() {
                   Setup and integration
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
+              <div data-aos="fade-in" data-aos-delay="100" className="flex flex-col items-center flex-1">
+                <div data-aos="fade-in" className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                   <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
                     2
                   </span>
@@ -443,8 +456,8 @@ export default function CustomerService247() {
                   Knowledge base training
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
+              <div data-aos="fade-in" data-aos-delay="200" className="flex flex-col items-center flex-1">
+                <div data-aos="fade-in" className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                   <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
                     3
                   </span>
@@ -456,8 +469,8 @@ export default function CustomerService247() {
                   Testing and refinement
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
+              <div data-aos="fade-in" data-aos-delay="300" className="flex flex-col items-center flex-1">
+                <div data-aos="fade-in" className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                   <span className="text-[48px] font-bold text-white max-tab-lg:text-[32px]">
                     4
                   </span>
@@ -477,7 +490,7 @@ export default function CustomerService247() {
       {/* CTA Section */}
       <section className="bg-primary-100 py-[80px] max-mob-lg:py-10 border-b-[1px] border-white">
         <Container>
-          <div className="text-center">
+          <div data-aos="fade-up" className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[20px] max-des-3xl:text-2xl">
               Your 24/7 Support Journey Starts Here
             </h2>
@@ -501,7 +514,7 @@ export default function CustomerService247() {
               />
               <Anchor href="/pricing" label="See Pricing" className="" />
             </div>
-            <p className="text-[20px] font-normal text-accent-200 mt-[40px] max-mob-lg:text-[16px]">
+            <p data-aos="fade-in" className="text-[20px] font-normal text-accent-200 mt-[40px] max-mob-lg:text-[16px]">
               Have questions? Our 24/7 chatbot is ready to help right now! 💬
             </p>
           </div>

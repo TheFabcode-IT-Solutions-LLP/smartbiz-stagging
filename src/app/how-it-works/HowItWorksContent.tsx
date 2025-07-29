@@ -4,9 +4,20 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
 import Button from "@/components/ui/button/Button";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 export default function HowItWorksContent() {
   const {toggleModal} = useTheme();
+
+  useEffect(() => {
+            AOS.init({
+              duration: 1000, 
+              once: false,     
+            });
+          }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -23,7 +34,7 @@ export default function HowItWorksContent() {
           />
           <div className="absolute inset-0 bg-primary-100/50 " />
            </div>
-          <div className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
+          <div data-aos="fade-up" className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[30px] max-tab-md:relative max-tab-md:bottom-0 max-tab-lg:px-4">
             <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
               How AI Workflow Automation Works:{" "}
               <span className="text-accent-100">Simple 4-Step Process</span>
@@ -54,16 +65,16 @@ export default function HowItWorksContent() {
       {/* Quick Overview Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[30px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[30px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             AI Workflow Automation Made Simple
           </h2>
-          <p className="text-[24px] text-center text-primary-100/80 mb-[50px] max-w-[800px] mx-auto max-mob-lg:text-base">
+          <p data-aos="fade-in" className="text-[24px] text-center text-primary-100/80 mb-[50px] max-w-[800px] mx-auto max-mob-lg:text-base">
             Our workflow automation process turns time-consuming manual tasks into smart, automatic systems. 
             Here&apos;s how we make it happen:
           </p>
           
           <div className="grid grid-cols-4 gap-[30px] max-tab-lg:grid-cols-2 max-mob-md:grid-cols-1">
-            <div className="text-center">
+            <div data-aos="fade-up" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[40px]">🔍</span>
               </div>
@@ -75,7 +86,7 @@ export default function HowItWorksContent() {
               </p>
             </div>
             
-            <div className="text-center">
+            <div data-aos="fade-up" data-aos-delay="100" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[40px]">🛠️</span>
               </div>
@@ -87,7 +98,7 @@ export default function HowItWorksContent() {
               </p>
             </div>
             
-            <div className="text-center">
+            <div data-aos="fade-up" data-aos-delay="200" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[40px]">🧪</span>
               </div>
@@ -99,7 +110,7 @@ export default function HowItWorksContent() {
               </p>
             </div>
             
-            <div className="text-center">
+            <div data-aos="fade-up" data-aos-delay="300" className="text-center">
               <div className="w-[100px] h-[100px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px]">
                 <span className="text-[40px]">🚀</span>
               </div>
@@ -117,13 +128,13 @@ export default function HowItWorksContent() {
       {/* Detailed Process Section */}
       <section className="bg-primary-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             The Complete Workflow Automation Process
           </h2>
           
           {/* Step 1 */}
           <div className="mb-[60px] max-mob-lg:mb-[40px]">
-            <div className="flex items-center gap-[40px] max-tab-lg:flex-col">
+            <div data-aos="fade-up"  className="flex items-center gap-[40px] max-tab-lg:flex-col">
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
                   <div className="w-[80px] aspect-square h-[80px] bg-accent-100 rounded-full flex items-center justify-center">
@@ -179,7 +190,7 @@ export default function HowItWorksContent() {
 
           {/* Step 2 */}
           <div className="mb-[60px] max-mob-lg:mb-[40px]">
-            <div className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
+            <div data-aos="fade-up" className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
               <div className="flex-1 max-w-[500px]">
                 <Image
                   src="/assets/images/Custom Development Phase.jpg"
@@ -235,7 +246,7 @@ export default function HowItWorksContent() {
 
           {/* Step 3 */}
           <div className="mb-[60px] max-mob-lg:mb-[40px]">
-            <div className="flex items-center gap-[40px] max-tab-lg:flex-col">
+            <div data-aos="fade-up" className="flex items-center gap-[40px] max-tab-lg:flex-col">
               <div className="flex-1">
                 <div className="flex items-center gap-[20px] mb-[30px]">
                   <div className="w-[80px] h-[80px] aspect-square bg-accent-100 rounded-full flex items-center justify-center">
@@ -291,7 +302,7 @@ export default function HowItWorksContent() {
 
           {/* Step 4 */}
           <div>
-            <div className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
+            <div data-aos="fade-up" className="flex items-center gap-[40px] max-tab-lg:flex-col-reverse">
               <div className="flex-1 max-w-[500px]">
                 <Image
                   src="/assets/images/Launch & Support Phase.jpg"
@@ -350,12 +361,12 @@ export default function HowItWorksContent() {
       {/* Timeline Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Your AI Automation Timeline
           </h2>
           <div className="bg-[#222222] rounded-[20px] py-[40px] max-tab-lg:py-[30px]">
             <div className="flex flex-row justify-between max-w-[1200px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px] gap-3">
-              <div className="flex flex-col items-center flex-1">
+              <div data-aos="fade-up" className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
                   <span className="text-[20px] font-bold text-white max-mob-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 1
@@ -368,7 +379,7 @@ export default function HowItWorksContent() {
                   Business analysis and automation planning
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
+              <div data-aos="fade-up" data-aos-delay="100" className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
                   <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 2-3
@@ -381,7 +392,7 @@ export default function HowItWorksContent() {
                   Building your custom AI solutions
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
+              <div data-aos="fade-up" data-aos-delay="200" className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
                   <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 4
@@ -394,7 +405,7 @@ export default function HowItWorksContent() {
                   Quality assurance and team training
                 </p>
               </div>
-              <div className="flex flex-col items-center flex-1">
+              <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col items-center flex-1">
                 <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[100px] max-mob-lg:h-[100px]">
                   <span className="text-[20px] font-bold text-white max-tab-lg:text-[20px] max-mob-md:text-[16px]">
                     Week 5
@@ -413,13 +424,13 @@ export default function HowItWorksContent() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
+      <section style={{overflow:'hidden'}} className="bg-accent-100 py-[50px] max-mob-lg:py-6 my-[50px]">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Real Results from Our Process
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-tab-lg:grid-cols-1">
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[20px] text-center">🚀</div>
               <blockquote className="text-[20px] text-white italic mb-[20px] max-mob-lg:text-[16px]">
                 &quot;The workflow automation process was smooth and professional. We saved 25 hours per week within the first month!&quot;
@@ -429,7 +440,7 @@ export default function HowItWorksContent() {
               </cite>
             </div>
             
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[20px] text-center">💰</div>
               <blockquote className="text-[20px] text-white italic mb-[20px] max-mob-lg:text-[16px]">
                 &quot;Our AI chatbot handles 80% of customer questions automatically. Customer satisfaction went up 40%.&quot;
@@ -439,7 +450,7 @@ export default function HowItWorksContent() {
               </cite>
             </div>
             
-            <div className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white/20 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <div className="text-[48px] mb-[20px] text-center">⭐</div>
               <blockquote className="text-[20px] text-white italic mb-[20px] max-mob-lg:text-[16px]">
                 &quot;The team made everything simple to understand. No technical jargon - just results that work.&quot;
@@ -455,11 +466,11 @@ export default function HowItWorksContent() {
       {/* What Makes Us Different */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             What Makes Our Process Different
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1">
-            <div className="flex gap-[20px] items-center">
+            <div data-aos="fade-up" className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🎯</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -472,7 +483,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-center">
+            <div data-aos="fade-up" data-aos-delay="100" className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🤝</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -485,7 +496,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-center">
+            <div data-aos="fade-up" className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">⚡</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -498,7 +509,7 @@ export default function HowItWorksContent() {
               </div>
             </div>
             
-            <div className="flex gap-[20px] items-center">
+            <div data-aos="fade-up" data-aos-delay="100" className="flex gap-[20px] items-center">
               <span className="text-[32px] flex-shrink-0">🔒</span>
               <div>
                 <h3 className="text-[24px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[18px]">
@@ -517,7 +528,7 @@ export default function HowItWorksContent() {
       {/* CTA Section */}
       <section className="bg-primary-100 py-[80px] max-mob-lg:py-10 mt-[50px] border-b-white border-[1px]">
         <Container>
-          <div className="text-center">
+          <div data-aos="fade-in" className="text-center">
             <h2 className="text-[40px] font-bold text-white mb-[20px] max-des-3xl:text-2xl">
               Ready to Start Your Automation Journey?
             </h2>

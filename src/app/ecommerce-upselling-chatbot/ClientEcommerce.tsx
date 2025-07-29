@@ -5,8 +5,19 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Image from "next/image";
 import Button from "@/components/ui/button/Button";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 export default function ClientEcommerce() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const { toggleModal } = useTheme();
   return (
     <>
@@ -20,9 +31,9 @@ export default function ClientEcommerce() {
             height={1000}
             className="w-full max-h-[100dvh] object-cover h-full"
           />
-           <div className="absolute inset-0 bg-primary-100/30 z-10"></div>
+          <div className="absolute inset-0 bg-primary-100/30 z-10"></div>
           <Container className="absolute bottom-[80px] flex flex-col w-full max-tab-lg:mt-[50px] max-tab-lg:pb-[50px] left-[50%] -translate-x-1/2  max-tab-md:relative max-tab-md:bottom-0  max-tab-lg:px-4">
-            <div className="text-center max-w-[1200px] mx-auto">
+            <div data-aos="fade-up" className="text-center max-w-[1200px] mx-auto">
               <h1 className="text-[50px] font-bold text-white leading-[60px] max-mob-lg:text-2xl max-des-3xl:text-[40px] max-mob-lg:leading-[1.2] max-des-3xl:leading-[40px]">
                 The Ecommerce Upselling Chatbot That{" "}
                 <span className="text-accent-100">Pays for Itself</span>
@@ -44,7 +55,7 @@ export default function ClientEcommerce() {
                   className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base"
                 />
                 <Button
-                  onClick={() => toggleModal(true)} 
+                  onClick={() => toggleModal(true)}
                   label="Start Free Trial"
                   className="px-[47px] py-[21px] text-[24px] font-medium  max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-white"
                 />
@@ -57,11 +68,11 @@ export default function ClientEcommerce() {
       {/* Science of Smart Upselling Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             The Science of Smart Upselling
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-w-[1000px] mx-auto max-tab-lg:grid-cols-1">
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-in" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Traditional Upselling:
               </h3>
@@ -86,7 +97,7 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="bg-accent-100 rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-in" data-aos-delay="150" className="bg-accent-100 rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[24px] font-bold text-white mb-[20px] max-mob-lg:text-[18px]">
                 AI-Powered Upselling:
               </h3>
@@ -116,14 +127,14 @@ export default function ClientEcommerce() {
       </section>
 
       {/* Intelligent Upselling Strategies Section */}
-      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6">
+      <section style={{overflow:'hidden'}} className="bg-primary-100 py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Intelligent Upselling Strategies That Work
           </h2>
           <div className="grid grid-cols-3 gap-[25px] max-tab-lg:grid-cols-1">
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">🎯</div>
+            <div data-aos="fade-up" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">🎯</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Behavioral Targeting
               </h3>
@@ -154,8 +165,8 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">🛍️</div>
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">🛍️</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Smart Product Pairing
               </h3>
@@ -186,8 +197,8 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
-              <div className="text-[48px] mb-[15px]">💡</div>
+            <div data-aos="fade-up" data-aos-delay="200" className="bg-white/10 backdrop-blur-sm rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+              <div data-aos="fade-in" className="text-[48px] mb-[15px]">💡</div>
               <h3 className="text-[24px] font-medium text-accent-100 mb-[20px] max-mob-lg:text-[18px]">
                 Contextual Recommendations
               </h3>
@@ -225,11 +236,11 @@ export default function ClientEcommerce() {
       {/* Case Studies Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Real Results from Real Stores
           </h2>
           <div className="grid grid-cols-2 gap-[40px] max-tab-lg:grid-cols-1">
-            <div className="bg-accent-100 rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-accent-100 rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-white mb-[30px] max-mob-lg:text-[20px]">
                 Case Study: Fashion Retailer
               </h3>
@@ -269,7 +280,7 @@ export default function ClientEcommerce() {
                 </div>
               </div>
             </div>
-            <div className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-[#F5F5F5] rounded-[20px] p-[40px] max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-primary-100 mb-[30px] max-mob-lg:text-[20px]">
                 Case Study: Electronics Store
               </h3>
@@ -316,11 +327,11 @@ export default function ClientEcommerce() {
       {/* How It Works Section */}
       <section className="bg-[#F5F5F5] py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             How Our Upselling Chatbot Drives Revenue
           </h2>
           <div className="flex justify-between max-w-[1200px] mx-auto max-mob-lg:flex-col max-mob-lg:gap-[40px]">
-            <div className="flex-1 text-center px-[20px]">
+            <div data-aos="fade-up" className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                 <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
                   1
@@ -341,7 +352,7 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="flex-1 text-center px-[20px]">
+            <div data-aos="fade-up" data-aos-delay="100" className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                 <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
                   2
@@ -362,7 +373,7 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="flex-1 text-center px-[20px]">
+            <div data-aos="fade-up" data-aos-delay="200" className="flex-1 text-center px-[20px]">
               <div className="w-[120px] h-[120px] bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-[20px] max-mob-lg:w-[80px] max-mob-lg:h-[80px]">
                 <span className="text-[48px] font-bold text-white max-mob-lg:text-[32px]">
                   3
@@ -390,11 +401,11 @@ export default function ClientEcommerce() {
       {/* Advanced Features Section */}
       <section className="py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-primary-100 mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Advanced Features for Maximum Impact
           </h2>
           <div className="grid grid-cols-3 gap-[40px] max-tab-lg:grid-cols-1">
-            <div className="text-center">
+            <div data-aos="fade-in" className="text-center">
               <div className="text-[64px] mb-[20px]">🎨</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Visual Product Showcase
@@ -414,7 +425,7 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="text-center">
+            <div data-aos="fade-in" data-aos-delay="100" className="text-center">
               <div className="text-[64px] mb-[20px]">🎁</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Dynamic Bundling
@@ -434,7 +445,7 @@ export default function ClientEcommerce() {
                 </li>
               </ul>
             </div>
-            <div className="text-center">
+            <div data-aos="fade-in" data-aos-delay="200" className="text-center">
               <div className="text-[64px] mb-[20px]">📊</div>
               <h3 className="text-[24px] font-bold text-primary-100 mb-[20px] max-mob-lg:text-[18px]">
                 Performance Analytics
@@ -459,13 +470,13 @@ export default function ClientEcommerce() {
       </section>
 
       {/* Pricing Section */}
-      <section className="bg-primary-100 py-[50px] max-mob-lg:py-6">
+      <section style={{overflow:'hidden'}} className="bg-primary-100 py-[50px] max-mob-lg:py-6">
         <Container>
-          <h2 className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
+          <h2 data-aos="fade-in" className="text-[40px] font-bold text-center text-white mb-[50px] max-des-3xl:text-2xl max-mob-lg:mb-6">
             Pricing That Makes Sense
           </h2>
           <div className="grid grid-cols-3 gap-[30px] max-w-[1200px] mx-auto max-tab-lg:grid-cols-1">
-            <div className="bg-white rounded-[20px] p-[40px] text-center max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-white rounded-[20px] p-[40px] text-center max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[20px]">
                 Starter Plan
               </h3>
@@ -492,7 +503,7 @@ export default function ClientEcommerce() {
                 className="w-full text-center "
               />
             </div>
-            <div className="bg-accent-100 rounded-[20px] p-[40px] text-center transform scale-105 max-mob-lg:p-[20px] max-tab-lg:scale-100">
+            <div data-aos="fade-up" data-aos-delay="100" className="bg-accent-100 rounded-[20px] p-[40px] text-center transform scale-105 max-mob-lg:p-[20px] max-tab-lg:scale-100">
               <div className="bg-accent-200 text-primary-100 text-[14px] font-bold px-[20px] py-[5px] rounded-full inline-block mb-[20px]">
                 MOST POPULAR
               </div>
@@ -522,7 +533,7 @@ export default function ClientEcommerce() {
                 className="w-full text-center bg-white !text-accent-100 hover:bg-gray-100"
               />
             </div>
-            <div className="bg-white rounded-[20px] p-[40px] text-center max-mob-lg:p-[20px]">
+            <div data-aos="fade-up" className="bg-white rounded-[20px] p-[40px] text-center max-mob-lg:p-[20px]">
               <h3 className="text-[28px] font-bold text-primary-100 mb-[10px] max-mob-lg:text-[20px]">
                 Enterprise
               </h3>
@@ -553,7 +564,7 @@ export default function ClientEcommerce() {
       {/* CTA Section */}
       <section className="py-[80px] max-mob-lg:py-10">
         <Container>
-          <div className="text-center">
+          <div data-aos="fade-in" className="text-center">
             <h2 className="text-[40px] font-bold text-primary-100 mb-[20px] max-des-3xl:text-2xl">
               See It In Action
             </h2>
@@ -573,7 +584,7 @@ export default function ClientEcommerce() {
                 className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-primary-100 text-white border-2 border-primary-100"
               />
               <Button
-                onClick={() => toggleModal(true)} 
+                onClick={() => toggleModal(true)}
                 label="Book Consultation"
                 className="px-[47px] py-[21px] text-[24px] font-medium max-tab-lg:py-3 max-tab-lg:px-5 max-tab-lg:text-base bg-transparent border-2 border-accent-100 !text-primary-100"
               />

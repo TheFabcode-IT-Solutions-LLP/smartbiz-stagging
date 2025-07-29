@@ -1,5 +1,10 @@
+
+'use client';
 import React from "react";
 import Container from "@/components/ui/conatiner/Container";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const workSteps = [
   {
@@ -25,17 +30,24 @@ const workSteps = [
 ];
 
 const ChatbotWorkflow = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
   return (
     <Container>
       <div className="py-[50px] max-mob-lg:py-6">
-        <h2 className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl mb-[50px] max-mob-lg:mb-6">
+        <h2 data-aos="fade-in" className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl mb-[50px] max-mob-lg:mb-6">
           How Our AI Chatbot Works
         </h2>
         <div className="bg-[#222222] rounded-[20px] py-[40px] max-tab-lg:py-[30px]">
           <div className="flex flex-row justify-between max-w-[1438px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px]">
             {workSteps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center w-full relative">
-                <div className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[70px] max-mob-lg:h-[70px] max-tab-md:w-[85px] max-tab-md:h-[85px]">
+              <div data-aos="fade-up" data-aos-delay={index * 50} key={index} className="flex flex-col items-center w-full relative">
+                <div data-aos="fade-in" className="w-[120px] h-[120px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[70px] max-mob-lg:h-[70px] max-tab-md:w-[85px] max-tab-md:h-[85px]">
                   <span className="text-[48px] font-bold text-white max-mob-lg:text-[24px] max-tab-md:text-[32px]">
                     {step.number}
                   </span>

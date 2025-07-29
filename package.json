@@ -10,17 +10,21 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.4.2",
+    "aos": "^2.3.4",
+    "classnames": "^2.5.1",
     "klaviyo-api": "^19.0.0",
     "lucide-react": "^0.525.0",
     "next": "^15.4.1",
     "nodemailer": "^7.0.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-phone-input-2": "^2.15.1",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",

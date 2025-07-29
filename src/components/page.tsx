@@ -101,12 +101,12 @@ export default function Home() {
         <Services />
         <ImageWithText />
         <RealClients />
-        
+
         {/* Enhanced Trust Signal */}
         <div className="text-white bg-accent-100 text-center font-medium text-2xl leading-[1.208] px-6 pt-[26px] pb-[25px] min-h-[80px] max-mob-lg:text-base max-mob-lg:py-3 max-mob-lg:min-h-auto mb-[50px]">
           <strong>Proven Results:</strong> Our AI workflow automation reduces support response time by 30% and saves businesses 20+ hours weekly on average
         </div>
-        
+
         <CustomerExperiences />
         <WorkSteps />
         <WhyChoose />

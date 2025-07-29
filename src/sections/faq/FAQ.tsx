@@ -3,8 +3,20 @@ import Anchor from "@/components/ui/Anchor/Anchor";
 import Container from "@/components/ui/conatiner/Container";
 import Image from "next/image";
 import React, { useState } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const FAQ = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const [activeAcc, setActiveTab] = useState("");
   const items = [
     {
@@ -27,18 +39,18 @@ const FAQ = () => {
       content:
         "Yes, our AI solutions integrate with 200+ popular business platforms including CRMs (Salesforce, HubSpot), email marketing tools (Mailchimp, Klaviyo), e-commerce platforms (Shopify, WooCommerce), and communication tools (Slack, Microsoft Teams). We also build custom integrations for proprietary systems.",
     },
-     {
+    {
       heading: "What about data security and privacy?",
       content:
         "We prioritize security with SOC 2 Type II compliance, end-to-end encryption, and GDPR/CCPA compliance. Your data is processed securely, stored in encrypted databases, and never shared with third parties. Our systems undergo regular security audits and penetration testing.",
     },
-     
-     {
+
+    {
       heading: "What ongoing support do you provide?",
       content:
         "We include 30 days of post-launch support with every implementation. Ongoing support includes system monitoring, performance optimization, updates, and technical assistance. We also provide training resources and documentation to ensure your team can manage the systems effectively.",
     },
-       
+
   ];
   return (
     <div className="py-[50px] max-mob-lg:py-6">
@@ -60,7 +72,7 @@ const FAQ = () => {
           <div className="flex-1 max-tab-sm:mt-0 pl-[50px] ml-20 max-tab-sm:border-l-0 max-tab-sm:pl-0 max-tab-sm:ml-0 border-l border-primary-100 space-y-[25px] max-des-2xl:space-y-4 max-des-2xl:pl-6 max-des-2xl:ml-6">
             {items &&
               items.map((item, index) => (
-                <div
+                <div data-aos='fade-in' data-aos-delay={index * 50}
                   key={item.heading}
                   className="w-full rounded-[20px] bg-primary-100"
                 >
@@ -70,11 +82,10 @@ const FAQ = () => {
                         prev == item.heading ? "" : item.heading
                       )
                     }
-                    className={`${
-                      activeAcc == item.heading
-                        ? "bg-accent-100 rounded-t-[20px] "
-                        : "bg-primary-100 rounded-[20px] "
-                    } text-3xl font-medium  max-tab-md:text-sm max-tab-sm:p-5 text-left max-des-2xl:py-6  max-des-2xl:text-xl leading-[1.208] text-white cursor-pointer py-8 pl-7 pr-[39px] flex items-center justify-between w-full transition-all duration-300`}
+                    className={`${activeAcc == item.heading
+                      ? "bg-accent-100 rounded-t-[20px] "
+                      : "bg-primary-100 rounded-[20px] "
+                      } text-3xl font-medium  max-tab-md:text-sm max-tab-sm:p-5 text-left max-des-2xl:py-6  max-des-2xl:text-xl leading-[1.208] text-white cursor-pointer py-8 pl-7 pr-[39px] flex items-center justify-between w-full transition-all duration-300`}
                   >
                     {index + 1}. {item.heading}{" "}
                     <Image
@@ -82,17 +93,15 @@ const FAQ = () => {
                       src="/assets/images/ArrowDown.png"
                       width={24}
                       height={24}
-                      className={`${
-                        activeAcc == item.heading ? "rotate-180" : ""
-                      }  transition-all duration-300 max-tab-sm:max-w-4`}
+                      className={`${activeAcc == item.heading ? "rotate-180" : ""
+                        }  transition-all duration-300 max-tab-sm:max-w-4`}
                     />
                   </button>
                   <div
-                    className={`${
-                      activeAcc == item.heading
-                        ? "max-h-[500px]"
-                        : "max-h-[0px]"
-                    } overflow-hidden transition-all max-des-2xl:text-base max-des-2xl:leading-[1.5] duration-300 text-xl leading-[30px] text-white font-normal text-left w-full  max-mob-lg:text-sm max-mob-lg:leading-[1.2]`}
+                    className={`${activeAcc == item.heading
+                      ? "max-h-[500px]"
+                      : "max-h-[0px]"
+                      } overflow-hidden transition-all max-des-2xl:text-base max-des-2xl:leading-[1.5] duration-300 text-xl leading-[30px] text-white font-normal text-left w-full  max-mob-lg:text-sm max-mob-lg:leading-[1.2]`}
                   >
                     <div className=" p-6 max-tab-sm:p-4">{item.content}</div>
                   </div>

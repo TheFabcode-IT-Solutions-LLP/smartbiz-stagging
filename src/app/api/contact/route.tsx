@@ -3,23 +3,23 @@ import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
   try {
-    const {
-      name,
-      email,
-      phone,
-      company,
-      industry,
-      website,
-      services,
-      projectDescription,
-      preferredCallTime,
-      estimatedBudget,
-      hearAboutUs,
-      hearAboutUsOther,
-      consent,
-      message,
-      file,
-    } = await request.json();
+    const formData = await request.formData();
+
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const company = formData.get("company") as string;
+    const industry = formData.get("industry") as string;
+    const website = formData.get("website") as string;
+    const services = formData.getAll("services") as string[]; // for checkboxes/multiselect
+    const projectDescription = formData.get("projectDescription") as string;
+    const preferredCallTime = formData.get("preferredCallTime") as string;
+    const estimatedBudget = formData.get("estimatedBudget") as string;
+    const hearAboutUs = formData.get("hearAboutUs") as string;
+    const hearAboutUsOther = formData.get("hearAboutUsOther") as string;
+    const consent = formData.get("consent");
+    const message = formData.get("message") as string;
+    const file = formData.get("file") as File | null;
 
     if (!name || !email || !consent) {
       return NextResponse.json(
@@ -51,16 +51,28 @@ export async function POST(request: Request) {
       <p><strong>Services Interested:</strong> ${formattedServices}</p>
       <p><strong>Project Description:</strong><br/>${projectDescription || "N/A"}</p>
       <p><strong>Preferred Call Time:</strong> ${preferredCallTime || "N/A"}</p>
-      <p><strong>Preferred Call Time:</strong> ${file || "N/A"}</p>
       <p><strong>Estimated Budget:</strong> ${estimatedBudget || "N/A"}</p>
       <p><strong>Heard About Us:</strong> ${hearAboutUs}</p>
       ${hearAboutUs === "Other"
         ? `<p><strong>Other (Specify):</strong> ${hearAboutUsOther || "N/A"}</p>`
         : ""
       }
-      <p><strong>Additional Message:</strong><br/>${message || "N/A"}</p>`
-      ;
+      <p><strong>Additional Message:</strong><br/>${message || "N/A"}</p>
+    `;
 
+
+    //attachment for file saving
+    const attachments = [];
+
+    if (file && file.name) {
+      const buffer = Buffer.from(await file.arrayBuffer());
+
+      attachments.push({
+        filename: file.name,
+        content: buffer,
+        contentType: file.type,
+      });
+    }
 
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
@@ -69,27 +81,12 @@ export async function POST(request: Request) {
       replyTo: email,
       text: projectDescription,
       html: htmlContent,
+      attachments,
     });
 
     return NextResponse.json(
       {
         message: "Message sent successfully!",
-        data: {
-          name,
-          email,
-          phone,
-          company,
-          industry,
-          website,
-          services,
-          projectDescription,
-          preferredCallTime,
-          estimatedBudget,
-          hearAboutUs,
-          hearAboutUsOther,
-          message,
-          file,
-        },
       },
       { status: 200 }
     );

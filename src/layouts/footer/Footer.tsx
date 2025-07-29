@@ -4,8 +4,18 @@ import Container from "@/components/ui/conatiner/Container";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Footer = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
 
   const [message, setMessage] = useState({ message: "", type: "" });
   const sm = [
@@ -103,7 +113,7 @@ const Footer = () => {
       <Container>
         {/* Newsletter */}
         <div className="flex items-center gap-6 justify-between pb-[50px] max-mob-lg:pb-6 border-b border-white max-tab-lg:flex-wrap">
-          <div>
+          <div data-aos="fade-in">
             <h3 className="text-white text-[40px] text-left font-bold leading-[70px] max-des-4xl:text-2xl max-mob-lg:leading-[2]">
               Subcribe to Our Newsletter
             </h3>
@@ -115,7 +125,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="max-w-[870px] w-full">
+          <div data-aos="fade-in" className="max-w-[870px] w-full">
             <form className="relative" onSubmit={(e) => onSubmit(e)}>
               <input
                 type="email"
@@ -146,7 +156,7 @@ const Footer = () => {
                 <div className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
                   <span className="font-medium">Success!</span> {message.message}
                 </div>
-                
+
               </>
             )}
 
@@ -166,7 +176,7 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="sm:hidden bg-[#F5F5F5] py-3 px-3 rounded-2xl">
+          <div data-aos="fade-up" className="sm:hidden bg-[#F5F5F5] py-3 px-3 rounded-2xl">
             <button
               onClick={() => toggleSection("services")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base "
@@ -221,8 +231,8 @@ const Footer = () => {
             )}
           </div>
 
-          <div className="max-sm:hidden">
-            <div className="text-3xl font-bold leading-[1.2] text-white text-left">
+          <div data-aos="fade-up"  className="max-sm:hidden">
+            <div data-aos="fade-in" className="text-3xl font-bold leading-[1.2] text-white text-left">
               Services
             </div>
             <ul className="mt-[30px] space-y-5">
@@ -239,8 +249,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="max-sm:hidden">
-            <div className="text-3xl font-bold text-white text-left">
+          <div data-aos="fade-up" className="max-sm:hidden">
+            <div data-aos="fade-in" className="text-3xl font-bold text-white text-left">
               Quick Links
             </div>
             <ul className="mt-[30px] space-y-5">
@@ -257,7 +267,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="sm:hidden bg-[#F5F5F5]  py-3 px-3 rounded-2xl ">
+          <div data-aos="fade-up" className="sm:hidden bg-[#F5F5F5]  py-3 px-3 rounded-2xl ">
             <button
               onClick={() => toggleSection("legal")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base  "
@@ -329,7 +339,7 @@ const Footer = () => {
             </ul>
           </div> */}
 
-          <div className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
+          <div data-aos="fade-up" className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
             <button
               onClick={() => toggleSection("quickLinks")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base sm:hidden "
@@ -383,7 +393,7 @@ const Footer = () => {
             )}
           </div>
 
-          <div className="max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
+          <div data-aos="fade-up" className="max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
             <div className="text-3xl font-bold text-white text-left max-sm:mt-[30px]">
               Follow Us
             </div>
@@ -406,7 +416,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-[50px] pb-[45px] border-t border-white text-white text-center text-2xl max-mob-lg:text-sm">
+        <div data-aos="fade-in" className="pt-[50px] pb-[45px] border-t border-white text-white text-center text-2xl max-mob-lg:text-sm">
           Copyright {date.getFullYear()} All Rights Reserved.
         </div>
       </Container>

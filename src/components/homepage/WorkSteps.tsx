@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Container from "../ui/conatiner/Container";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const steps = [
   {
@@ -26,16 +29,24 @@ const steps = [
 ];
 
 const WorkSteps = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <Container>
       <div className="py-[50px]  max-mob-lg:py-6  w-full mx-auto">
-        <h2 className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl">
+        <h2 data-aos="fade-in" className="text-[40px] font-bold leading-[1.2] text-center tracking-[0%] max-des-3xl:text-2xl">
           How It Works
         </h2>
         <div className="mt-[50px] bg-[#222222] rounded-[20px] py-[40px] max-tab-lg:mt-6">
           <div className="flex flex-row justify-between max-w-[1438px] w-full mx-auto px-[20px] max-mob-lg:flex-wrap max-mob-lg:gap-[35px]">
             {steps.map((step, index) => (
-               <><div className="flex flex-row md:hidden w-full pb-4 border-b-[1px] border-dotted border-[#FFFFFF4D] bg-opacity-30">
+              <><div className="flex flex-row md:hidden w-full pb-4 border-b-[1px] border-dotted border-[#FFFFFF4D] bg-opacity-30">
                 <div className="items-center w-full block  ">
                   <div className="max-mob-lg: flex flex-col justify-center items-center  w-full relative " key={index}>
                     <div className="w-[140px] h-[140px] rounded-full bg-accent-100 flex justify-center items-center max-mob-lg:w-[70px] max-mob-lg:h-[70px] max-tab-md:w-[85px] max-tab-md:h-[85px]">
@@ -82,11 +93,11 @@ const WorkSteps = () => {
 
                 </div>
               </div>
-              
-              <div
-                key={index}
-                className="flex flex-col items-center w-full relative max-md:hidden"
-              >
+
+                <div data-aos="fade-in" data-aos-delay={index * 100}
+                  key={index}
+                  className="flex flex-col items-center w-full relative max-md:hidden"
+                >
                   <h4 className="text-[24px] font-medium text-center text-white mb-[15px] max-mob-lg:mb-[10px]">
                     {step.title}
                   </h4>

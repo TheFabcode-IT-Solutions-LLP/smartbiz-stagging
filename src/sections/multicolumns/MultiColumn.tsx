@@ -6,12 +6,23 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import { useEffect } from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 const MultiColumn = ({
   heading = "Common Business Automation Challenges We Solve Every Day",
 }: {
   heading?: string;
 }) => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   const items = [
     {
       icon: "/assets/images/to-do.png",
@@ -54,7 +65,7 @@ const MultiColumn = ({
         <p className="text-center text-[20px] text-primary-100/80 mt-4 max-w-[800px] mx-auto max-mob-lg:text-base">
           If any of these sound familiar, AI workflow automation can transform your business operations and boost productivity by 40% or more.
         </p>
-        
+
         <div className="mt-[50px] max-mob-lg:mt-6 max-mob-lg:-mx-[16px]">
           <div className="product-slider-component relative px-0">
             <Swiper
@@ -95,9 +106,9 @@ const MultiColumn = ({
               className="mySwiper"
             >
               {items &&
-                items.map((item) => (
+                items.map((item, index) => (
                   <SwiperSlide className="!h-auto" key={`${item.heading}`}>
-                    <MultiColumnItem item={item} />
+                    <MultiColumnItem item={item} delay={index * 200} />
                   </SwiperSlide>
                 ))}
             </Swiper>
@@ -110,15 +121,17 @@ const MultiColumn = ({
 
 const MultiColumnItem = ({
   item,
+  delay,
 }: {
   item: {
     icon: string;
     heading: string;
     content: string;
   };
+  delay: number;
 }) => {
   return (
-    <div className="bg-primary-100 w-full rounded-[20px] pt-11 px-[19px] pb-12 h-full">
+    <div data-aos="fade-in" data-aos-delay={delay} className="bg-primary-100 w-full rounded-[20px] pt-11 px-[19px] pb-12 h-full">
       <div className="bg-accent-100 rounded-full w-[90px] h-[90px] flex justify-center items-center mx-auto">
         <Image
           alt={`${item?.heading} automation solution icon`}
