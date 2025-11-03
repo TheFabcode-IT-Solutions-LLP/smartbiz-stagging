@@ -9,7 +9,6 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Footer = () => {
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -47,12 +46,12 @@ const Footer = () => {
     { label: "Contact", href: "/contact" },
   ];
 
-  // const legalItems = [
-  //   { label: "Privacy Policy", href: "/privacy-policy" },
-  //   { label: "Terms of Service", href: "/terms-of-service" },
-  //   { label: "Security", href: "/security" },
-  //   { label: "Compliance", href: "/compliance" },
-  // ];
+  const legalItems = [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms of Service", href: "/terms-of-service" },
+    { label: "Security", href: "/security" },
+    { label: "Compliance", href: "/compliance" },
+  ];
 
   const [formData, setFormData] = useState({ email: "" });
 
@@ -92,7 +91,9 @@ const Footer = () => {
       const result = await response.json();
 
       setMessage({
-        message: result.message || (response.ok ? "Subscribed successfully!" : "Subscription failed."),
+        message:
+          result.message ||
+          (response.ok ? "Subscribed successfully!" : "Subscription failed."),
         type: response.ok ? "success" : "error",
       });
 
@@ -153,13 +154,15 @@ const Footer = () => {
             )}
             {message?.type === "success" && (
               <>
-                <div className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50" role="alert">
-                  <span className="font-medium">Success!</span> {message.message}
+                <div
+                  className="p-4 my-4 text-sm text-green-800 rounded-lg bg-green-50"
+                  role="alert"
+                >
+                  <span className="font-medium">Success!</span>{" "}
+                  {message.message}
                 </div>
-
               </>
             )}
-
           </div>
         </div>
 
@@ -176,7 +179,10 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div data-aos="fade-up" className="sm:hidden bg-[#F5F5F5] py-3 px-3 rounded-2xl">
+          <div
+            data-aos="fade-up"
+            className="sm:hidden bg-[#F5F5F5] py-3 px-3 rounded-2xl"
+          >
             <button
               onClick={() => toggleSection("services")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base "
@@ -184,7 +190,6 @@ const Footer = () => {
               Services
               <span>
                 {open.services ? (
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -231,8 +236,11 @@ const Footer = () => {
             )}
           </div>
 
-          <div data-aos="fade-up"  className="max-sm:hidden">
-            <div data-aos="fade-in" className="text-3xl font-bold leading-[1.2] text-white text-left">
+          <div data-aos="fade-up" className="max-sm:hidden">
+            <div
+              data-aos="fade-in"
+              className="text-3xl font-bold leading-[1.2] text-white text-left"
+            >
               Services
             </div>
             <ul className="mt-[30px] space-y-5">
@@ -250,7 +258,10 @@ const Footer = () => {
           </div>
 
           <div data-aos="fade-up" className="max-sm:hidden">
-            <div data-aos="fade-in" className="text-3xl font-bold text-white text-left">
+            <div
+              data-aos="fade-in"
+              className="text-3xl font-bold text-white text-left"
+            >
               Quick Links
             </div>
             <ul className="mt-[30px] space-y-5">
@@ -267,7 +278,10 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div data-aos="fade-up" className="sm:hidden bg-[#F5F5F5]  py-3 px-3 rounded-2xl ">
+          <div
+            data-aos="fade-up"
+            className="sm:hidden bg-[#F5F5F5]  py-3 px-3 rounded-2xl "
+          >
             <button
               onClick={() => toggleSection("legal")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base  "
@@ -275,7 +289,6 @@ const Footer = () => {
               Legal
               <span>
                 {open.legal ? (
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="12"
@@ -290,7 +303,6 @@ const Footer = () => {
                     <polyline points="18 15 12 9 6 15" />
                   </svg>
                 ) : (
-
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -323,8 +335,13 @@ const Footer = () => {
             )} */}
           </div>
 
-          {/* <div className="max-sm:hidden">
-            <div className="text-3xl font-bold text-white text-left">Legal</div>
+          <div data-aos="fade-up" className=" max-sm:hidden">
+            <div
+              data-aos="fade-in"
+              className="text-3xl font-bold text-white text-left"
+            >
+              Legal
+            </div>
             <ul className="mt-[30px] space-y-5">
               {legalItems.map((item, index) => (
                 <li key={index}>
@@ -337,9 +354,12 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
 
-          <div data-aos="fade-up" className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden">
+          <div
+            data-aos="fade-up"
+            className="bg-[#F5F5F5] py-3 px-3 rounded-2xl sm:hidden"
+          >
             <button
               onClick={() => toggleSection("quickLinks")}
               className="text-3xl font-bold  w-full text-left flex items-center justify-between max-mob-lg:text-base sm:hidden "
@@ -393,7 +413,10 @@ const Footer = () => {
             )}
           </div>
 
-          <div data-aos="fade-up" className="max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
+          <div
+            data-aos="fade-up"
+            className="max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center"
+          >
             <div className="text-3xl font-bold text-white text-left max-sm:mt-[30px]">
               Follow Us
             </div>
@@ -416,7 +439,10 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div data-aos="fade-in" className="pt-[50px] pb-[45px] border-t border-white text-white text-center text-2xl max-mob-lg:text-sm">
+        <div
+          data-aos="fade-in"
+          className="pt-[50px] pb-[45px] border-t border-white text-white text-center text-2xl max-mob-lg:text-sm"
+        >
           Copyright {date.getFullYear()} All Rights Reserved.
         </div>
       </Container>
