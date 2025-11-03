@@ -53,7 +53,7 @@ export default function PrivacyPolicy() {
               Introduction
             </h2>
             <p>
-              SmartBiz AI ("we," "our," or "us") is committed to protecting your
+              SmartBiz AI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;)
               privacy. This Privacy Policy explains how we collect, use,
               disclose, and safeguard your information when you visit our
               website or use our AI workflow automation, custom chatbots, smart
